@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="그룹_18" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <clipPath id="clip-path">
+            <path id="사각형_18" fill="none" d="M0 0H32V32H0z"/>
+        </clipPath>
+        <style>
+            .cls-3{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="그룹_17" clip-path="url(#clip-path)">
+        <rect id="사각형_12" width="30" height="27" class="cls-3" rx="1" transform="translate(1 4)"/>
+        <path id="선_17" d="M0 0L0 5" class="cls-3" transform="translate(21 1)"/>
+        <path id="선_18" d="M0 0L0 5" class="cls-3" transform="translate(11 1)"/>
+        <path id="사각형_13" d="M0 0H2V2H0z" class="cls-3" transform="translate(7 13)"/>
+        <path id="사각형_14" d="M0 0H2V2H0z" class="cls-3" transform="translate(15 13)"/>
+        <path id="사각형_15" d="M0 0H2V2H0z" class="cls-3" transform="translate(23 13)"/>
+        <path id="사각형_16" d="M0 0H2V2H0z" class="cls-3" transform="translate(7 21)"/>
+        <path id="사각형_17" d="M0 0H2V2H0z" class="cls-3" transform="translate(15 21)"/>
+        <path id="선_19" d="M4 0L0 4" class="cls-3" transform="translate(22 20)"/>
+        <path id="선_20" d="M4 4L0 0" class="cls-3" transform="translate(22 20)"/>
+    </g>
+</svg>
