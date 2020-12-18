@@ -1,0 +1,81 @@
+header.main_header {
+    ///// TopMenu
+    .top_nav_wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #414141;
+        padding:10px 30px;
+        align-items: center;
+    }
+    .top_menu {
+        display: flex;
+        a, li {
+            color:#fff;
+            font-size: 16px;
+            line-height: 1.2em;
+        }
+        li {
+            padding: 0 18px;
+            border-right: 1px solid rgba(255,255,255,0.5);
+            &:last-child {
+                padding-right: none;
+                border-right: none;
+            }
+        }
+    }
+    ///// Navigation
+    .gnb {
+        background-color: #fff;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        ._nav {
+            display:flex;
+            flex-direction: row;
+            li {
+                display:flex;
+                align-items: center;
+                justify-content:center;
+                &:hover {
+                    border-bottom:4px solid $DarkGrey;
+                }
+            }
+            li._active {
+                border-bottom:4px solid $Red;
+                > a {
+                    font-weight: bold;
+                }
+            }
+            .has_icon ._icon {
+                background-position: center center;
+                background-size: auto;
+                background-repeat: no-repeat;
+                display:flex;
+                margin-right: 18px;
+                &.room {
+                    width:35px;
+                    height:35px;
+                    background-image: url('#{$urlImg}/menuicon_01.svg');
+                }
+                &.reservation {
+                    width:32px;
+                    height:32px;
+                    background-image: url('#{$urlImg}/menuicon_02.svg');
+                }
+                &.settle {
+                    width:28px;
+                    height:32px;
+                    background-image: url('#{$urlImg}/menuicon_03.svg');
+                }
+            }
+            a {
+                padding:40px 120px;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
