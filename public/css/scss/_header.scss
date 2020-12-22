@@ -8,18 +8,40 @@ header.main_header {
         padding:10px 30px;
         align-items: center;
     }
+    .logo {
+        a {
+            display:flex;
+            width:251px;
+            height: 30px;
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image:url('#{$urlImg}/logo.png');
+            @include respond-to('md'){
+                width: 120px;
+                height: 34px;
+                background-image:url('#{$urlImg}/logo-m.png');
+            }
+        }
+    }
     .top_menu {
         display: flex;
         a, li {
             color:#fff;
             font-size: 16px;
             line-height: 1.2em;
+            @include respond-to('md'){
+                font-size: 16px;
+            }
         }
         li {
             padding: 0 18px;
             border-right: 1px solid rgba(255,255,255,0.5);
+            &:first-child {
+                padding-left: 0;
+            }
             &:last-child {
-                padding-right: none;
+                padding-right: 0;
                 border-right: none;
             }
         }
@@ -33,10 +55,12 @@ header.main_header {
         ._nav {
             display:flex;
             flex-direction: row;
+            width: 100%;
             li {
                 display:flex;
                 align-items: center;
                 justify-content:center;
+                width:33.33%;
                 &:hover {
                     border-bottom:4px solid $DarkGrey;
                 }
@@ -53,28 +77,39 @@ header.main_header {
                 background-repeat: no-repeat;
                 display:flex;
                 margin-right: 18px;
-                &.room {
+                &.room_list {
                     width:35px;
                     height:35px;
                     background-image: url('#{$urlImg}/menuicon_01.svg');
                 }
-                &.reservation {
+                &.reservation_list {
                     width:32px;
                     height:32px;
                     background-image: url('#{$urlImg}/menuicon_02.svg');
                 }
-                &.settle {
+                &.settle_list {
                     width:28px;
                     height:32px;
                     background-image: url('#{$urlImg}/menuicon_03.svg');
                 }
+                @include respond-to('md') {
+                    display: none;
+                }
             }
             a {
-                padding:40px 120px;
+                padding:40px;
                 font-size: 20px;
+                width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                @include respond-to('md') {
+                    padding:30px;
+                }
+                @include respond-to('sm') {
+                    padding:20px 10px;
+                    font-size: 18px;
+                }
             }
         }
     }
