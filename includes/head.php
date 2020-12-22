@@ -2,6 +2,9 @@
     // URL 확장자명 제거하기
     include_once 'includes/no_extension.php';
     strip_php_extension();
+
+    $url = $_SERVER['REQUEST_URI'];
+    preg_match('|.*/(.*)|', $url, $matches);
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -14,9 +17,8 @@
 
         <!-- peterosea custom code -->
         <link type="text/css" rel="stylesheet" href="public/css/style.css">
-        <script src="public/js/script.js" type="text/javascript"></script>
         <!-- /.peterosea custom code -->
     </head>
-    <body>
+    <body class="<?php echo $matches[1]; ?>">
         <!-- Body Container -->
         <div class="body_container">

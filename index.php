@@ -10,9 +10,7 @@
         include_once 'includes/header.php';
         ?>
         <div id="content" class="content_wrap">
-            <div class="container_inner fixed_inner">
-                <?php include_once 'pages/'. $pageUrl .'.php'; ?>
-            </div>
+            <?php include_once 'pages/'. $pageUrl .'.php'; ?>
         </div>
     <?php
     }

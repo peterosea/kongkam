@@ -109,37 +109,110 @@ path, g {
     width:100%;
     max-width: $siteWidth;
   }
+  &.column_align {
+    flex-direction: column;
+  }
+  &.row_align {
+    flex-direction: row;
+  }
 }
 #content.content_wrap {
   padding:60px 0;
   display:flex;
   justify-content:center;
+  @include respond-to('xl') {
+    padding:60px 20px;
+  }
+  @include respond-to('md') {
+    padding:20px;
+  }
+}
+
+// 라벨
+.label {
+  padding: 7px 8px;
+  line-height:1.2em;
+  border-radius: 6px;
+  background-color: #666;
+  display:inline-flex;
+  justify-content:center;
+  align-items: center;
+  width: 74px;
+  font-size: 14px;
+  color:#fff;
+  &._checkin {
+    background-color: #46c17a;
+  }
+  &._reserve {
+    background-color: #0085cb;
+  }
+  &._deposit {
+    background-color: #00466a;
+  }
+  &._hold {
+    background-color: #aaaaaa;
+  }
+}
+.label_grp {
+  display: flex;
+  .label {
+    margin-right: 5px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 // Selectbox
 .options_wrap {
   display: flex;
   .selectbox {
-    border:1px solid $BorderGrey;
-    background-color: #fff;
-    border-radius: 6px;
     width: 100%;
-    height: 60px;
     display:flex;
-    overflow: hidden;
-    position:absolute;
-    top: 0;
-    left: 0;
+    transition:all 0.3s;
     cursor: pointer;
+    .selected_item {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      background-color: #fff;
+      border-radius: 6px;
+      border:1px solid $BorderGrey;
+      z-index: 1;
+      align-items: center;
+      padding: 12px 20px;
+    }
     ul._inner {
       width: 100%;
+      height: 0;
+      visibility: hidden;
+      opacity: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition:all 0.3s;
+      position:absolute;
+      top: 62px;
+      left:0;
+      border:1px solid $BorderGrey;
+      background-color: #fff;
+      border-radius: 6px;
+      z-index: -1;
       > li {
         display:flex;
         justify-content: flex-start;
         align-items: center;
         padding: 12px 20px;
-        height: 60px;
+        min-height: 61px;
         width: 100%;
+        border-bottom: 1px solid $BorderGrey;
+        cursor: pointer;
+        &:last-child {
+          border-bottom: none;
+        }
+        &:hover {
+          background-color: #f9f9f9;
+        }
       }
     }
     .arrow {
@@ -153,8 +226,26 @@ path, g {
       top: 14px;
       right: 15px;
       position: absolute;
+      z-index: 1;
       i {
         font-size: 10px;
+      }
+    }
+
+    &._opened {
+      ul._inner {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        z-index: 9;
+      }
+      .arrow {
+        background-color: #666;
+        border:none;
+        i {
+          color:#fff;
+          transform: rotateX(180deg);
+        }
       }
     }
   }
@@ -165,19 +256,55 @@ path, g {
       position: relative;
       width: 300px;
       &:first-child {
-        .selectbox {
+        .selected_item {
           border-top-right-radius: 0;
           border-bottom-right-radius: 0;
         }
       }
       &:last-child {
-        .selectbox {
+        .selected_item {
           border-left: none;
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
         }
       }
     }
+  }  
+}
+
+// 테이블/리스트 내 레이어 팝업
+.inner_popup {
+  position:absolute;
+  top:0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 6px;
+  display:flex;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+  ul {
+    width: 260px;
   }
-  
+  &.with_tail:before {
+    content: '';
+    border-top: 0 solid transparent;
+    border-left: 29px solid #0085cb;
+    border-right: 0 solid transparent;
+    border-bottom: 25px solid transparent;
+    position: absolute;
+    right: -30px;
+    top: 34px;
+  }
+  &.with_tail:after {
+    content: '';
+    border-top: 0px solid transparent;
+    border-left: 28px solid #fff;
+    border-right: 0 solid transparent;
+    border-bottom: 24px solid transparent;
+    position: absolute;
+    right: -27px;
+    top: 35px;
+  }
 }
