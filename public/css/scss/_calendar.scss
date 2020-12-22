@@ -1,0 +1,197 @@
+.calendarContainer {
+  display: flex;
+  justify-content: center;
+  .container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 55px;
+    padding-bottom: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include respond-to("md") {
+      padding-top: 36px;
+      padding-bottom: 33px;
+    }
+  }
+
+  // fullcalendar.css override
+  .fc-view {
+    border: 1px solid $very-light-pink;
+    background-color: $white;
+    border-radius: 4px;
+    overflow: hidden;
+
+    thead {
+      border: none;
+      td {
+        border: none;
+      }
+    }
+    > table > tbody > tr > td {
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+  }
+  .fc-toolbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .fc-right {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .fc-center {
+      h2 {
+        font-family: $NotoSansKR;
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.45;
+        letter-spacing: -0.6px;
+        text-align: center;
+        color: $black;
+      }
+      .fc-button {
+        border-radius: 999px;
+        border: none;
+        box-shadow: none;
+        background: $white;
+        text-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 31px;
+        height: 31px;
+        padding: 0;
+        i {
+          font-size: 6px;
+          color: $brownish-grey;
+        }
+      }
+    }
+  }
+  ul.roomStatus {
+    display: flex;
+    gap: 21px;
+
+    @mixin statusStyle($pointColor) {
+      span {
+        line-height: 1;
+        font-family: $NotoSansKR;
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1;
+        letter-spacing: -0.48px;
+        text-align: left;
+        color: #{$pointColor};
+        padding-bottom: 2px;
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-color: #{$pointColor};
+        border-radius: 9999px;
+      }
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      &-draft {
+        @include statusStyle($brownish-grey);
+      }
+      &-on {
+        @include statusStyle($bluish-green);
+      }
+      &-done {
+        @include statusStyle($cerulean);
+      }
+    }
+  }
+
+  th.fc-widget-header {
+    border: none;
+    padding: 12px 17px 14px;
+    font-family: $NotoSansKR;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.48px;
+    text-align: right;
+    color: $black;
+  }
+
+  .fc-unthemed .fc-today {
+    background: none;
+  }
+  .fc-basic-view .fc-day-number {
+    padding-top: 10px;
+    padding-right: 21px;
+    padding-bottom: 11px;
+    font-family: $NotoSansKR !important;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.86;
+    letter-spacing: -0.42px;
+    text-align: right;
+    color: $black;
+  }
+
+  .fc-day-grid {
+    .fc-row:last-child td {
+      border-bottom: 0;
+    }
+  }
+
+  .fc-event-container {
+    .fc-event {
+      border-radius: 999px;
+      text-align: center;
+      color: $white;
+      margin-right: 4px;
+      margin-left: 4px;
+      margin-bottom: 4px;
+
+      &.status {
+        border: none;
+        &-draft {
+          background-color: $brownish-grey;
+        }
+        &-on {
+          background-color: $bluish-green;
+        }
+        &-done {
+          background-color: $cerulean;
+        }
+      }
+      span {
+        color: $white;
+        font-family: $NotoSansKR;
+        font-size: 14px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.42px;
+        text-align: center;
+        color: $white;
+      }
+    }
+  }
+}
