@@ -8,10 +8,15 @@
   <!-- Font Awesome Load -->
   <script src="https://kit.fontawesome.com/780f6d964f.js" crossorigin="anonymous"></script>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
   <!-- peterosea custom code -->
-  <link type="text/css" rel="stylesheet" href="public/css/style.css">
+  <link type="text/css" rel="stylesheet" href="../public/css/style.css">
   <!-- /.peterosea custom code -->
 </head>
+<?php include_once 'header.php' ?>
 
 <body class="<?php echo $matches[1]; ?>">
   <!-- Body Container -->
