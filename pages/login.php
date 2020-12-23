@@ -7,7 +7,7 @@
         <img src="../public/img/2.png" srcset="../public/img/2@2x.png 2x, ../public/img/2@3x.png 3x">
       </a>
       <div class="formWrap">
-        <form action="">
+        <form action="" class="type-default">
           <div class="login">
             <div class="id">
               <label>

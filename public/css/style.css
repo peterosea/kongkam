@@ -366,6 +366,177 @@ g {
   top: 35px;
 }
 
+form.type-default ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 576px) {
+  form.type-default ul {
+    gap: 13px;
+  }
+}
+
+form.type-default label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+
+form.type-default label span {
+  display: inline-block;
+  width: 100px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.6px;
+  text-align: left;
+  color: #222222;
+}
+
+form.type-default label input {
+  padding: 16px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 400px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.54px;
+  text-align: left;
+}
+
+form.type-default label input::-webkit-input-placeholder {
+  color: #999999;
+}
+
+form.type-default label input:-ms-input-placeholder {
+  color: #999999;
+}
+
+form.type-default label input::-ms-input-placeholder {
+  color: #999999;
+}
+
+form.type-default label input::placeholder {
+  color: #999999;
+}
+
+form.type-default label select {
+  padding: 17px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.54px;
+}
+
+form.type-default label .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3px;
+}
+
+form.type-default label .phone input {
+  max-width: 227px;
+  width: 100%;
+}
+
+form.type-default label .phone .select {
+  position: relative;
+  width: 100%;
+}
+
+form.type-default label .phone .select select {
+  max-width: 170px;
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+form.type-default label .phone .select img.arrow {
+  position: absolute;
+  pointer-events: none;
+  top: 50%;
+  right: 16px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+form.type-default .squaredFour {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+form.type-default .squaredFour .checkbox {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background: #ffffff;
+  border-radius: 4px;
+  border: solid 1px #dddddd;
+  position: relative;
+}
+
+form.type-default .squaredFour .checkbox:after {
+  content: "";
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  border: 3px solid #333;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0.5;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+form.type-default .squaredFour .checkbox:hover::after {
+  opacity: 0.5;
+}
+
+form.type-default .squaredFour input[type="checkbox"] {
+  visibility: hidden;
+}
+
+form.type-default .squaredFour input[type="checkbox"]:checked + .checkbox:after {
+  opacity: 1;
+}
+
 header.main_header .top_nav_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -613,55 +784,6 @@ header.main_header .gnb ._nav a {
   }
 }
 
-.section.page-login .login label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 8px;
-}
-
-.section.page-login .login label span {
-  display: inline-block;
-  width: 100px;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: -0.6px;
-  text-align: left;
-  color: #222222;
-}
-
-.section.page-login .login label input {
-  padding: 16px 20px;
-  border: 1px solid #dddddd;
-  border-radius: 6px;
-  width: 100%;
-  max-width: 400px;
-}
-
-.section.page-login .login label input::-webkit-input-placeholder {
-  color: #999999;
-}
-
-.section.page-login .login label input:-ms-input-placeholder {
-  color: #999999;
-}
-
-.section.page-login .login label input::-ms-input-placeholder {
-  color: #999999;
-}
-
-.section.page-login .login label input::placeholder {
-  color: #999999;
-}
-
 .section.page-login .option {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -689,56 +811,6 @@ header.main_header .gnb ._nav a {
       -ms-flex-align: center;
           align-items: center;
   gap: 9px;
-}
-
-.section.page-login .option .squaredFour {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-  gap: 10px;
-}
-
-.section.page-login .option .squaredFour .checkbox {
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  background: #ffffff;
-  border-radius: 4px;
-  border: solid 1px #dddddd;
-  position: relative;
-}
-
-.section.page-login .option .squaredFour .checkbox:after {
-  content: "";
-  width: 9px;
-  height: 5px;
-  position: absolute;
-  top: 9px;
-  left: 10px;
-  border: 3px solid #333;
-  border-top: none;
-  border-right: none;
-  background: transparent;
-  opacity: 0.5;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.section.page-login .option .squaredFour .checkbox:hover::after {
-  opacity: 0.5;
-}
-
-.section.page-login .option .squaredFour input[type="checkbox"] {
-  visibility: hidden;
-}
-
-.section.page-login .option .squaredFour input[type="checkbox"]:checked + .checkbox:after {
-  opacity: 1;
 }
 
 @media (max-width: 780px) {
@@ -1263,6 +1335,139 @@ body.room_list ._pop .inner_popup {
   font-stretch: normal;
   font-style: normal;
   letter-spacing: -0.42px;
+  text-align: center;
+  color: #ffffff;
+}
+
+header nav.find {
+  border-bottom: 1px solid #dddddd;
+  background-color: #ffffff;
+}
+
+header nav.find .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header nav.find .menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav.find .menu-list li {
+  width: 50%;
+}
+
+header nav.find .menu-list li a {
+  padding: 45px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 11px;
+}
+
+header nav.find .menu-list li a.active {
+  border-bottom: 4px solid #e50019;
+}
+
+.section.page-findId {
+  padding-top: 100px;
+  padding-bottom: 145px;
+}
+
+@media (max-width: 576px) {
+  .section.page-findId {
+    padding: 50px 0 70px;
+  }
+}
+
+.section.page-findId .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section.page-findId .pageHeader {
+  margin-bottom: 45px;
+  padding: 0 20px;
+}
+
+.section.page-findId .pageHeader h2.title {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.72px;
+  text-align: left;
+  color: #222222;
+  word-break: keep-all;
+}
+
+.section.page-findId .pageHeader h2.title + p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: -0.54px;
+  text-align: left;
+  color: #666666;
+}
+
+.section.page-findId .content {
+  padding: 168px 20px;
+  border-radius: 6px;
+  border: solid 1px #dddddd;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width: 576px) {
+  .section.page-findId .content {
+    padding: 84px 20px;
+  }
+}
+
+.section.page-findId .content form {
+  max-width: 510px;
+  margin: 0 auto;
+}
+
+.section.page-findId .content hr {
+  margin-top: 45px;
+  margin-bottom: 45px;
+  border: none;
+  border-bottom: 1px solid #dddddd;
+}
+
+.section.page-findId .content button[type="submit"] {
+  width: 100%;
+  padding: 15px 0 18px;
+  border-radius: 6px;
+  background-color: #414141;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.54px;
   text-align: center;
   color: #ffffff;
 }
