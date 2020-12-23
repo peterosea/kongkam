@@ -16,8 +16,7 @@
   <link type="text/css" rel="stylesheet" href="../public/css/style.css">
   <!-- /.peterosea custom code -->
 </head>
-<?php include_once 'header.php' ?>
 
-<body class="<?php echo $matches[1]; ?>">
+<body class="<?php if (!empty($matches)) echo $matches[1]; ?>">
   <!-- Body Container -->
   <div class="body_container">
