@@ -137,5 +137,14 @@
     button[type="submit"] {
       margin-bottom: 33px;
     }
+    .resultWrap .result {
+      font-family: $NotoSansKR;
+      font-size: 22px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: -0.66px;
+      color: $black;
+    }
   }
 }

@@ -190,4 +190,16 @@ form.type {
       }
     }
   }
+  &-password {
+    .inputWrap {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-bottom: 10px;
+    }
+    button[type="submit"] {
+      padding: 17px 38px;
+      width: 100%;
+    }
+  }
 }
