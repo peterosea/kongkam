@@ -56,8 +56,6 @@
       border-bottom: 1px solid $very-light-pink;
     }
     button[type="submit"] {
-      width: 100%;
-      padding: 15px 0 18px;
       border-radius: 6px;
       background-color: $greyish-brown;
       border: none;
@@ -71,6 +69,28 @@
       letter-spacing: -0.54px;
       text-align: center;
       color: $white;
+    }
+    form.type-default {
+      margin-bottom: 19px;
+      button[type="submit"] {
+        width: 100%;
+        padding: 15px 0 18px;
+      }
+    }
+    form.type-authortication {
+      label input {
+        height: 100%;
+        @include respond-to("sm") {
+          max-width: none;
+        }
+      }
+      button[type="submit"] {
+        width: auto;
+        padding: 17px 38px;
+        @include respond-to("sm") {
+          width: 100%;
+        }
+      }
     }
   }
 }

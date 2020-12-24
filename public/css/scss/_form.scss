@@ -58,6 +58,8 @@ form.type {
       .phone {
         display: flex;
         gap: 3px;
+        max-width: 400px;
+        width: 100%;
       }
       .phone input {
         max-width: 227px;
@@ -66,8 +68,9 @@ form.type {
       .phone .select {
         position: relative;
         width: 100%;
+        height: 100%;
+        max-width: 170px;
         select {
-          max-width: 170px;
           width: 100%;
           appearance: none;
         }
@@ -120,6 +123,67 @@ form.type {
         &:checked + .checkbox:after {
           opacity: 1;
         }
+      }
+    }
+  }
+  &-authortication {
+    .numberPush {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+      margin-bottom: 19px;
+
+      button[type="submit"] {
+        padding: 17px 38px;
+        @include respond-to("sm") {
+          width: 100%;
+        }
+      }
+
+      label {
+        position: relative;
+        width: 100%;
+        max-width: 398px;
+        @include respond-to("sm") {
+          max-width: none;
+        }
+      }
+
+      span.timer {
+        font-family: $NotoSansKR;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.54px;
+        text-align: right;
+        color: $brown-grey-two;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        padding-bottom: 3px;
+      }
+    }
+
+    .helpWrap {
+      display: flex;
+    }
+    .help {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      cursor: pointer;
+
+      span {
+        font-family: $NotoSansKR;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.48px;
+        text-align: left;
+        color: $black;
       }
     }
   }

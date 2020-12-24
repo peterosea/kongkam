@@ -458,6 +458,8 @@ form.type-default label .phone {
   display: -ms-flexbox;
   display: flex;
   gap: 3px;
+  max-width: 400px;
+  width: 100%;
 }
 
 form.type-default label .phone input {
@@ -468,10 +470,11 @@ form.type-default label .phone input {
 form.type-default label .phone .select {
   position: relative;
   width: 100%;
+  height: 100%;
+  max-width: 170px;
 }
 
 form.type-default label .phone .select select {
-  max-width: 170px;
   width: 100%;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -535,6 +538,83 @@ form.type-default .squaredFour input[type="checkbox"] {
 
 form.type-default .squaredFour input[type="checkbox"]:checked + .checkbox:after {
   opacity: 1;
+}
+
+form.type-authortication .numberPush {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3px;
+  margin-bottom: 19px;
+}
+
+form.type-authortication .numberPush button[type="submit"] {
+  padding: 17px 38px;
+}
+
+@media (max-width: 576px) {
+  form.type-authortication .numberPush button[type="submit"] {
+    width: 100%;
+  }
+}
+
+form.type-authortication .numberPush label {
+  position: relative;
+  width: 100%;
+  max-width: 398px;
+}
+
+@media (max-width: 576px) {
+  form.type-authortication .numberPush label {
+    max-width: none;
+  }
+}
+
+form.type-authortication .numberPush span.timer {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.54px;
+  text-align: right;
+  color: #999999;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding-bottom: 3px;
+}
+
+form.type-authortication .helpWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form.type-authortication .help {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+form.type-authortication .help span {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.48px;
+  text-align: left;
+  color: #222222;
 }
 
 header.main_header .top_nav_wrap {
@@ -1455,8 +1535,6 @@ header nav.find .menu-list li a.active {
 }
 
 .section.page-findId .content button[type="submit"] {
-  width: 100%;
-  padding: 15px 0 18px;
   border-radius: 6px;
   background-color: #414141;
   border: none;
@@ -1470,5 +1548,35 @@ header nav.find .menu-list li a.active {
   letter-spacing: -0.54px;
   text-align: center;
   color: #ffffff;
+}
+
+.section.page-findId .content form.type-default {
+  margin-bottom: 19px;
+}
+
+.section.page-findId .content form.type-default button[type="submit"] {
+  width: 100%;
+  padding: 15px 0 18px;
+}
+
+.section.page-findId .content form.type-authortication label input {
+  height: 100%;
+}
+
+@media (max-width: 576px) {
+  .section.page-findId .content form.type-authortication label input {
+    max-width: none;
+  }
+}
+
+.section.page-findId .content form.type-authortication button[type="submit"] {
+  width: auto;
+  padding: 17px 38px;
+}
+
+@media (max-width: 576px) {
+  .section.page-findId .content form.type-authortication button[type="submit"] {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

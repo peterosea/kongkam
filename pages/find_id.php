@@ -55,6 +55,23 @@
           <hr>
           <button type="submit">인증번호 받기</button>
         </form>
+        <form action="" class="type-default type-authortication">
+          <div class="numberPush">
+            <label>
+              <input type="text" placeholder="인증번호 6자리 숫자 입력">
+              <span class="timer">50:12</span>
+            </label>
+            <button type="submit">확인</button>
+          </div>
+          <div class="helpWrap">
+            <div class="help">
+              <span>
+                인증번호가 오지 않나요
+              </span>
+              <img src="../public/img/91.png" srcset="../public/img/91@2x.png 2x, ../public/img/91@3x.png 3x">
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
