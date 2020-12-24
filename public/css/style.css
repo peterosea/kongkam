@@ -441,6 +441,10 @@ form.type-default label input::placeholder {
   color: #999999;
 }
 
+form.type-default label input.fullWidth {
+  max-width: none;
+}
+
 form.type-default label select {
   padding: 17px 20px;
   border: 1px solid #dddddd;
@@ -540,6 +544,34 @@ form.type-default .squaredFour input[type="checkbox"]:checked + .checkbox:after 
   opacity: 1;
 }
 
+form.type-default .helpWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form.type-default .helpWrap .help {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+form.type-default .helpWrap .help span {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.48px;
+  text-align: left;
+  color: #222222;
+}
+
 form.type-authortication .numberPush {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -587,34 +619,6 @@ form.type-authortication .numberPush span.timer {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   padding-bottom: 3px;
-}
-
-form.type-authortication .helpWrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-form.type-authortication .help {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 12px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-}
-
-form.type-authortication .help span {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: -0.48px;
-  text-align: left;
-  color: #222222;
 }
 
 header.main_header .top_nav_wrap {
@@ -1463,28 +1467,28 @@ header nav.find .menu-list li a.active {
   border-bottom: 4px solid #e50019;
 }
 
-.section.page-findId {
+.section.page-find {
   padding-top: 100px;
   padding-bottom: 145px;
 }
 
 @media (max-width: 576px) {
-  .section.page-findId {
+  .section.page-find {
     padding: 50px 0 70px;
   }
 }
 
-.section.page-findId .container {
+.section.page-find .container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.section.page-findId .pageHeader {
+.section.page-find .pageHeader {
   margin-bottom: 45px;
   padding: 0 20px;
 }
 
-.section.page-findId .pageHeader h2.title {
+.section.page-find .pageHeader h2.title {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 24px;
   font-weight: 500;
@@ -1496,7 +1500,7 @@ header nav.find .menu-list li a.active {
   word-break: keep-all;
 }
 
-.section.page-findId .pageHeader h2.title + p {
+.section.page-find .pageHeader h2.title + p {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 18px;
   font-weight: normal;
@@ -1508,7 +1512,7 @@ header nav.find .menu-list li a.active {
   color: #666666;
 }
 
-.section.page-findId .content {
+.section.page-find .content {
   padding: 168px 20px;
   border-radius: 6px;
   border: solid 1px #dddddd;
@@ -1517,25 +1521,25 @@ header nav.find .menu-list li a.active {
 }
 
 @media (max-width: 576px) {
-  .section.page-findId .content {
+  .section.page-find .content {
     padding: 84px 20px;
   }
 }
 
-.section.page-findId .content form {
+.section.page-find .content form {
   max-width: 510px;
   margin: 0 auto;
 }
 
-.section.page-findId .content hr {
+.section.page-find .content hr {
   margin-top: 45px;
   margin-bottom: 45px;
   border: none;
   border-bottom: 1px solid #dddddd;
 }
 
-.section.page-findId .content a.btn,
-.section.page-findId .content button[type="submit"] {
+.section.page-find .content a.btn,
+.section.page-find .content button[type="submit"] {
   border-radius: 6px;
   background-color: #414141;
   border: none;
@@ -1551,41 +1555,41 @@ header nav.find .menu-list li a.active {
   color: #ffffff;
 }
 
-.section.page-findId .content form.type-default {
+.section.page-find .content form.type-default {
   margin-bottom: 19px;
 }
 
-.section.page-findId .content form.type-default button[type="submit"] {
+.section.page-find .content form.type-default button[type="submit"] {
   width: 100%;
   padding: 15px 0 18px;
 }
 
-.section.page-findId .content form.type-authortication label input {
+.section.page-find .content form.type-authortication label input {
   height: 100%;
 }
 
 @media (max-width: 576px) {
-  .section.page-findId .content form.type-authortication label input {
+  .section.page-find .content form.type-authortication label input {
     max-width: none;
   }
 }
 
-.section.page-findId .content form.type-authortication button[type="submit"] {
+.section.page-find .content form.type-authortication button[type="submit"] {
   width: auto;
   padding: 17px 38px;
 }
 
 @media (max-width: 576px) {
-  .section.page-findId .content form.type-authortication button[type="submit"] {
+  .section.page-find .content form.type-authortication button[type="submit"] {
     width: 100%;
   }
 }
 
-.section.page-findId .content .resultWrap {
+.section.page-find .content .resultWrap {
   text-align: center;
 }
 
-.section.page-findId .content .resultWrap p {
+.section.page-find .content .resultWrap p {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 18px;
   font-weight: normal;
@@ -1597,7 +1601,7 @@ header nav.find .menu-list li a.active {
   margin-bottom: 12px;
 }
 
-.section.page-findId .content .resultWrap .result {
+.section.page-find .content .resultWrap .result {
   margin-bottom: 50px;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 28px;
@@ -1609,14 +1613,22 @@ header nav.find .menu-list li a.active {
   color: #222222;
 }
 
-.section.page-findId .content .resultWrap .result span.id {
+.section.page-find .content .resultWrap .result span.id {
   color: #16a854;
 }
 
-.section.page-findId .content .resultWrap a.btn {
+.section.page-find .content .resultWrap a.btn {
   display: inline-block;
   width: 100%;
   max-width: 493px;
   padding: 17px 48px;
+}
+
+.section.page-find.password .idWrap {
+  margin-bottom: 10px;
+}
+
+.section.page-find.password button[type="submit"] {
+  margin-bottom: 33px;
 }
 /*# sourceMappingURL=style.css.map */
