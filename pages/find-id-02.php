@@ -53,7 +53,7 @@
             </li>
           </ul>
           <hr>
-          <button type="submit">인증번호 받기</button>
+          <!-- <button type="submit">인증번호 받기</button> -->
         </form>
         <form action="" class="type-default type-authortication">
           <div class="numberPush">
