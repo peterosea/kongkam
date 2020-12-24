@@ -458,6 +458,8 @@ form.type-default label .phone {
   display: -ms-flexbox;
   display: flex;
   gap: 3px;
+  max-width: 400px;
+  width: 100%;
 }
 
 form.type-default label .phone input {
@@ -468,10 +470,11 @@ form.type-default label .phone input {
 form.type-default label .phone .select {
   position: relative;
   width: 100%;
+  height: 100%;
+  max-width: 170px;
 }
 
 form.type-default label .phone .select select {
-  max-width: 170px;
   width: 100%;
   -webkit-appearance: none;
      -moz-appearance: none;
