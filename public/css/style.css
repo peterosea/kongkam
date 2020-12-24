@@ -1534,6 +1534,7 @@ header nav.find .menu-list li a.active {
   border-bottom: 1px solid #dddddd;
 }
 
+.section.page-findId .content a.btn,
 .section.page-findId .content button[type="submit"] {
   border-radius: 6px;
   background-color: #414141;
@@ -1578,5 +1579,44 @@ header nav.find .menu-list li a.active {
   .section.page-findId .content form.type-authortication button[type="submit"] {
     width: 100%;
   }
+}
+
+.section.page-findId .content .resultWrap {
+  text-align: center;
+}
+
+.section.page-findId .content .resultWrap p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: -0.54px;
+  color: #666666;
+  margin-bottom: 12px;
+}
+
+.section.page-findId .content .resultWrap .result {
+  margin-bottom: 50px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 28px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.46;
+  letter-spacing: -0.84px;
+  color: #222222;
+}
+
+.section.page-findId .content .resultWrap .result span.id {
+  color: #16a854;
+}
+
+.section.page-findId .content .resultWrap a.btn {
+  display: inline-block;
+  width: 100%;
+  max-width: 493px;
+  padding: 17px 48px;
 }
 /*# sourceMappingURL=style.css.map */

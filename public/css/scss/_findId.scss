@@ -55,6 +55,7 @@
       border: none;
       border-bottom: 1px solid $very-light-pink;
     }
+    a.btn,
     button[type="submit"] {
       border-radius: 6px;
       background-color: $greyish-brown;
@@ -90,6 +91,41 @@
         @include respond-to("sm") {
           width: 100%;
         }
+      }
+    }
+    .resultWrap {
+      text-align: center;
+      p {
+        font-family: $NotoSansKR;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: -0.54px;
+        color: $brownish-grey;
+        margin-bottom: 12px;
+      }
+      .result {
+        margin-bottom: 50px;
+        font-family: $NotoSansKR;
+        font-size: 28px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.46;
+        letter-spacing: -0.84px;
+        color: $black;
+
+        span.id {
+          color: $bluish-green;
+        }
+      }
+      a.btn {
+        display: inline-block;
+        width: 100%;
+        max-width: 493px;
+        padding: 17px 48px;
       }
     }
   }
