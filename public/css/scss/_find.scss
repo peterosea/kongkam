@@ -1,4 +1,4 @@
-.section.page-findId {
+.section.page-find {
   padding-top: 100px;
   padding-bottom: 145px;
   @include respond-to("sm") {
@@ -127,6 +127,15 @@
         max-width: 493px;
         padding: 17px 48px;
       }
+    }
+  }
+
+  &.password {
+    .idWrap {
+      margin-bottom: 10px;
+    }
+    button[type="submit"] {
+      margin-bottom: 33px;
     }
   }
 }

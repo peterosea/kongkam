@@ -43,6 +43,9 @@ form.type {
         &::placeholder {
           color: $brown-grey-two;
         }
+        &.fullWidth {
+          max-width: none;
+        }
       }
       select {
         padding: 17px 20px;
@@ -125,6 +128,27 @@ form.type {
         }
       }
     }
+
+    .helpWrap {
+      display: flex;
+      .help {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        cursor: pointer;
+
+        span {
+          font-family: $NotoSansKR;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: -0.48px;
+          text-align: left;
+          color: $black;
+        }
+      }
+    }
   }
   &-authortication {
     .numberPush {
@@ -163,27 +187,6 @@ form.type {
         right: 20px;
         transform: translateY(-50%);
         padding-bottom: 3px;
-      }
-    }
-
-    .helpWrap {
-      display: flex;
-    }
-    .help {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      cursor: pointer;
-
-      span {
-        font-family: $NotoSansKR;
-        font-size: 16px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        letter-spacing: -0.48px;
-        text-align: left;
-        color: $black;
       }
     }
   }

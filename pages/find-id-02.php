@@ -21,7 +21,7 @@
 </header>
 
 <main>
-  <div class="section page-findId">
+  <div class="section page-find">
     <div class="container">
       <div class="pageHeader">
         <h2 class="title">회원정보에 등록한 휴대전화로 인증</h2>
@@ -53,7 +53,7 @@
             </li>
           </ul>
           <hr>
-          <button type="submit">인증번호 받기</button>
+          <!-- <button type="submit">인증번호 받기</button> -->
         </form>
         <form action="" class="type-default type-authortication">
           <div class="numberPush">
