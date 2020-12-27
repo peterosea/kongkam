@@ -1,5 +1,5 @@
 <div id="calendar" class="fc fc-ltr fc-unthemed">
-  <div class="fc-toolbar">
+  <div class="fc-toolbar toolbar">
     <!-- <div class="fc-left">
       <div class="fc-button-group">
         <button type="button" class="fc-prev-button fc-button fc-state-default fc-corner-left"><span class="fc-icon fc-icon-left-single-arrow"></span></button>
@@ -10,13 +10,13 @@
     <div class="fc-right">
       <!-- <div class="fc-button-group"><button type="button" class="fc-month-button fc-button fc-state-default fc-corner-left fc-state-active">month</button><button type="button" class="fc-agendaWeek-button fc-button fc-state-default">week</button><button type="button" class="fc-agendaDay-button fc-button fc-state-default fc-corner-right">day</button></div> -->
       <ul class="roomStatus">
-        <li class="status status-on">
+        <li class="status status-checkin">
           <span>입실</span>
         </li>
-        <li class="status status-done">
+        <li class="status status-reserve">
           <span>예약완료</span>
         </li>
-        <li class="status status-draft">
+        <li class="status status-hold">
           <span>예약대기</span>
         </li>
       </ul>
@@ -96,7 +96,7 @@
                           <tr>
                             <td></td>
                             <td></td>
-                            <td class="fc-event-container"><a class="status status-on fc-day-grid-event fc-event fc-start fc-end label-important fc-draggable">
+                            <td class="fc-event-container"><a class="status status-checkin fc-day-grid-event fc-event fc-start fc-end label-important fc-draggable">
                                 <div class="fc-content">
                                   <!-- <span class="fc-time">12a</span> -->
                                   <span class="fc-roomnumber">101호</span><span>&nbsp;/&nbsp;</span><span class="fc-title">정아인 외1</span>
@@ -189,7 +189,7 @@
                             <td rowspan="2"></td>
                             <td rowspan="2"></td>
                             <td rowspan="2"></td>
-                            <td class="fc-event-container" colspan="3"><a class="status status-done fc-day-grid-event fc-event fc-start fc-not-end label-success fc-draggable">
+                            <td class="fc-event-container" colspan="3"><a class="status status-reserve fc-day-grid-event fc-event fc-start fc-not-end label-success fc-draggable">
                                 <div class="fc-content">
                                   <span class="fc-roomnumber">101호</span><span>&nbsp;/&nbsp;</span><span class="fc-title">김희철 외1</span>
                                 </div>
@@ -198,7 +198,7 @@
                           <tr>
                             <td></td>
                             <td></td>
-                            <td class="fc-event-container"><a class="status status-draft fc-day-grid-event fc-event fc-start fc-end label-info fc-draggable">
+                            <td class="fc-event-container"><a class="status status-hold fc-day-grid-event fc-event fc-start fc-end label-info fc-draggable">
                                 <div class="fc-content">
                                   <!-- <span class="fc-time">4p</span> -->
                                   <span class="fc-roomnumber">102호</span><span>&nbsp;/&nbsp;</span><span class="fc-title">최민희 외1</span>
@@ -240,7 +240,7 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td class="fc-event-container"><a class="status status-done fc-day-grid-event fc-event fc-not-start fc-end label-success fc-draggable fc-resizable">
+                            <td class="fc-event-container"><a class="status status-reserve fc-day-grid-event fc-event fc-not-start fc-end label-success fc-draggable fc-resizable">
                                 <div class="fc-content">
                                   <span class="fc-roomnumber">101호</span><span>&nbsp;/&nbsp;</span><span class="fc-title">김희철 외1</span>
                                 </div>
