@@ -1,3 +1,4 @@
+<?php include_once '../includes/head.php' ?>
 <div class="container_inner fixed_inner column_align">
   <div class="options_wrap">
     <ul class="selectbox_grp">
@@ -403,7 +404,7 @@
             </ul>
             <div class="label_grp">
               <span class="label _reserve">예약</span>
-              <span class="label _deposit">입금완료</span>
+              <span class="label _hold">입금대기</span>
             </div>
           </div>
         </div>

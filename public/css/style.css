@@ -150,11 +150,11 @@ g {
 }
 
 .label._reserve {
-  background-color: #0085cb;
+  background-color: #00b4cb;
 }
 
 .label._deposit {
-  background-color: #00466a;
+  background-color: #0085cb;
 }
 
 .label._hold {
@@ -1191,6 +1191,7 @@ body.room_list ._pop .inner_popup {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 auto;
   padding-top: 55px;
   padding-bottom: 45px;
   padding-left: 20px;
@@ -1325,7 +1326,7 @@ body.room_list ._pop .inner_popup {
   gap: 7px;
 }
 
-.calendarContainer ul.roomStatus .status-draft span {
+.calendarContainer ul.roomStatus .status-hold span {
   line-height: 1;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
@@ -1339,7 +1340,7 @@ body.room_list ._pop .inner_popup {
   padding-bottom: 2px;
 }
 
-.calendarContainer ul.roomStatus .status-draft::before {
+.calendarContainer ul.roomStatus .status-hold::before {
   content: "";
   display: block;
   width: 16px;
@@ -1348,7 +1349,7 @@ body.room_list ._pop .inner_popup {
   border-radius: 9999px;
 }
 
-.calendarContainer ul.roomStatus .status-on span {
+.calendarContainer ul.roomStatus .status-checkin span {
   line-height: 1;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
@@ -1358,20 +1359,20 @@ body.room_list ._pop .inner_popup {
   line-height: 1;
   letter-spacing: -0.48px;
   text-align: left;
-  color: #16a854;
+  color: #46c17a;
   padding-bottom: 2px;
 }
 
-.calendarContainer ul.roomStatus .status-on::before {
+.calendarContainer ul.roomStatus .status-checkin::before {
   content: "";
   display: block;
   width: 16px;
   height: 16px;
-  background-color: #16a854;
+  background-color: #46c17a;
   border-radius: 9999px;
 }
 
-.calendarContainer ul.roomStatus .status-done span {
+.calendarContainer ul.roomStatus .status-reserve span {
   line-height: 1;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
@@ -1385,7 +1386,7 @@ body.room_list ._pop .inner_popup {
   padding-bottom: 2px;
 }
 
-.calendarContainer ul.roomStatus .status-done::before {
+.calendarContainer ul.roomStatus .status-reserve::before {
   content: "";
   display: block;
   width: 16px;
@@ -1447,6 +1448,12 @@ body.room_list ._pop .inner_popup {
   margin-bottom: 4px;
 }
 
+@media (max-width: 576px) {
+  .calendarContainer .fc-event-container .fc-event {
+    max-height: 14px;
+  }
+}
+
 .calendarContainer .fc-event-container .fc-event.status {
   border: none;
 }
@@ -1456,7 +1463,7 @@ body.room_list ._pop .inner_popup {
 }
 
 .calendarContainer .fc-event-container .fc-event.status-checkin {
-  background-color: #16a854;
+  background-color: #46c17a;
 }
 
 .calendarContainer .fc-event-container .fc-event.status-reserve {
@@ -1473,6 +1480,12 @@ body.room_list ._pop .inner_popup {
   letter-spacing: -0.42px;
   text-align: center;
   color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .calendarContainer .fc-event-container .fc-event span {
+    color: transparent;
+  }
 }
 
 .calendarContainer .fc-event-container .fc-event .fc-content {

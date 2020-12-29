@@ -126,7 +126,7 @@
         @include statusStyle($brownish-grey);
       }
       &-checkin {
-        @include statusStyle($bluish-green);
+        @include statusStyle($dark-mint);
       }
       &-reserve {
         @include statusStyle($cerulean);
@@ -184,6 +184,9 @@
       margin-right: 4px;
       margin-left: 4px;
       margin-bottom: 4px;
+      @include respond-to('sm') {
+        max-height: 14px;
+      }
 
       &.status {
         border: none;
@@ -191,7 +194,7 @@
           background-color: $brownish-grey;
         }
         &-checkin {
-          background-color: $bluish-green;
+          background-color: $dark-mint;
         }
         &-reserve {
           background-color: $cerulean;
@@ -207,6 +210,9 @@
         letter-spacing: -0.42px;
         text-align: center;
         color: $white;
+        @include respond-to('sm') {
+          color: transparent;
+        }
       }
 
       .fc-content {
