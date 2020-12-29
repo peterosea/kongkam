@@ -160,13 +160,13 @@ g {
   font-size: 14px;
   color: #fff;
   &._checkin {
-    background-color: #46c17a;
+    background-color: $dark-mint;
   }
   &._reserve {
-    background-color: #0085cb;
+    background-color: $turquoise-blue;
   }
   &._deposit {
-    background-color: #00466a;
+    background-color: $cerulean;
   }
   &._hold {
     background-color: #aaaaaa;
