@@ -2024,3 +2024,100 @@ header nav.find .menu-list li a.active {
   text-align: center;
   color: #222222;
 }
+
+.home-page .dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 6px;
+}
+
+.home-page .dashboard .gridTile {
+  width: calc(50% - 3px);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dddddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home-page .dashboard .gridTile .column {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home-page .dashboard .gridTile .listWrap {
+  padding: 32px 35px;
+  height: 100%;
+}
+
+.home-page .dashboard .gridTile .listWrap table {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.home-page .dashboard .gridTile .content.borderRight {
+  border-right: 1px solid #dddddd;
+  height: 100%;
+}
+
+.home-page .dashboard .gridTile table td {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.75;
+  letter-spacing: -0.48px;
+  color: #222222;
+}
+
+.home-page .dashboard .gridTile table .roomNumber {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.75;
+  letter-spacing: -0.48px;
+  text-align: center;
+  color: #666666;
+}
+
+.home-page .dashboard .gridTile .checkin table tr td:first-child {
+  width: 50px;
+}
+
+.home-page .dashboard .gridTile .checkin table tr td:last-child {
+  width: 66px;
+}
+
+.home-page .dashboard .gridTile .checkout table tr td:first-child {
+  width: 43px;
+}
+
+.home-page .dashboard .gridTile .header {
+  border-bottom: 1px solid #dddddd;
+  text-align: center;
+  padding: 15px;
+}
+
+.home-page .dashboard .gridTile .header span {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -0.54px;
+  color: #222222;
+}
