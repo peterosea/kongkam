@@ -113,8 +113,16 @@
         }
       }
       .checkout table tr {
+        td {
+          text-align: center;
+        }
         td:first-child {
           width: 43px;
+          text-align: left;
+        }
+        td:last-child {
+          width: 80px;
+          text-align: right;
         }
       }
       .currentRoomConditions td {

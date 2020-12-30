@@ -2105,8 +2105,18 @@ header nav.find .menu-list li a.active {
   width: 66px;
 }
 
+.home-page .dashboard .gridTile .checkout table tr td {
+  text-align: center;
+}
+
 .home-page .dashboard .gridTile .checkout table tr td:first-child {
   width: 43px;
+  text-align: left;
+}
+
+.home-page .dashboard .gridTile .checkout table tr td:last-child {
+  width: 80px;
+  text-align: right;
 }
 
 .home-page .dashboard .gridTile .currentRoomConditions td {
