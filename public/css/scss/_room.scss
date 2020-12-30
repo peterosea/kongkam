@@ -1,6 +1,9 @@
+@import "roomDetail";
+
 .room_list {
-  .options_wrap {
-    margin-top: 60px;
+  .container_inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .options_wrap,
   .selectbox_grp {
@@ -16,6 +19,7 @@
   ._content.list_wrap {
     margin-top: 20px;
     width: 100%;
+    margin-bottom: 40px;
   }
   .room_list {
     display: flex;
