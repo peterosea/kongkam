@@ -1959,4 +1959,68 @@ header nav.find .menu-list li a.active {
   letter-spacing: -0.66px;
   color: #222222;
 }
-/*# sourceMappingURL=style.css.map */
+
+.home-page {
+  padding-top: 51px;
+  padding-bottom: 65px;
+}
+
+.home-page .date {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.46;
+  letter-spacing: -0.78px;
+  text-align: center;
+  color: #222222;
+  margin-bottom: 30px;
+}
+
+.home-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-page .allInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding: 23px 77px 33px;
+  margin: 0;
+  background-color: #ffffff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.home-page .allInfo .count {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.48;
+  letter-spacing: -1.2px;
+  text-align: center;
+  color: #e50019;
+}
+
+.home-page .allInfo .title {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -0.48px;
+  text-align: center;
+  color: #222222;
+}

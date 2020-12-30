@@ -1,0 +1,53 @@
+.home-page {
+  padding-top: 51px;
+  padding-bottom: 65px;
+  .date {
+    font-family: $NotoSansKR;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: -0.78px;
+    text-align: center;
+    color: $black;
+    margin-bottom: 30px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .allInfo {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 23px 77px 33px;
+    margin: 0;
+    background-color: $white;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 20px;
+    .count {
+      font-family: $NotoSansKR;
+      font-size: 40px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.48;
+      letter-spacing: -1.2px;
+      text-align: center;
+      color: $cherry-red;
+    }
+    .title {
+      font-family: $NotoSansKR;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: -0.48px;
+      text-align: center;
+      color: $black;
+    }
+  }
+}
