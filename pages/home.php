@@ -147,7 +147,33 @@
             </div>
           </div>
         </div>
-        <div class="gridTile">testt</div>
+        <div class="gridTile">
+          <div class="column">
+            <div class="header"><span>공지사항</span></div>
+            <div class="content">
+              <div class="listWrap">
+                <ul class="list">
+                  <li>
+                    <div class="title">11 : 00 김정현 고객 3시 예약 (입금완료)</div>
+                    <div class="date">20.12.25</div>
+                  </li>
+                  <li>
+                    <div class="title">12 : 30 예약 고객 입금확인 필요</div>
+                    <div class="date">20.12.25</div>
+                  </li>
+                  <li>
+                    <div class="title">10월 미입금 내역 확인</div>
+                    <div class="date">20.12.25</div>
+                  </li>
+                  <li>
+                    <div class="title">10월 미입금 내역 확인</div>
+                    <div class="date">20.12.25</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="gridTile">test</div>
       </div>
     </div>

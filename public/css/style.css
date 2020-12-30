@@ -2069,6 +2069,37 @@ header nav.find .menu-list li a.active {
   width: 100%;
 }
 
+.home-page .dashboard .gridTile .listWrap ul.list {
+  list-style: none;
+}
+
+.home-page .dashboard .gridTile .listWrap ul.list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.home-page .dashboard .gridTile .listWrap ul.list li:last-child {
+  margin-bottom: 0;
+}
+
+.home-page .dashboard .gridTile .listWrap ul.list li .title,
+.home-page .dashboard .gridTile .listWrap ul.list li .date {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.48px;
+  text-align: left;
+  color: #222222;
+  margin: 0;
+}
+
 .home-page .dashboard .gridTile .content.borderRight {
   border-right: 1px solid #dddddd;
   height: 100%;
