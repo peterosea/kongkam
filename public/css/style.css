@@ -83,6 +83,7 @@ g {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin: 0 auto;
 }
 
 .container_inner.fixed_inner {
@@ -914,24 +915,29 @@ header.main_header .gnb ._nav a {
   gap: 9px;
 }
 
+.room_list .options_wrap {
+  margin-top: 60px;
+}
+
 @media (max-width: 780px) {
-  body.room_list .options_wrap, body.room_list .selectbox_grp {
+  .room_list .options_wrap,
+  .room_list .selectbox_grp {
     width: 100%;
   }
 }
 
 @media (max-width: 780px) {
-  body.room_list .options_wrap .selectbox_grp > li {
+  .room_list .options_wrap .selectbox_grp > li {
     width: 50%;
   }
 }
 
-body.room_list ._content.list_wrap {
+.room_list ._content.list_wrap {
   margin-top: 20px;
   width: 100%;
 }
 
-body.room_list .room_list {
+.room_list .room_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -939,7 +945,7 @@ body.room_list .room_list {
       flex-wrap: wrap;
 }
 
-body.room_list .room {
+.room_list .room {
   border-radius: 6px;
   border: solid 1px #ddd;
   background-color: #ffffff;
@@ -956,11 +962,11 @@ body.room_list .room {
   position: relative;
 }
 
-body.room_list .room:nth-child(5n) {
+.room_list .room:nth-child(5n) {
   margin-right: 0;
 }
 
-body.room_list .room .inner_wrap {
+.room_list .room .inner_wrap {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -972,7 +978,7 @@ body.room_list .room .inner_wrap {
 }
 
 @media (max-width: 780px) {
-  body.room_list .room .inner_wrap {
+  .room_list .room .inner_wrap {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -980,7 +986,7 @@ body.room_list .room .inner_wrap {
   }
 }
 
-body.room_list .room .number {
+.room_list .room .number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -994,13 +1000,13 @@ body.room_list .room .number {
   border-bottom: 1px solid #ddd;
 }
 
-body.room_list .room .number span {
+.room_list .room .number span {
   font-size: 20px;
   font-weight: bold;
   line-height: 1;
 }
 
-body.room_list .room .text_wrap {
+.room_list .room .text_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1019,23 +1025,23 @@ body.room_list .room .text_wrap {
   min-height: 170px;
 }
 
-body.room_list .room .text_wrap ._text li {
+.room_list .room .text_wrap ._text li {
   line-height: 1.6em;
   font-size: 16px;
   letter-spacing: -0.02em;
   text-align: center;
 }
 
-body.room_list .room .text_wrap .label_grp {
+.room_list .room .text_wrap .label_grp {
   margin-top: 14px;
 }
 
-body.room_list .room:hover {
+.room_list .room:hover {
   border-color: rgba(0, 133, 203, 0.5);
 }
 
 @media (max-width: 780px) {
-  body.room_list .room {
+  .room_list .room {
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1043,12 +1049,12 @@ body.room_list .room:hover {
             flex-direction: column;
     margin-right: 0;
   }
-  body.room_list .room .number {
+  .room_list .room .number {
     border-bottom: none;
     border-right: 1px solid #ddd;
     width: 23%;
   }
-  body.room_list .room .text_wrap {
+  .room_list .room .text_wrap {
     width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1063,51 +1069,51 @@ body.room_list .room:hover {
     min-height: 60px;
     padding: 20px 30px;
   }
-  body.room_list .room .text_wrap ._text li {
+  .room_list .room .text_wrap ._text li {
     text-align: left;
   }
-  body.room_list .room .text_wrap .label_grp {
+  .room_list .room .text_wrap .label_grp {
     margin-top: 0;
   }
 }
 
 @media (max-width: 576px) {
-  body.room_list .room .text_wrap {
+  .room_list .room .text_wrap {
     padding: 20px;
   }
-  body.room_list .room .number {
+  .room_list .room .number {
     width: 32%;
   }
 }
 
-body.room_list .inner_popup {
+.room_list .inner_popup {
   border: solid 1px #0085cb;
   left: -326px;
   top: -1px;
 }
 
-body.room_list .inner_popup .btn.close {
+.room_list .inner_popup .btn.close {
   right: 15px;
   position: absolute;
   top: 10px;
   cursor: pointer;
 }
 
-body.room_list .inner_popup .btn.close > i {
+.room_list .inner_popup .btn.close > i {
   font-size: 21px;
   color: #ccc;
 }
 
-body.room_list .inner_popup .btn.close > i:hover {
+.room_list .inner_popup .btn.close > i:hover {
   color: #333;
 }
 
-body.room_list .inner_popup li {
+.room_list .inner_popup li {
   font-size: 16px;
   line-height: 2;
 }
 
-body.room_list .inner_popup label {
+.room_list .inner_popup label {
   font-weight: bold;
   width: 30%;
   display: -webkit-inline-box;
@@ -1116,7 +1122,7 @@ body.room_list .inner_popup label {
 }
 
 @media (max-width: 780px) {
-  body.room_list .inner_popup {
+  .room_list .inner_popup {
     position: relative;
     left: 0;
     top: 0;
@@ -1129,34 +1135,34 @@ body.room_list .inner_popup label {
     border-top-left-radius: 0;
     border-top: 1px solid #ddd;
   }
-  body.room_list .inner_popup.with_tail:before {
+  .room_list .inner_popup.with_tail:before {
     content: none;
   }
-  body.room_list .inner_popup.with_tail:after {
+  .room_list .inner_popup.with_tail:after {
     content: none;
   }
-  body.room_list .inner_popup ul {
+  .room_list .inner_popup ul {
     width: 100%;
   }
-  body.room_list .inner_popup label {
+  .room_list .inner_popup label {
     width: 20%;
   }
 }
 
 @media (max-width: 576px) {
-  body.room_list .inner_popup label {
+  .room_list .inner_popup label {
     width: 30%;
   }
 }
 
-body.room_list ._pop .inner_popup {
+.room_list ._pop .inner_popup {
   visibility: visible;
   opacity: 1;
   z-index: 9;
 }
 
 @media (max-width: 780px) {
-  body.room_list ._pop .inner_popup {
+  .room_list ._pop .inner_popup {
     height: 0;
     padding: 30px 40px;
     height: auto;
@@ -1164,7 +1170,7 @@ body.room_list ._pop .inner_popup {
 }
 
 @media (max-width: 576px) {
-  body.room_list ._pop .inner_popup {
+  .room_list ._pop .inner_popup {
     padding: 20px 30px;
   }
 }
@@ -1959,4 +1965,3 @@ header nav.find .menu-list li a.active {
   letter-spacing: -0.66px;
   color: #222222;
 }
-/*# sourceMappingURL=style.css.map */
