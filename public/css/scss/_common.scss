@@ -160,6 +160,9 @@ g {
   width: 74px;
   font-size: 14px;
   color: #fff;
+  box-shadow: none;
+  border: none;
+
   &._checkin {
     background-color: $dark-mint;
   }
