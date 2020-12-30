@@ -108,7 +108,45 @@
             </div>
           </div>
         </div>
-        <div class="gridTile">test</div>
+        <div class="gridTile">
+          <div class="column">
+            <div class="header"><span>현 객실상황</span></div>
+            <div class="content">
+              <div class="listWrap">
+                <table class="currentRoomConditions">
+                  <thead>
+                    <tr>
+                      <th>객실</th>
+                      <th>고객</th>
+                      <th>입실</th>
+                      <th>퇴실</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1001</td>
+                      <td>홍길동</td>
+                      <td>11월 18일 13:30</td>
+                      <td>11월 21일 11:00</td>
+                    </tr>
+                    <tr>
+                      <td>1001</td>
+                      <td>홍길동</td>
+                      <td>11월 18일 13:30</td>
+                      <td>11월 21일 11:00</td>
+                    </tr>
+                    <tr>
+                      <td>1001</td>
+                      <td>홍길동</td>
+                      <td>11월 18일 13:30</td>
+                      <td>11월 21일 11:00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="gridTile">testt</div>
         <div class="gridTile">test</div>
       </div>
