@@ -9,3 +9,15 @@
 ## Description
 
 PHP 로컬서버로 셋팅해서 작업중.
+
+## Hansanghyeon
+
+### 환경
+
+- docker
+  - apache
+  - php:8.0
+
+위 구성으로 작업
+
+`url/pages/calendar.php` 해당 php를 단일로 불러오는 방식으로 보고 테스트, 코딩
