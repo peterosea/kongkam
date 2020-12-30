@@ -124,6 +124,7 @@ g {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  margin: 0 auto;
   &.fixed_inner {
     width: 100%;
     max-width: $siteWidth;
@@ -159,6 +160,9 @@ g {
   width: 74px;
   font-size: 14px;
   color: #fff;
+  box-shadow: none;
+  border: none;
+
   &._checkin {
     background-color: $dark-mint;
   }
