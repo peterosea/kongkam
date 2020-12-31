@@ -414,7 +414,8 @@ form.type-default label span {
   color: #222222;
 }
 
-form.type-default label input {
+form.type-default label input,
+form.type-default label textarea {
   padding: 16px 20px;
   border: 1px solid #dddddd;
   border-radius: 6px;
@@ -429,23 +430,28 @@ form.type-default label input {
   text-align: left;
 }
 
-form.type-default label input::-webkit-input-placeholder {
+form.type-default label input::-webkit-input-placeholder,
+form.type-default label textarea::-webkit-input-placeholder {
   color: #999999;
 }
 
-form.type-default label input:-ms-input-placeholder {
+form.type-default label input:-ms-input-placeholder,
+form.type-default label textarea:-ms-input-placeholder {
   color: #999999;
 }
 
-form.type-default label input::-ms-input-placeholder {
+form.type-default label input::-ms-input-placeholder,
+form.type-default label textarea::-ms-input-placeholder {
   color: #999999;
 }
 
-form.type-default label input::placeholder {
+form.type-default label input::placeholder,
+form.type-default label textarea::placeholder {
   color: #999999;
 }
 
-form.type-default label input.fullWidth {
+form.type-default label input.fullWidth,
+form.type-default label textarea.fullWidth {
   max-width: none;
 }
 
@@ -475,21 +481,24 @@ form.type-default label .phone input {
   width: 100%;
 }
 
-form.type-default label .phone .select {
-  position: relative;
-  width: 100%;
-  height: 100%;
+form.type-default label .phone .select select {
   max-width: 170px;
 }
 
-form.type-default label .phone .select select {
+form.type-default label .select {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+form.type-default label .select select {
   width: 100%;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
 
-form.type-default label .phone .select img.arrow {
+form.type-default label .select img.arrow {
   position: absolute;
   pointer-events: none;
   top: 50%;
@@ -1421,6 +1430,124 @@ header.main_header .gnb ._nav a {
   }
 }
 
+.calendarDetailView {
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: solid 2px #0085cb;
+}
+
+.calendarDetailView .header {
+  padding: 24px 49px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.calendarDetailView .content {
+  padding: 33px 52px 42px;
+}
+
+.calendarDetailView .content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.calendarDetailView .content ul li {
+  width: calc(50% - 5px);
+}
+
+@media (max-width: 992px) {
+  .calendarDetailView .content ul li {
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.calendarDetailView .content ul li:nth-child(2n-1) {
+  padding-right: 40px;
+}
+
+.calendarDetailView .content ul li:nth-child(2n) {
+  padding-left: 40px;
+}
+
+.calendarDetailView .content ul li.fullWidth {
+  width: 100%;
+  padding: 0;
+}
+
+.calendarDetailView .content ul label {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+@media (max-width: 576px) {
+  .calendarDetailView .content ul label {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.calendarDetailView .content ul label input,
+.calendarDetailView .content ul label select,
+.calendarDetailView .content ul label textarea {
+  max-width: none;
+  width: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.48px;
+  text-align: left;
+  color: #222222;
+}
+
+.calendarDetailView .content ul label.align-flex-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.calendarDetailView .content ul label textarea {
+  width: 100%;
+  max-width: none;
+}
+
+.calendarDetailView .content ul .btnListItem {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.calendarDetailView .content .name {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 3.75;
+  letter-spacing: -0.48px;
+  text-align: left;
+  color: #222222;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 80px;
+}
+
 .calendarContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1436,6 +1563,7 @@ header.main_header .gnb ._nav a {
 
 .calendarContainer .container {
   max-width: 1200px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

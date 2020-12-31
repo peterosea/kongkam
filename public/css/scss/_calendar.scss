@@ -1,9 +1,12 @@
+@import "calendarDetail";
+
 .calendarContainer {
   display: flex;
   justify-content: center;
   flex-direction: column;
   .container {
     max-width: 1200px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -184,7 +187,7 @@
       margin-right: 4px;
       margin-left: 4px;
       margin-bottom: 4px;
-      @include respond-to('sm') {
+      @include respond-to("sm") {
         max-height: 14px;
       }
 
@@ -210,7 +213,7 @@
         letter-spacing: -0.42px;
         text-align: center;
         color: $white;
-        @include respond-to('sm') {
+        @include respond-to("sm") {
           color: transparent;
         }
       }

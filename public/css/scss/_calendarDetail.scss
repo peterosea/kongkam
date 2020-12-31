@@ -1,0 +1,83 @@
+.calendarDetailView {
+  background-color: $white;
+  border-radius: 6px;
+  border: solid 2px $cerulean;
+
+  .header {
+    padding: 24px 49px;
+    border-bottom: 1px solid $very-light-pink-two;
+  }
+  .content {
+    padding: 33px 52px 42px;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 10px;
+      margin-bottom: 10px;
+      li {
+        width: calc(50% - 5px);
+        @include respond-to("lg") {
+          width: 100%;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+        &:nth-child(2n-1) {
+          padding-right: 40px;
+        }
+        &:nth-child(2n) {
+          padding-left: 40px;
+        }
+      }
+      li.fullWidth {
+        width: 100%;
+        padding: 0;
+      }
+      label {
+        flex-wrap: nowrap;
+        @include respond-to("sm") {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        input,
+        select,
+        textarea {
+          max-width: none;
+          width: 100%;
+          font-family: $NotoSansKR;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: -0.48px;
+          text-align: left;
+          color: $black;
+        }
+        &.align-flex-start {
+          align-items: flex-start;
+        }
+        textarea {
+          width: 100%;
+          max-width: none;
+        }
+      }
+      .btnListItem {
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+    .name {
+      font-family: $NotoSansKR;
+      font-size: 16px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 3.75;
+      letter-spacing: -0.48px;
+      text-align: left;
+      color: $black;
+      flex: 0 0 auto;
+      width: 80px;
+    }
+  }
+}
