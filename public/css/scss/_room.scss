@@ -4,6 +4,10 @@
   .container_inner {
     padding-top: 60px;
     padding-bottom: 60px;
+    @include respond-to("md") {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
   .options_wrap,
   .selectbox_grp {
@@ -44,6 +48,7 @@
       flex-direction: column;
       @include respond-to("md") {
         flex-direction: row;
+        cursor: pointer;
       }
     }
     .number {
@@ -113,9 +118,39 @@
     }
   }
   .inner_popup {
-    border: solid 1px $cerulean;
-    left: -326px;
-    top: -1px;
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top: 1px solid #ddd;
+    display: none;
+    @include respond-to("md") {
+      display: block;
+    }
+    .contentWrap {
+      padding: 50px 30px;
+      border-bottom: 1px solid $very-light-pink;
+    }
+    h1 {
+      display: inline-block;
+      font-family: $NotoSansKR;
+      font-size: 32px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.47;
+      letter-spacing: -0.96px;
+      text-align: left;
+      color: $black;
+      border-bottom: 4px solid $black;
+      margin-bottom: 40px;
+      margin-top: 0;
+    }
     .btn.close {
       right: 15px;
       position: absolute;
@@ -129,56 +164,39 @@
         }
       }
     }
+    ul {
+      width: 100%;
+    }
     li {
       font-size: 16px;
       line-height: 2;
     }
     label {
       font-weight: bold;
-      width: 30%;
+      width: 20%;
       display: inline-flex;
-    }
-    @include respond-to("md") {
-      position: relative;
-      left: 0;
-      top: 0;
-      height: 0;
-      padding: 0;
-      border: none;
-      box-shadow: none;
-      border-top-right-radius: 0;
-      border-top-left-radius: 0;
-      border-top: 1px solid #ddd;
-      &.with_tail:before {
-        content: none;
-      }
-      &.with_tail:after {
-        content: none;
-      }
-      ul {
-        width: 100%;
-      }
-      label {
-        width: 20%;
-      }
-    }
-    @include respond-to("sm") {
-      label {
+      @include respond-to("sm") {
         width: 30%;
       }
     }
+  }
+  .room._pop {
+    border: 2px solid $cerulean;
   }
   ._pop .inner_popup {
     visibility: visible;
     opacity: 1;
     z-index: 9;
-    @include respond-to("md") {
-      height: 0;
-      padding: 30px 40px;
-      height: auto;
-    }
-    @include respond-to("sm") {
-      padding: 20px 30px;
+    height: auto;
+  }
+}
+.d-none {
+  display: none;
+}
+.d-md {
+  @media screen and (min-width: 769px) {
+    &-block {
+      display: block;
     }
   }
 }

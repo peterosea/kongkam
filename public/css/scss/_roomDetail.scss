@@ -6,13 +6,24 @@
   .row {
     display: flex;
     width: 100%;
-    gap: 1px;
     background-color: $very-light-pink-two;
+    @include respond-to("md") {
+      flex-direction: column;
+    }
     .col {
       flex: auto;
       display: flex;
       flex-direction: column;
-      gap: 1px;
+      border-right: 1px solid $very-light-pink-two;
+      @include respond-to("md") {
+        border-right: none;
+        border-bottom: 1px solid $very-light-pink-two;
+      }
+      &:last-child {
+        border-right: none;
+        border-bottom: none;
+      }
+
       .header,
       .content {
         background-color: $white;
@@ -24,6 +35,11 @@
   }
   .header {
     padding: 22px 42px;
+    border-bottom: 1px solid $very-light-pink-two;
+    @include respond-to("md") {
+      padding-top: 52px;
+      padding-bottom: 8px;
+    }
     span {
       font-family: $NotoSansKR;
       font-size: 18px;
@@ -34,10 +50,17 @@
       letter-spacing: -0.54px;
       text-align: left;
       color: $black;
+      @include respond-to("md") {
+        letter-spacing: -0.96px;
+        border-bottom: 4px solid $black;
+      }
     }
   }
   .content {
     padding: 32px 42px;
+    @include respond-to("md") {
+      padding-bottom: 52px;
+    }
     .customerInfo,
     .roomStateManagement {
       th {
@@ -52,6 +75,10 @@
         text-align: left;
         color: $black;
         padding-right: 20px;
+        @include respond-to("md") {
+          line-height: 2;
+          letter-spacing: -0.84px;
+        }
       }
       td {
         font-family: $NotoSansKR;
@@ -63,6 +90,11 @@
         letter-spacing: -0.48px;
         text-align: left;
         color: $black;
+        @include respond-to("md") {
+          font-weight: 300;
+          line-height: 2;
+          letter-spacing: -0.84px;
+        }
       }
     }
     .roomOptionControl {
@@ -90,9 +122,15 @@
         align-items: center;
         justify-content: space-between;
         gap: 24px;
+        @include respond-to("md") {
+          flex-wrap: wrap;
+        }
       }
       .title {
         font-weight: 500;
+        @include respond-to("sm") {
+          width: 100%;
+        }
       }
       .temperature {
         display: flex;
@@ -113,5 +151,15 @@
         padding-left: 20px;
       }
     }
+  }
+}
+.inner_popup .roomDetailView {
+  border: none;
+  .header {
+    border-bottom: none;
+  }
+  .content .roomOptionControl .switch {
+    display: flex;
+    align-items: center;
   }
 }

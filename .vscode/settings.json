@@ -1,6 +1,5 @@
 {
   "editor.formatOnSave": true,
-  "liveSassCompile.settings.generateMap": false,
   "liveSassCompile.settings.formats": [
     {
       "format": "expanded",
