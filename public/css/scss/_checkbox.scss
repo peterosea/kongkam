@@ -1,6 +1,7 @@
 label.iosCheckbox {
   display: inline-block;
   background: #fff;
+  width: auto !important;
 
   > input {
     display: none;
