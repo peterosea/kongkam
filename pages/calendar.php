@@ -37,16 +37,8 @@
             </div>
           </div>
         </div>
-        <div class="inner_popup with_tail">
-          <ul>
-            <li><label>고객명</label>김영희</li>
-            <li><label>인원</label>3명</li>
-            <li><label>숙박기간</label>2박 3일</li>
-            <li><label>입실</label>11월 12일</li>
-            <li><label>퇴실</label>11월 15일</li>
-            <li><label>예약앱</label>야놀자</li>
-            <li><label>메모</label>차량 여부 및 다른 사항들</li>
-          </ul>
+        <div class="inner_popup">
+          <?php include('calendarDetailView.php') ?>
         </div>
       </div>
       <div class="room">
@@ -66,103 +58,31 @@
             </div>
           </div>
         </div>
-        <div class="inner_popup with_tail">
-          <ul>
-            <li><label>고객명</label>김영희</li>
-            <li><label>인원</label>3명</li>
-            <li><label>숙박기간</label>2박 3일</li>
-            <li><label>입실</label>11월 12일</li>
-            <li><label>퇴실</label>11월 15일</li>
-            <li><label>예약앱</label>야놀자</li>
-            <li><label>메모</label>차량 여부 및 다른 사항들</li>
-          </ul>
+        <div class="inner_popup">
+          <?php include('calendarDetailView.php') ?>
         </div>
       </div>
     </div>
     <script type="text/javascript">
       // 객실관리 리스트 팝업
-      const getRoom = document.querySelectorAll('.room');
+      const getRoom = document.querySelectorAll('.room .inner_wrap');
       const pop = '_pop';
       for (let i = 0; i < getRoom.length; i++) {
         getRoom[i].addEventListener('click', function(e) {
-          if (getRoom[i].classList.contains(pop)) {
-            getRoom[i].classList.remove(pop);
+          if (getRoom[i].parentElement.classList.contains(pop)) {
+            getRoom[i].parentElement.classList.remove(pop);
           } else {
             for (let j = 0; j < getRoom.length; j++) {
-              getRoom[j].classList.remove(pop);
+              getRoom[j].parentElement.classList.remove(pop);
             }
-            getRoom[i].classList.add(pop);
+            getRoom[i].parentElement.classList.add(pop);
           }
         });
       }
     </script>
   </div>
-  <div class="innerWrap container">
-    <div class="calendarDetailView">
-      <div class="header">101호</div>
-      <div class="content">
-        <form class="type-default">
-          <ul>
-            <li>
-              <label>
-                <span class="name">고객명</span>
-                <input type="text">
-              </label>
-            </li>
-            <li>
-              <label>
-                <span class="name">전화번호</span>
-                <input type="text">
-              </label>
-            </li>
-            <li>
-              <label>
-                <span class="name">입실일</span>
-                <input type="date">
-              </label>
-            </li>
-            <li>
-              <label>
-                <span class="name">퇴실일</span>
-                <input type="date">
-              </label>
-            </li>
-            <li>
-              <label>
-                <span class="name">예약앱</span>
-                <div class="select">
-                  <select name="" id="">
-                    <option value="야놀자">야놀자</option>
-                  </select>
-                  <img class="arrow" src="../public/img/73.png" srcset="../public/img/73@2x.png 2x, ../public/img/73@3x.png 3x">
-                </div>
-              </label>
-            </li>
-            <li>
-              <label>
-                <span class="name">입금상태</span>
-                <div class="select">
-                  <select name="" id="">
-                    <option value="입금대기">입금대기</option>
-                    <option value="입금완료">입금완료</option>
-                  </select>
-                  <img class="arrow" src="../public/img/73.png" srcset="../public/img/73@2x.png 2x, ../public/img/73@3x.png 3x">
-                </div>
-              </label>
-            </li>
-            <li class="fullWidth">
-              <label class="align-flex-start">
-                <span class="name">메모</span>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-              </label>
-            </li>
-            <li class="fullWidth btnListItem">
-              <button type="submit" class="label _deposit">저장</button>
-            </li>
-          </ul>
-        </form>
-      </div>
-    </div>
+  <div class="container desktopOnly">
+    <?php include('calendarDetailView.php') ?>
   </div>
 </div>
 <?php include_once '../includes/foot.php' ?>

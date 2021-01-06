@@ -1311,6 +1311,7 @@ header.main_header .gnb ._nav a {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  overflow: hidden;
 }
 
 .room_list .room:nth-child(5n) {
@@ -1656,6 +1657,51 @@ header.main_header .gnb ._nav a {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   width: 80px;
+}
+
+.inner_popup .calendarDetailView {
+  border: none;
+}
+
+.inner_popup .calendarDetailView .header {
+  display: none;
+}
+
+.inner_popup .calendarDetailView .content {
+  padding: 40px 42px;
+}
+
+.inner_popup .calendarDetailView .content ul li label {
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.inner_popup .calendarDetailView .content .btnListItem {
+  border-top: 1px solid #cccccc;
+  padding-top: 40px;
+}
+
+.inner_popup .calendarDetailView .content .btnListItem .label {
+  padding: 12px 30px;
+  width: auto;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.46;
+  letter-spacing: -0.84px;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .desktopOnly {
+    display: none !important;
+  }
 }
 
 .calendarContainer {
@@ -2220,14 +2266,7 @@ header.main_header .gnb ._nav a {
 @media (max-width: 780px) {
   .calendarContainer .mobileOnly ._pop .inner_popup {
     height: 0;
-    padding: 30px 40px;
     height: auto;
-  }
-}
-
-@media (max-width: 576px) {
-  .calendarContainer .mobileOnly ._pop .inner_popup {
-    padding: 20px 30px;
   }
 }
 
