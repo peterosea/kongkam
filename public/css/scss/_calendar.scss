@@ -385,11 +385,7 @@
       z-index: 9;
       @include respond-to("md") {
         height: 0;
-        padding: 30px 40px;
         height: auto;
-      }
-      @include respond-to("sm") {
-        padding: 20px 30px;
       }
     }
   }
