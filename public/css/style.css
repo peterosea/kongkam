@@ -2510,6 +2510,8 @@ header nav.find .menu-list li a.active {
 .home-page .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .home-page .allInfo {
@@ -2528,6 +2530,34 @@ header nav.find .menu-list li a.active {
           justify-content: space-between;
   gap: 18px;
   margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #dddddd;
+}
+
+@media (max-width: 780px) {
+  .home-page .allInfo {
+    padding: 23px 30px 33px;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-page .allInfo {
+    padding-left: 10%;
+    padding-right: 10%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.home-page .allInfo .divider {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .home-page .allInfo .divider {
+    display: block;
+    width: 100%;
+  }
 }
 
 .home-page .allInfo .count {
@@ -2575,6 +2605,18 @@ header nav.find .menu-list li a.active {
       flex-wrap: wrap;
 }
 
+@media (max-width: 992px) {
+  .home-page .dashboard .gridTile.checkinoutHistory, .home-page .dashboard .gridTile.roomStatus {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-page .dashboard .gridTile {
+    width: 100%;
+  }
+}
+
 .home-page .dashboard .gridTile .column {
   -webkit-box-flex: 1;
       -ms-flex: auto;
@@ -2586,11 +2628,20 @@ header nav.find .menu-list li a.active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
 }
 
 .home-page .dashboard .gridTile .listWrap {
   padding: 32px 35px;
   height: 100%;
+}
+
+@media (max-width: 576px) {
+  .home-page .dashboard .gridTile .listWrap {
+    padding: 32px 18px;
+    overflow-x: scroll;
+    width: 100%;
+  }
 }
 
 .home-page .dashboard .gridTile .listWrap table {
@@ -2616,6 +2667,10 @@ header nav.find .menu-list li a.active {
   margin-bottom: 0;
 }
 
+.home-page .dashboard .gridTile .listWrap ul.list li .title {
+  word-break: keep-all;
+}
+
 .home-page .dashboard .gridTile .listWrap ul.list li .title,
 .home-page .dashboard .gridTile .listWrap ul.list li .date {
   font-family: "Noto Sans KR", sans-serif;
@@ -2632,6 +2687,12 @@ header nav.find .menu-list li a.active {
 .home-page .dashboard .gridTile .content.borderRight {
   border-right: 1px solid #dddddd;
   height: 100%;
+}
+
+@media (max-width: 576px) {
+  .home-page .dashboard .gridTile .content.borderRight {
+    border: none;
+  }
 }
 
 .home-page .dashboard .gridTile table td {
@@ -2699,4 +2760,23 @@ header nav.find .menu-list li a.active {
   line-height: 1.5;
   letter-spacing: -0.54px;
   color: #222222;
+}
+
+.home-page .dashboard .gridTile.roomStatus .date {
+  min-width: 130px;
+}
+
+@media (max-width: 576px) {
+  .home-page .dashboard .gridTile.checkinoutHistory {
+    border: none;
+    background-color: transparent;
+  }
+  .home-page .dashboard .gridTile.checkinoutHistory .column {
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #dddddd;
+  }
+  .home-page .dashboard .gridTile.checkinoutHistory .checkin {
+    margin-bottom: 10px;
+  }
 }

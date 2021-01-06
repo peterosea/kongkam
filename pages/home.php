@@ -18,6 +18,7 @@
           <div class="count">0</div>
           <div class="title">예약취소</div>
         </li>
+        <li class="divider"></li>
         <li>
           <div class="count">3</div>
           <div class="title">대기객실</div>
@@ -36,7 +37,7 @@
   <div class="section">
     <div class="container">
       <div class="dashboard">
-        <div class="gridTile">
+        <div class="gridTile checkinoutHistory">
           <div class="column checkin">
             <div class="header"><span>오늘 입실</span></div>
             <div class="content borderRight">
@@ -108,7 +109,7 @@
             </div>
           </div>
         </div>
-        <div class="gridTile">
+        <div class="gridTile roomStatus">
           <div class="column">
             <div class="header"><span>현 객실상황</span></div>
             <div class="content">
@@ -124,22 +125,22 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>1001</td>
+                      <td>505호</td>
                       <td>홍길동</td>
-                      <td>11월 18일 13:30</td>
-                      <td>11월 21일 11:00</td>
+                      <td class="date">11월 18일 13:30</td>
+                      <td class="date">11월 21일 11:00</td>
                     </tr>
                     <tr>
-                      <td>1001</td>
+                      <td>506호</td>
                       <td>홍길동</td>
-                      <td>11월 18일 13:30</td>
-                      <td>11월 21일 11:00</td>
+                      <td class="date">11월 18일 13:30</td>
+                      <td class="date">11월 21일 11:00</td>
                     </tr>
                     <tr>
-                      <td>1001</td>
+                      <td>507호</td>
                       <td>홍길동</td>
-                      <td>11월 18일 13:30</td>
-                      <td>11월 21일 11:00</td>
+                      <td class="date">11월 18일 13:30</td>
+                      <td class="date">11월 21일 11:00</td>
                     </tr>
                   </tbody>
                 </table>
