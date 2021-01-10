@@ -121,7 +121,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 24px;
+        > div {
+          margin-right: 24px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
         @include respond-to("md") {
           flex-wrap: wrap;
         }
@@ -135,12 +140,15 @@
       .temperature {
         display: flex;
         align-items: center;
-        gap: 8px;
+        .decrement {
+          margin-right: 8px;
+        }
 
         .valueWrap {
           display: flex;
           align-items: center;
           margin-bottom: 2px;
+          margin-right: 8px;
         }
         input {
           border: none;
