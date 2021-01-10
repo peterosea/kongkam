@@ -27,11 +27,14 @@
     margin: 0;
     background-color: $white;
     justify-content: space-between;
-    gap: 18px;
     margin-bottom: 20px;
     border-radius: 6px;
     border: 1px solid $very-light-pink;
 
+    li {
+      width: 100%;
+      max-width: 100px;
+    }
     @include respond-to("md") {
       padding: 23px 30px 33px;
     }
@@ -46,6 +49,7 @@
       @include respond-to("sm") {
         display: block;
         width: 100%;
+        max-width: none;
       }
     }
 
@@ -76,7 +80,6 @@
   .dashboard {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
     .gridTile {
       width: calc(50% - 3px);
       background-color: $white;
@@ -84,14 +87,21 @@
       border: 1px solid $very-light-pink;
       display: flex;
       flex-wrap: wrap;
+      margin-bottom: 6px;
+
+      &:nth-child(2n -1) {
+        margin-right: 6px;
+      }
 
       @include respond-to("lg") {
         &.checkinoutHistory,
         &.roomStatus {
+          margin-right: 0;
           width: 100%;
         }
       }
       @include respond-to("sm") {
+        margin-right: 0 !important;
         width: 100%;
       }
 

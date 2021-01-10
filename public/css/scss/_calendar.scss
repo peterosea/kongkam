@@ -57,7 +57,6 @@
     .fc-center {
       display: flex;
       align-items: center;
-      gap: 0.75em;
       h2 {
         font-family: $NotoSansKR;
         font-size: 20px;
@@ -83,6 +82,12 @@
         height: 31px;
         padding: 0;
         margin: 0;
+        &.fc-prev-button {
+          margin-right: 0.75em;
+        }
+        &.fc-next-button {
+          margin-left: 0.75em;
+        }
         i {
           font-size: 6px;
           color: $brownish-grey;
@@ -92,8 +97,6 @@
   }
   ul.roomStatus {
     display: flex;
-    gap: 21px;
-
     @include respond-to("md") {
       display: none;
     }
@@ -124,7 +127,13 @@
     .status {
       display: flex;
       align-items: center;
-      gap: 7px;
+      margin-right: 21px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &::before {
+        margin-right: 7px;
+      }
       &-hold {
         @include statusStyle($brownish-grey);
       }

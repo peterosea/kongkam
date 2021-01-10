@@ -16,7 +16,9 @@ header nav.find {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 11px;
+        img {
+          margin-right: 11px;
+        }
         &.active {
           border-bottom: 4px solid $cherry-red;
         }

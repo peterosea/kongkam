@@ -378,14 +378,17 @@ form.type-default ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 3px;
   margin: 0;
   padding: 0;
 }
 
+form.type-default ul li {
+  margin-bottom: 3px;
+}
+
 @media (max-width: 576px) {
-  form.type-default ul {
-    gap: 13px;
+  form.type-default ul li {
+    margin-bottom: 13px;
   }
 }
 
@@ -398,7 +401,6 @@ form.type-default label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 8px;
 }
 
 form.type-default label span {
@@ -412,6 +414,7 @@ form.type-default label span {
   letter-spacing: -0.6px;
   text-align: left;
   color: #222222;
+  margin: 8px 8px 8px 0;
 }
 
 form.type-default label input,
@@ -471,7 +474,6 @@ form.type-default label .phone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 3px;
   max-width: 400px;
   width: 100%;
 }
@@ -481,8 +483,13 @@ form.type-default label .phone input {
   width: 100%;
 }
 
+form.type-default label .phone .select {
+  margin-right: 3px;
+}
+
 form.type-default label .phone .select select {
-  max-width: 170px;
+  max-width: 190px;
+  height: 100%;
 }
 
 form.type-default label .select {
@@ -516,7 +523,6 @@ form.type-default .squaredFour {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  gap: 10px;
 }
 
 form.type-default .squaredFour .checkbox {
@@ -527,6 +533,7 @@ form.type-default .squaredFour .checkbox {
   border-radius: 4px;
   border: solid 1px #dddddd;
   position: relative;
+  margin-right: 10px;
 }
 
 form.type-default .squaredFour .checkbox:after {
@@ -567,7 +574,6 @@ form.type-default .helpWrap .help {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 12px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -583,6 +589,7 @@ form.type-default .helpWrap .help span {
   letter-spacing: -0.48px;
   text-align: left;
   color: #222222;
+  margin-right: 12px;
 }
 
 form.type-authortication .numberPush {
@@ -591,17 +598,18 @@ form.type-authortication .numberPush {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 3px;
   margin-bottom: 19px;
 }
 
 form.type-authortication .numberPush button[type="submit"] {
   padding: 17px 38px;
+  margin-bottom: 0;
 }
 
 @media (max-width: 576px) {
   form.type-authortication .numberPush button[type="submit"] {
     width: 100%;
+    margin-bottom: 33px;
   }
 }
 
@@ -609,11 +617,14 @@ form.type-authortication .numberPush label {
   position: relative;
   width: 100%;
   max-width: 398px;
+  margin-right: 3px;
 }
 
 @media (max-width: 576px) {
   form.type-authortication .numberPush label {
     max-width: none;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -642,8 +653,11 @@ form.type-password .inputWrap {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 3px;
   margin-bottom: 10px;
+}
+
+form.type-password .inputWrap label:first-child {
+  margin-bottom: 3px;
 }
 
 form.type-password button[type="submit"] {
@@ -976,13 +990,20 @@ header.main_header .gnb ._nav a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 3px;
+}
+
+.section.page-login .login .id {
+  margin-bottom: 3px;
 }
 
 @media (max-width: 576px) {
-  .section.page-login .login {
-    gap: 13px;
+  .section.page-login .login .id {
+    margin-bottom: 13px;
   }
+}
+
+.section.page-login .login label span {
+  width: 80px;
 }
 
 .section.page-login .option {
@@ -994,14 +1015,12 @@ header.main_header .gnb ._nav a {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 8px;
 }
 
 .section.page-login .option ul.find {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 18px;
 }
 
 .section.page-login .option ul.find li a {
@@ -1011,7 +1030,10 @@ header.main_header .gnb ._nav a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 9px;
+}
+
+.section.page-login .option ul.find li a img {
+  margin-right: 9px;
 }
 
 .roomDetailView {
@@ -1191,7 +1213,14 @@ header.main_header .gnb ._nav a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 24px;
+}
+
+.roomDetailView .content .roomOptionControl .roomOptionControlItemWrap > div {
+  margin-right: 24px;
+}
+
+.roomDetailView .content .roomOptionControl .roomOptionControlItemWrap > div:last-child {
+  margin-right: 0;
 }
 
 @media (max-width: 780px) {
@@ -1218,7 +1247,10 @@ header.main_header .gnb ._nav a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 8px;
+}
+
+.roomDetailView .content .roomOptionControl .temperature .decrement {
+  margin-right: 8px;
 }
 
 .roomDetailView .content .roomOptionControl .temperature .valueWrap {
@@ -1229,6 +1261,7 @@ header.main_header .gnb ._nav a {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 2px;
+  margin-right: 8px;
 }
 
 .roomDetailView .content .roomOptionControl .temperature input {
@@ -1566,7 +1599,6 @@ header.main_header .gnb ._nav a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 10px;
   margin-bottom: 10px;
 }
 
@@ -1584,6 +1616,13 @@ header.main_header .gnb ._nav a {
 
 .calendarDetailView .content ul li:nth-child(2n-1) {
   padding-right: 40px;
+  margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+  .calendarDetailView .content ul li:nth-child(2n-1) {
+    margin-right: 0;
+  }
 }
 
 .calendarDetailView .content ul li:nth-child(2n) {
@@ -1593,6 +1632,7 @@ header.main_header .gnb ._nav a {
 .calendarDetailView .content ul li.fullWidth {
   width: 100%;
   padding: 0;
+  margin-right: 0;
 }
 
 .calendarDetailView .content ul label {
@@ -1793,7 +1833,6 @@ header.main_header .gnb ._nav a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.75em;
 }
 
 .calendarContainer .fc-toolbar .fc-center h2,
@@ -1833,6 +1872,16 @@ header.main_header .gnb ._nav a {
   margin: 0;
 }
 
+.calendarContainer .fc-toolbar .fc-center .fc-button.fc-prev-button,
+.calendarContainer .toolbar .fc-center .fc-button.fc-prev-button {
+  margin-right: 0.75em;
+}
+
+.calendarContainer .fc-toolbar .fc-center .fc-button.fc-next-button,
+.calendarContainer .toolbar .fc-center .fc-button.fc-next-button {
+  margin-left: 0.75em;
+}
+
 .calendarContainer .fc-toolbar .fc-center .fc-button i,
 .calendarContainer .toolbar .fc-center .fc-button i {
   font-size: 6px;
@@ -1843,7 +1892,6 @@ header.main_header .gnb ._nav a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 21px;
 }
 
 @media (max-width: 780px) {
@@ -1859,7 +1907,15 @@ header.main_header .gnb ._nav a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 7px;
+  margin-right: 21px;
+}
+
+.calendarContainer ul.roomStatus .status:last-child {
+  margin-right: 0;
+}
+
+.calendarContainer ul.roomStatus .status::before {
+  margin-right: 7px;
 }
 
 .calendarContainer ul.roomStatus .status-hold span {
@@ -2307,7 +2363,10 @@ header nav.find .menu-list li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 11px;
+}
+
+header nav.find .menu-list li a img {
+  margin-right: 11px;
 }
 
 header nav.find .menu-list li a.active {
@@ -2475,10 +2534,6 @@ header nav.find .menu-list li a.active {
   margin-bottom: 10px;
 }
 
-.section.page-find.password button[type="submit"] {
-  margin-bottom: 33px;
-}
-
 .section.page-find.password .resultWrap .result {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 22px;
@@ -2528,10 +2583,14 @@ header nav.find .menu-list li a.active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 18px;
   margin-bottom: 20px;
   border-radius: 6px;
   border: 1px solid #dddddd;
+}
+
+.home-page .allInfo li {
+  width: 100%;
+  max-width: 100px;
 }
 
 @media (max-width: 780px) {
@@ -2557,6 +2616,7 @@ header nav.find .menu-list li a.active {
   .home-page .allInfo .divider {
     display: block;
     width: 100%;
+    max-width: none;
   }
 }
 
@@ -2590,7 +2650,6 @@ header nav.find .menu-list li a.active {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 6px;
 }
 
 .home-page .dashboard .gridTile {
@@ -2603,16 +2662,23 @@ header nav.find .menu-list li a.active {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.home-page .dashboard .gridTile:nth-child(2n -1) {
+  margin-right: 6px;
 }
 
 @media (max-width: 992px) {
   .home-page .dashboard .gridTile.checkinoutHistory, .home-page .dashboard .gridTile.roomStatus {
+    margin-right: 0;
     width: 100%;
   }
 }
 
 @media (max-width: 576px) {
   .home-page .dashboard .gridTile {
+    margin-right: 0 !important;
     width: 100%;
   }
 }

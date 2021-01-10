@@ -32,24 +32,28 @@
     margin-bottom: 27px;
     display: flex;
     flex-direction: column;
-    gap: 3px;
-    @include respond-to("sm") {
-      gap: 13px;
+    .id {
+      margin-bottom: 3px;
+      @include respond-to("sm") {
+        margin-bottom: 13px;
+      }
+    }
+    label span {
+      width: 80px;
     }
   }
   .option {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 8px;
-
     ul.find {
       display: flex;
-      gap: 18px;
       li a {
         display: flex;
         align-items: center;
-        gap: 9px;
+        img {
+          margin-right: 9px;
+        }
       }
     }
   }
