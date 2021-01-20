@@ -2793,3 +2793,182 @@ header.find .menu-list li {
     margin-bottom: 10px;
   }
 }
+
+main.customer_care {
+  padding: 70px 0;
+}
+
+main.customer_care .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main.customer_care .registration {
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #bfbfbf;
+}
+
+main.customer_care .registration .header {
+  border-bottom: 1px solid #bfbfbf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.customer_care .registration .header .col {
+  width: 100%;
+  padding: 23px 0;
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.48px;
+  color: #222222;
+}
+
+main.customer_care .registration .content {
+  padding: 28px 31px 4px 31px;
+}
+
+main.customer_care .registration .content .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.customer_care .registration .content .row:not(:last-child) {
+  border-bottom: 1px solid #bfbfbf;
+  padding-bottom: 13px;
+  margin-bottom: 13px;
+}
+
+main.customer_care .registration .content .row .col {
+  width: 100%;
+}
+
+main.customer_care .registration .content .row .col:not(:last-child) {
+  margin-right: 10px;
+}
+
+main.customer_care .registration .content .row input {
+  border-radius: 6px;
+  border: 1px solid #bfbfbf;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 16px;
+  padding: 17px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main.customer_care .registration .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 36px 31px;
+  position: relative;
+}
+
+main.customer_care .registration .footer .paging {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.customer_care .registration .footer .paging button {
+  all: unset;
+  background-color: #ffffff;
+  border-radius: 999px;
+  width: 31px;
+  height: 31px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #bfbfbf;
+  color: #656666;
+}
+
+main.customer_care .registration .footer .paging button.right {
+  margin-left: 31px;
+}
+
+main.customer_care .registration .footer .paging button.right i {
+  -webkit-transform: translateX(2px);
+          transform: translateX(2px);
+}
+
+main.customer_care .registration .footer .paging button.left {
+  margin-right: 31px;
+}
+
+main.customer_care .registration .footer .paging button.left i {
+  -webkit-transform: translateX(-1px);
+          transform: translateX(-1px);
+}
+
+main.customer_care .registration .footer .paging .paging-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #999999;
+}
+
+main.customer_care .registration .footer .paging .paging-number li {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  line-height: 1;
+  padding-bottom: 1px;
+}
+
+main.customer_care .registration .footer .paging .paging-number li:not(:last-child) {
+  margin-right: 8px;
+}
+
+main.customer_care .registration .footer .paging .paging-number .current {
+  color: #222222;
+}
+
+main.customer_care .registration .footer button.customer-registration-btn {
+  all: unset;
+  padding: 4px 16px 8px;
+  border-radius: 6px;
+  background-color: #0085cb;
+  position: absolute;
+  right: 31px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -0.48px;
+  text-align: center;
+  color: #ffffff;
+}

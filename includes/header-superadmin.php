@@ -2,7 +2,7 @@
   <div class="container">
     <ul class="menu-list">
       <li>
-        <a href="/pages/superadmin-page14.php">
+        <a href="/pages/customer-care-01.php">
           <img src="../public/img/150.svg">
           고객 관리
         </a>
