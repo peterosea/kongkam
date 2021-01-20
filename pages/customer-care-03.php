@@ -7,48 +7,38 @@
 <main class="page-content customer_care">
   <div class="container">
     <?php include_once 'customer-care-nav.php' ?>
-    <div class="customerModifyRegistration registrationStyle">
+    <div class="lodgingModifyRegistration registrationStyle">
       <div class="header modify">
-        고객 등록 / 수정
+        숙소 등록 / 수정
       </div>
       <div class="body">
         <form class="type-default">
           <ul>
             <li>
               <label>
-                <span class="name">ID</span>
+                <span class="name">숙소이름</span>
                 <input type="text">
               </label>
             </li>
             <li>
               <label>
-                <span class="name">Password</span>
-                <input type="password">
-              </label>
-            </li>
-            <li>
-              <label>
-                <span class="name">고객명</span>
+                <span class="name">주소</span>
                 <input type="text">
               </label>
             </li>
             <li>
               <label>
-                <span class="name">전화번호</span>
-                <input type="text">
+                <span class="name">체크인/마감 시간</span>
+                <input type="text" value="15:00">
+                <input type="text" value="15:00">
               </label>
             </li>
             <li>
               <label>
-                <span class="name">서비스 이용상태</span>
-                <input type="text" readonly value="이용중 (2021.01.01 ~ 2021.03.31)">
+                <span class="name">체크아웃 시간</span>
+                <input type="text" value="15:00">
               </label>
             </li>
-            <li class="fullWidth">
-              <label class="align-flex-start">
-                <span class="name">메모</span>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-              </label>
             </li>
             <li class="fullWidth btnListItem">
               <button type="submit" class="label _deposit">저장</button>
