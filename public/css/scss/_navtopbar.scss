@@ -5,6 +5,9 @@
   background-color: #414141;
   padding: 10px 30px;
   align-items: center;
+  &.superadmin {
+    background-color: $dark-red;
+  }
   .logo {
     a {
       display: flex;
@@ -22,6 +25,13 @@
   }
   .top_menu {
     display: flex;
+    ._name {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 9px;
+      }
+    }
     a,
     li {
       color: #fff;
