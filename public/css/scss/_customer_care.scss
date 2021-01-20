@@ -5,11 +5,13 @@ main.customer_care {
     max-width: 1200px;
     margin: 0 auto;
   }
-  .registration {
+  .registrationStyle {
     border-radius: 6px;
     overflow: hidden;
     background-color: $white;
     border: 1px solid $very-light-pink-three;
+  }
+  .registration {
     .header {
       border-bottom: 1px solid $very-light-pink-three;
       display: flex;
@@ -129,4 +131,5 @@ main.customer_care {
       }
     }
   }
+  // 고객 등록 수정
 }

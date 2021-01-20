@@ -6,7 +6,7 @@
 <?php include_once '../includes/body-open.php' ?>
 <main class="page-content customer_care">
   <div class="container">
-    <div class="registration">
+    <div class="registration registrationStyle">
       <div class="header">
         <div class="col">고객명</div>
         <div class="col">아이디</div>
