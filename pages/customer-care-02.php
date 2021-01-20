@@ -6,14 +6,7 @@
 <?php include_once '../includes/body-open.php' ?>
 <main class="page-content customer_care">
   <div class="container">
-    <nav class="customerCareMenu">
-      <ul>
-        <li class="current"><a href="#">고객정보</a></li>
-        <li><a href="#">숙소정보</a></li>
-        <li><a href="#">객실정보</a></li>
-        <li><a href="#">과금내역</a></li>
-      </ul>
-    </nav>
+    <?php include_once 'customer-care-nav.php' ?>
     <div class="customerModifyRegistration registrationStyle">
       <div class="header">
         고객 등록 / 수정
