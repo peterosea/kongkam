@@ -1,0 +1,53 @@
+header.pageHeader {
+  border-bottom: 1px solid $very-light-pink;
+  background-color: $white;
+  .container {
+    margin: 0 auto;
+    @media (min-width: 1439) {
+      max-width: 1200px;
+    }
+  }
+  .menu-list {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-sizing: border-box;
+    li {
+      width: 100%;
+      img {
+        margin-right: 11px;
+        @include respond-to("md") {
+          display: none;
+        }
+      }
+    }
+    a {
+      padding: 40px;
+      padding-bottom: 36px;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      border-bottom: 4px solid transparent;
+      &:hover {
+        border-color: $cherry-red;
+      }
+      @include respond-to("md") {
+        padding: 30px;
+        padding-bottom: 26px;
+      }
+      @include respond-to("sm") {
+        padding: 20px 10px;
+        padding-bottom: 16px;
+        font-size: 18px;
+      }
+    }
+    li.active > a {
+      font-weight: bold;
+      border-color: $cherry-red;
+    }
+  }
+}
+@import "header-management";
+@import "header-find";

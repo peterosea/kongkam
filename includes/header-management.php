@@ -1,25 +1,22 @@
-<header class="management">
-  <div class="container_inner fixed_inner">
-    <ul class="_nav">
-      <li class="menu_item has_icon <?php if ($matches[1] == 'room_list') {
-                                      echo '_active';
-                                    } ?>">
-        <a href="/room_list">
-          <span class="_icon room_list"></span>객실 관리
+<header class="management pageHeader">
+  <div class="container">
+    <ul class="menu-list">
+      <li>
+        <a href="/pages/room_list.php">
+          <img src="../public/img/menuicon_01.svg">
+          객실 관리
         </a>
       </li>
-      <li class="menu_item has_icon <?php if ($matches[1] == 'reservation_list') {
-                                      echo '_active';
-                                    } ?>">
-        <a href="/reservation_list">
-          <span class="_icon reservation_list"></span>예약 관리
+      <li>
+        <a href="/pages/calendar.php">
+          <img src="../public/img/menuicon_02.svg">
+          예약 관리
         </a>
       </li>
-      <li class="menu_item has_icon <?php if ($matches[1] == 'settle_list') {
-                                      echo '_active';
-                                    } ?>">
+      <li>
         <a href="#">
-          <span class="_icon settle_list"></span>정산 목록
+          <img src="../public/img/menuicon_03.svg">
+          정산 목록
         </a>
       </li>
     </ul>
