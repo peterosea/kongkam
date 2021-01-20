@@ -1,5 +1,9 @@
 <?php include_once '../includes/head.php' ?>
 <link type="text/css" rel="stylesheet" href="../public/css/fullcalendar.css">
+
+<?php include_once '../includes/header-management.php' ?>
+
+<?php include_once '../includes/body-open.php' ?>
 <div class="calendarContainer">
   <div class="innerWrap container">
     <?php include_once './calendarSource.php' ?>
@@ -85,4 +89,5 @@
     <?php include('calendarDetailView.php') ?>
   </div>
 </div>
-<?php include_once '../includes/foot.php' ?>
+<?php include_once '../includes/body-close.php' ?>
+<?php include_once '../includes/footer.php' ?>

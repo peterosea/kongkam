@@ -1,5 +1,9 @@
 <?php include_once '../includes/head.php'; ?>
-<?php include_once '../includes/header.php'; ?>
+
+<?php include_once '../includes/navtopbar-default.php' ?>
+<?php include_once '../includes/header-management.php' ?>
+
+<?php include_once '../includes/body-open.php' ?>
 
 <main class="home-page">
   <div class="section">
@@ -180,3 +184,5 @@
     </div>
   </div>
 </main>
+<?php include_once '../includes/body-close.php' ?>
+<?php include_once '../includes/footer.php' ?>

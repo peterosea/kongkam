@@ -752,7 +752,7 @@ button._crement::after {
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 12H7' stroke='%23112C34' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
 
-header.main_header .top_nav_wrap {
+.top_nav_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -770,7 +770,7 @@ header.main_header .top_nav_wrap {
           align-items: center;
 }
 
-header.main_header .logo a {
+.top_nav_wrap .logo a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -783,46 +783,48 @@ header.main_header .logo a {
 }
 
 @media (max-width: 780px) {
-  header.main_header .logo a {
+  .top_nav_wrap .logo a {
     width: 120px;
     height: 34px;
     background-image: url("../img/logo-m.png");
   }
 }
 
-header.main_header .top_menu {
+.top_nav_wrap .top_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header.main_header .top_menu a, header.main_header .top_menu li {
+.top_nav_wrap .top_menu a,
+.top_nav_wrap .top_menu li {
   color: #fff;
   font-size: 16px;
   line-height: 1.2em;
 }
 
 @media (max-width: 780px) {
-  header.main_header .top_menu a, header.main_header .top_menu li {
+  .top_nav_wrap .top_menu a,
+  .top_nav_wrap .top_menu li {
     font-size: 16px;
   }
 }
 
-header.main_header .top_menu li {
+.top_nav_wrap .top_menu li {
   padding: 0 18px;
   border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-header.main_header .top_menu li:first-child {
+.top_nav_wrap .top_menu li:first-child {
   padding-left: 0;
 }
 
-header.main_header .top_menu li:last-child {
+.top_nav_wrap .top_menu li:last-child {
   padding-right: 0;
   border-right: none;
 }
 
-header.main_header .gnb {
+header.management {
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -835,7 +837,7 @@ header.main_header .gnb {
           align-items: center;
 }
 
-header.main_header .gnb ._nav {
+header.management ._nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -846,7 +848,7 @@ header.main_header .gnb ._nav {
   width: 100%;
 }
 
-header.main_header .gnb ._nav li {
+header.management ._nav li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -859,19 +861,19 @@ header.main_header .gnb ._nav li {
   width: 33.33%;
 }
 
-header.main_header .gnb ._nav li:hover {
+header.management ._nav li:hover {
   border-bottom: 4px solid #666666;
 }
 
-header.main_header .gnb ._nav li._active {
+header.management ._nav li._active {
   border-bottom: 4px solid #e50019;
 }
 
-header.main_header .gnb ._nav li._active > a {
+header.management ._nav li._active > a {
   font-weight: bold;
 }
 
-header.main_header .gnb ._nav .has_icon ._icon {
+header.management ._nav .has_icon ._icon {
   background-position: center center;
   background-size: auto;
   background-repeat: no-repeat;
@@ -881,31 +883,31 @@ header.main_header .gnb ._nav .has_icon ._icon {
   margin-right: 18px;
 }
 
-header.main_header .gnb ._nav .has_icon ._icon.room_list {
+header.management ._nav .has_icon ._icon.room_list {
   width: 35px;
   height: 35px;
   background-image: url("../img/menuicon_01.svg");
 }
 
-header.main_header .gnb ._nav .has_icon ._icon.reservation_list {
+header.management ._nav .has_icon ._icon.reservation_list {
   width: 32px;
   height: 32px;
   background-image: url("../img/menuicon_02.svg");
 }
 
-header.main_header .gnb ._nav .has_icon ._icon.settle_list {
+header.management ._nav .has_icon ._icon.settle_list {
   width: 28px;
   height: 32px;
   background-image: url("../img/menuicon_03.svg");
 }
 
 @media (max-width: 780px) {
-  header.main_header .gnb ._nav .has_icon ._icon {
+  header.management ._nav .has_icon ._icon {
     display: none;
   }
 }
 
-header.main_header .gnb ._nav a {
+header.management ._nav a {
   padding: 40px;
   font-size: 20px;
   width: 100%;
@@ -921,16 +923,63 @@ header.main_header .gnb ._nav a {
 }
 
 @media (max-width: 780px) {
-  header.main_header .gnb ._nav a {
+  header.management ._nav a {
     padding: 30px;
   }
 }
 
 @media (max-width: 576px) {
-  header.main_header .gnb ._nav a {
+  header.management ._nav a {
     padding: 20px 10px;
     font-size: 18px;
   }
+}
+
+header nav.find {
+  border-bottom: 1px solid #dddddd;
+  background-color: #ffffff;
+}
+
+header nav.find .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header nav.find .menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav.find .menu-list li {
+  width: 50%;
+}
+
+header nav.find .menu-list li a {
+  padding: 45px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav.find .menu-list li a img {
+  margin-right: 11px;
+}
+
+header nav.find .menu-list li a.active {
+  border-bottom: 4px solid #e50019;
 }
 
 .section.page-login {
@@ -2324,53 +2373,6 @@ header.main_header .gnb ._nav a {
     height: 0;
     height: auto;
   }
-}
-
-header nav.find {
-  border-bottom: 1px solid #dddddd;
-  background-color: #ffffff;
-}
-
-header nav.find .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-header nav.find .menu-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-header nav.find .menu-list li {
-  width: 50%;
-}
-
-header nav.find .menu-list li a {
-  padding: 45px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header nav.find .menu-list li a img {
-  margin-right: 11px;
-}
-
-header nav.find .menu-list li a.active {
-  border-bottom: 4px solid #e50019;
 }
 
 .section.page-find {

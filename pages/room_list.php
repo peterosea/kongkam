@@ -1,5 +1,8 @@
 <?php include_once '../includes/head.php' ?>
-<?php include_once '../includes/header.php' ?>
+
+<?php include_once '../includes/header-management.php' ?>
+
+<?php include_once '../includes/body-open.php' ?>
 <main class="room_list">
   <div class="container_inner fixed_inner column_align">
     <div class="options_wrap">
@@ -352,3 +355,6 @@
     });
   }
 </script>
+
+<?php include_once '../includes/body-close.php' ?>
+<?php include_once '../includes/footer.php' ?>
