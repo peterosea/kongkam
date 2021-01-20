@@ -1,6 +1,8 @@
 <div class="top_nav_wrap">
   <div class="logo">
-    <a href="/room_list"></a>
+    <a href="/pages/room_list.php">
+      <img src="../public/img/logo.png" alt="">
+    </a>
   </div>
   <ul class="top_menu">
     <li class="user_name">
