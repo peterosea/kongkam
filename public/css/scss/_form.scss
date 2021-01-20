@@ -1,0 +1,218 @@
+form.type {
+  &-default {
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-bottom: 3px;
+        @include respond-to("sm") {
+          margin-bottom: 13px;
+        }
+      }
+    }
+    label {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      span {
+        display: inline-block;
+        width: 100px;
+        font-family: $NotoSansKR;
+        font-size: 20px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.6px;
+        text-align: left;
+        color: $black;
+        margin: 8px 8px 8px 0;
+      }
+      input,
+      textarea {
+        padding: 16px 20px;
+        border: 1px solid $very-light-pink;
+        border-radius: 6px;
+        width: 100%;
+        max-width: 400px;
+        font-family: $NotoSansKR;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.54px;
+        text-align: left;
+        &::placeholder {
+          color: $brown-grey-two;
+        }
+        &.fullWidth {
+          max-width: none;
+        }
+      }
+      select {
+        padding: 17px 20px;
+        border: 1px solid $very-light-pink;
+        border-radius: 6px;
+        font-family: $NotoSansKR;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.54px;
+      }
+      .phone {
+        display: flex;
+        max-width: 400px;
+        width: 100%;
+      }
+      .phone input {
+        max-width: 227px;
+        width: 100%;
+      }
+      .phone .select {
+        margin-right: 3px;
+        select {
+          max-width: 190px;
+          height: 100%;
+        }
+      }
+      .select {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        select {
+          width: 100%;
+          appearance: none;
+        }
+        img.arrow {
+          position: absolute;
+          pointer-events: none;
+          top: 50%;
+          right: 16px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    // checkbox style
+    .squaredFour {
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .checkbox {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        background: #ffffff;
+        border-radius: 4px;
+        border: solid 1px $very-light-pink;
+        position: relative;
+        margin-right: 10px;
+        &:after {
+          content: "";
+          width: 9px;
+          height: 5px;
+          position: absolute;
+          top: 9px;
+          left: 10px;
+          border: 3px solid #333;
+          border-top: none;
+          border-right: none;
+          background: transparent;
+          opacity: 0.5;
+          transform: rotate(-45deg);
+        }
+        &:hover::after {
+          opacity: 0.5;
+        }
+      }
+      input[type="checkbox"] {
+        visibility: hidden;
+        &:checked + .checkbox:after {
+          opacity: 1;
+        }
+      }
+    }
+
+    .helpWrap {
+      display: flex;
+      .help {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        span {
+          font-family: $NotoSansKR;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: -0.48px;
+          text-align: left;
+          color: $black;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+  &-authortication {
+    .numberPush {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 19px;
+
+      button[type="submit"] {
+        padding: 17px 38px;
+        margin-bottom: 0;
+        @include respond-to("sm") {
+          width: 100%;
+          margin-bottom: 33px;
+        }
+      }
+
+      label {
+        position: relative;
+        width: 100%;
+        max-width: 398px;
+        margin-right: 3px;
+        @include respond-to("sm") {
+          max-width: none;
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+
+      span.timer {
+        font-family: $NotoSansKR;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.54px;
+        text-align: right;
+        color: $brown-grey-two;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        padding-bottom: 3px;
+      }
+    }
+  }
+  &-password {
+    .inputWrap {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      label:first-child {
+        margin-bottom: 3px;
+      }
+    }
+    button[type="submit"] {
+      padding: 17px 38px;
+      width: 100%;
+    }
+  }
+}

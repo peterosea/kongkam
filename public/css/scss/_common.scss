@@ -1,20 +1,20 @@
 ////////////// 반응형 변수
 $breakpoints: (
   "sm": (
-    max-width: 576px
+    max-width: 576px,
   ),
   "md": (
-    max-width: 780px
+    max-width: 780px,
   ),
   "lg": (
-    max-width: 992px
+    max-width: 992px,
   ),
   "xl": (
-    max-width: 1280px
+    max-width: 1280px,
   ),
   "hg": (
-    max-width: 1400px
-  )
+    max-width: 1400px,
+  ),
 );
 /// Responsive breakpoint manager
 /// @access public
@@ -42,7 +42,7 @@ $breakpoints: (
 ////////// 변수 //////////
 
 // 이미지폰트 폴더 경로
-$urlImg: '../img';
+$urlImg: "../img";
 // 컬러 변수
 $Red: #e50019;
 $Green: #46c17a;
@@ -50,63 +50,83 @@ $Blue: #0085cb;
 $DarkBlue: #00466a;
 $LightGrey: #aaaaaa;
 $DarkGrey: #666666;
-$BorderGrey:#ddd;
+$BorderGrey: #ddd;
 // 사이트 기본 넓이 변수
 $siteWidth: 1200px;
 
 //////////. 변수 //////////
 
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap');
-
-html, body {
-    margin:0;
-    background-color:#f4f4f4;
+html,
+body {
+  margin: 0;
+  background-color: #f4f4f4;
 }
-body, div, a, h1, h2, h3, h4, h5, h6, p, td, th {
-    font-family: 'Maven Pro', 'Noto Sans KR', sans-serif !important;
-    line-height:1.4em;
-    color:#000;
+body,
+div,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+td,
+th {
+  font-family: "Maven Pro", "Noto Sans KR", sans-serif !important;
+  line-height: 1.4em;
+  color: #000;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-weight:bold;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
 }
-ul, li {
-    margin:0;
-    padding:0;
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 li {
-    list-style: none;
+  list-style: none;
 }
 a {
+  text-decoration: none;
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
     text-decoration: none;
-    &:hover, &:focus, &:active {
-        color:inherit;
-        text-decoration: none;
-    }
+  }
 }
 * {
   box-sizing: border-box;
-  transition:all 0.3s;
+  transition: all 0.3s;
 }
-*:focus { 
-  outline:none;
-}​
-button {
+*:focus {
+  outline: none;
+}
+​ button {
   outline: none;
   border: none;
   cursor: pointer;
 }
-path, g {
-  transition:all 0.3s;
+path,
+g {
+  transition: all 0.3s;
 }
 
 // Contents 영역
 .container_inner {
-  display:flex;
+  display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  margin: 0 auto;
   &.fixed_inner {
-    width:100%;
+    width: 100%;
     max-width: $siteWidth;
   }
   &.column_align {
@@ -117,37 +137,40 @@ path, g {
   }
 }
 #content.content_wrap {
-  padding:60px 0;
-  display:flex;
-  justify-content:center;
-  @include respond-to('xl') {
-    padding:60px 20px;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  @include respond-to("xl") {
+    padding: 60px 20px;
   }
-  @include respond-to('md') {
-    padding:20px;
+  @include respond-to("md") {
+    padding: 20px;
   }
 }
 
 // 라벨
 .label {
   padding: 7px 8px;
-  line-height:1.2em;
+  line-height: 1.2em;
   border-radius: 6px;
   background-color: #666;
-  display:inline-flex;
-  justify-content:center;
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
   width: 74px;
   font-size: 14px;
-  color:#fff;
+  color: #fff;
+  box-shadow: none;
+  border: none;
+
   &._checkin {
-    background-color: #46c17a;
+    background-color: $dark-mint;
   }
   &._reserve {
-    background-color: #0085cb;
+    background-color: $turquoise-blue;
   }
   &._deposit {
-    background-color: #00466a;
+    background-color: $cerulean;
   }
   &._hold {
     background-color: #aaaaaa;
@@ -168,8 +191,8 @@ path, g {
   display: flex;
   .selectbox {
     width: 100%;
-    display:flex;
-    transition:all 0.3s;
+    display: flex;
+    transition: all 0.3s;
     cursor: pointer;
     .selected_item {
       width: 100%;
@@ -177,7 +200,7 @@ path, g {
       display: flex;
       background-color: #fff;
       border-radius: 6px;
-      border:1px solid $BorderGrey;
+      border: 1px solid $BorderGrey;
       z-index: 1;
       align-items: center;
       padding: 12px 20px;
@@ -190,16 +213,16 @@ path, g {
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition:all 0.3s;
-      position:absolute;
+      transition: all 0.3s;
+      position: absolute;
       top: 62px;
-      left:0;
-      border:1px solid $BorderGrey;
+      left: 0;
+      border: 1px solid $BorderGrey;
       background-color: #fff;
       border-radius: 6px;
       z-index: -1;
       > li {
-        display:flex;
+        display: flex;
         justify-content: flex-start;
         align-items: center;
         padding: 12px 20px;
@@ -216,11 +239,11 @@ path, g {
       }
     }
     .arrow {
-      display:flex;
+      display: flex;
       justify-content: center;
       align-items: center;
-      width:30px;
-      height:30px;
+      width: 30px;
+      height: 30px;
       border-radius: 100px;
       border: 1px solid $BorderGrey;
       top: 14px;
@@ -241,9 +264,9 @@ path, g {
       }
       .arrow {
         background-color: #666;
-        border:none;
+        border: none;
         i {
-          color:#fff;
+          color: #fff;
           transform: rotateX(180deg);
         }
       }
@@ -269,18 +292,18 @@ path, g {
         }
       }
     }
-  }  
+  }
 }
 
 // 테이블/리스트 내 레이어 팝업
 .inner_popup {
-  position:absolute;
-  top:0;
+  position: absolute;
+  top: 0;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   padding: 25px;
   background-color: #fff;
   border-radius: 6px;
-  display:flex;
+  display: flex;
   visibility: hidden;
   opacity: 0;
   z-index: -1;
@@ -288,7 +311,7 @@ path, g {
     width: 260px;
   }
   &.with_tail:before {
-    content: '';
+    content: "";
     border-top: 0 solid transparent;
     border-left: 29px solid #0085cb;
     border-right: 0 solid transparent;
@@ -298,7 +321,7 @@ path, g {
     top: 34px;
   }
   &.with_tail:after {
-    content: '';
+    content: "";
     border-top: 0px solid transparent;
     border-left: 28px solid #fff;
     border-right: 0 solid transparent;

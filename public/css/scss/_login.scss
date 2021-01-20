@@ -1,0 +1,60 @@
+.section.page-login {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .imageWrap {
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    margin-bottom: 93px;
+    display: flex;
+    @include respond-to("sm") {
+      margin-bottom: 38px;
+      padding-left: 24px;
+      padding-right: 24px;
+      box-sizing: border-box;
+    }
+    img {
+      max-width: 540px;
+      width: 100%;
+    }
+  }
+  .formWrap {
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .login {
+    margin-bottom: 27px;
+    display: flex;
+    flex-direction: column;
+    .id {
+      margin-bottom: 3px;
+      @include respond-to("sm") {
+        margin-bottom: 13px;
+      }
+    }
+    label span {
+      width: 80px;
+    }
+  }
+  .option {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    ul.find {
+      display: flex;
+      li a {
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 9px;
+        }
+      }
+    }
+  }
+}

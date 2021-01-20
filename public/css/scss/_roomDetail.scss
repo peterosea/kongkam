@@ -1,0 +1,173 @@
+.roomDetailView {
+  border-radius: 6px;
+  border: 2px solid $cerulean;
+  overflow: hidden;
+  width: 100%;
+  .row {
+    display: flex;
+    width: 100%;
+    background-color: $very-light-pink-two;
+    @include respond-to("md") {
+      flex-direction: column;
+    }
+    .col {
+      flex: auto;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid $very-light-pink-two;
+      @include respond-to("md") {
+        border-right: none;
+        border-bottom: 1px solid $very-light-pink-two;
+      }
+      &:last-child {
+        border-right: none;
+        border-bottom: none;
+      }
+
+      .header,
+      .content {
+        background-color: $white;
+      }
+      .content {
+        height: 100%;
+      }
+    }
+  }
+  .header {
+    padding: 22px 42px;
+    border-bottom: 1px solid $very-light-pink-two;
+    @include respond-to("md") {
+      padding-top: 52px;
+      padding-bottom: 8px;
+    }
+    span {
+      font-family: $NotoSansKR;
+      font-size: 18px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: -0.54px;
+      text-align: left;
+      color: $black;
+      @include respond-to("md") {
+        letter-spacing: -0.96px;
+        border-bottom: 4px solid $black;
+      }
+    }
+  }
+  .content {
+    padding: 32px 42px;
+    @include respond-to("md") {
+      padding-bottom: 52px;
+    }
+    .customerInfo,
+    .roomStateManagement {
+      th {
+        text-align: left;
+        font-family: $NotoSansKR;
+        font-size: 16px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2.38;
+        letter-spacing: -0.48px;
+        text-align: left;
+        color: $black;
+        padding-right: 20px;
+        @include respond-to("md") {
+          line-height: 2;
+          letter-spacing: -0.84px;
+        }
+      }
+      td {
+        font-family: $NotoSansKR;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2.38;
+        letter-spacing: -0.48px;
+        text-align: left;
+        color: $black;
+        @include respond-to("md") {
+          font-weight: 300;
+          line-height: 2;
+          letter-spacing: -0.84px;
+        }
+      }
+    }
+    .roomOptionControl {
+      font-family: $NotoSansKR;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: -0.54px;
+      text-align: left;
+      color: $black;
+      padding-top: 8px;
+
+      li {
+        margin-bottom: 32px;
+        padding-bottom: 32px;
+        border-bottom: 1px solid $very-light-pink-two;
+        &:last-child {
+          border: none;
+        }
+      }
+
+      .roomOptionControlItemWrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        > div {
+          margin-right: 24px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        @include respond-to("md") {
+          flex-wrap: wrap;
+        }
+      }
+      .title {
+        font-weight: 500;
+        @include respond-to("sm") {
+          width: 100%;
+        }
+      }
+      .temperature {
+        display: flex;
+        align-items: center;
+        .decrement {
+          margin-right: 8px;
+        }
+
+        .valueWrap {
+          display: flex;
+          align-items: center;
+          margin-bottom: 2px;
+          margin-right: 8px;
+        }
+        input {
+          border: none;
+          width: 20px;
+        }
+      }
+      .submitWrap {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+.inner_popup .roomDetailView {
+  border: none;
+  .header {
+    border-bottom: none;
+  }
+  .content .roomOptionControl .switch {
+    display: flex;
+    align-items: center;
+  }
+}

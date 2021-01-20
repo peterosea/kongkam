@@ -1,0 +1,147 @@
+.section.page-find {
+  padding-top: 100px;
+  padding-bottom: 145px;
+  @include respond-to("sm") {
+    padding: 50px 0 70px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .pageHeader {
+    margin-bottom: 45px;
+    padding: 0 20px;
+    h2.title {
+      font-family: $NotoSansKR;
+      font-size: 24px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: -0.72px;
+      text-align: left;
+      color: $black;
+      word-break: keep-all;
+    }
+    h2.title + p {
+      font-family: $NotoSansKR;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.44;
+      letter-spacing: -0.54px;
+      text-align: left;
+      color: $brownish-grey;
+    }
+  }
+  .content {
+    padding: 168px 20px;
+    border-radius: 6px;
+    border: solid 1px $very-light-pink;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @include respond-to("sm") {
+      padding: 84px 20px;
+    }
+    form {
+      max-width: 510px;
+      margin: 0 auto;
+    }
+    hr {
+      margin-top: 45px;
+      margin-bottom: 45px;
+      border: none;
+      border-bottom: 1px solid $very-light-pink;
+    }
+    a.btn,
+    button[type="submit"] {
+      border-radius: 6px;
+      background-color: $greyish-brown;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-family: $NotoSansKR;
+      font-size: 18px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: -0.54px;
+      text-align: center;
+      color: $white;
+    }
+    form.type-default {
+      margin-bottom: 19px;
+      button[type="submit"] {
+        width: 100%;
+        padding: 15px 0 18px;
+      }
+    }
+    form.type-authortication {
+      label input {
+        height: 100%;
+        @include respond-to("sm") {
+          max-width: none;
+        }
+      }
+      button[type="submit"] {
+        width: auto;
+        padding: 17px 38px;
+        @include respond-to("sm") {
+          width: 100%;
+        }
+      }
+    }
+    .resultWrap {
+      text-align: center;
+      p {
+        font-family: $NotoSansKR;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: -0.54px;
+        color: $brownish-grey;
+        margin-bottom: 12px;
+      }
+      .result {
+        margin-bottom: 50px;
+        font-family: $NotoSansKR;
+        font-size: 28px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.46;
+        letter-spacing: -0.84px;
+        color: $black;
+
+        span.id {
+          color: $bluish-green;
+        }
+      }
+      a.btn {
+        display: inline-block;
+        width: 100%;
+        max-width: 493px;
+        padding: 17px 48px;
+      }
+    }
+  }
+
+  &.password {
+    .idWrap {
+      margin-bottom: 10px;
+    }
+    .resultWrap .result {
+      font-family: $NotoSansKR;
+      font-size: 22px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: -0.66px;
+      color: $black;
+    }
+  }
+}

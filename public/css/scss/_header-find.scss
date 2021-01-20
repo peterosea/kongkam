@@ -1,0 +1,28 @@
+header nav.find {
+  border-bottom: 1px solid $very-light-pink;
+  background-color: $white;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      width: 50%;
+      a {
+        padding: 45px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          margin-right: 11px;
+        }
+        &.active {
+          border-bottom: 4px solid $cherry-red;
+        }
+      }
+    }
+  }
+}
