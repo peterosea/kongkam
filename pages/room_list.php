@@ -1,5 +1,6 @@
 <?php include_once '../includes/head.php' ?>
 
+<?php include_once '../includes/navtopbar-default.php' ?>
 <?php include_once '../includes/header-management.php' ?>
 
 <?php include_once '../includes/body-open.php' ?>

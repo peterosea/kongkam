@@ -1,6 +1,7 @@
 <?php include_once '../includes/head.php' ?>
 <link type="text/css" rel="stylesheet" href="../public/css/fullcalendar.css">
 
+<?php include_once '../includes/navtopbar-default.php' ?>
 <?php include_once '../includes/header-management.php' ?>
 
 <?php include_once '../includes/body-open.php' ?>
