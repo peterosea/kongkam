@@ -15,7 +15,7 @@
         <div class="col">서비스 이용중</div>
         <div class="col">비고</div>
       </div>
-      <div class="content">
+      <div class="body">
         <?php
         $row = <<<HTML
             <div class="row">

@@ -1,5 +1,5 @@
 main.customer_care {
-  padding: 70px 0;
+  padding: 70px 20px;
 
   .container {
     max-width: 1200px;
@@ -10,26 +10,24 @@ main.customer_care {
     overflow: hidden;
     background-color: $white;
     border: 1px solid $very-light-pink-three;
-  }
-  .registration {
     .header {
       border-bottom: 1px solid $very-light-pink-three;
       display: flex;
-      .col {
-        width: 100%;
-        padding: 23px 0;
-        text-align: center;
-        font-family: $NotoSansKR;
-        font-size: 16px;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        letter-spacing: -0.48px;
-        color: $black;
-      }
     }
-    .content {
+    .body {
       padding: 28px 31px 4px 31px;
+    }
+  }
+  .registration {
+    .header .col {
+      width: 100%;
+      padding: 23px 0;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: -0.48px;
+    }
+    .body {
       .row {
         display: flex;
         &:not(:last-child) {
@@ -131,5 +129,139 @@ main.customer_care {
       }
     }
   }
+  // 고객 관리 메뉴
+  .customerCareMenu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      li {
+        padding: 0 25px;
+        a {
+          color: $black;
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: 500;
+          letter-spacing: -0.54px;
+        }
+        &.current a {
+          color: $cherry-red;
+        }
+      }
+      li:not(:last-child) {
+        border-right: 2px solid $very-light-pink-two;
+      }
+    }
+  }
   // 고객 등록 수정
+  .customerModifyRegistration {
+    .header {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 24px 61px;
+    }
+    .body {
+      padding-bottom: 40px;
+    }
+    form.type-default {
+      position: relative;
+      padding: 0 41px;
+      @include respond-to("md") {
+        padding: 0;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-bottom: 10px;
+        li {
+          width: calc(50% - 5px);
+          margin-bottom: 10px;
+          @include respond-to("lg") {
+            width: 100%;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
+          &:nth-child(2n-1) {
+            padding-right: 40px;
+            margin-right: 10px;
+            @include respond-to("lg") {
+              margin-right: 0;
+            }
+          }
+          &:nth-child(2n) {
+            padding-left: 40px;
+          }
+        }
+        li.fullWidth {
+          width: 100%;
+          padding: 0;
+          margin-right: 0;
+        }
+        label {
+          flex-wrap: nowrap;
+          @include respond-to("sm") {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          input,
+          select,
+          textarea {
+            max-width: none;
+            width: 100%;
+            font-family: $NotoSansKR;
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: -0.48px;
+            text-align: left;
+            color: $black;
+          }
+          &.align-flex-start {
+            align-items: flex-start;
+          }
+          textarea {
+            width: 100%;
+            max-width: none;
+          }
+        }
+        li.btnListItem {
+          margin-top: 32px;
+          text-align: center;
+          padding-top: 41px;
+
+          button {
+            font-size: 16px;
+          }
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $very-light-pink;
+            position: absolute;
+            left: 0;
+            transform: translateY(-41px);
+          }
+        }
+      }
+      .name {
+        font-family: $NotoSansKR;
+        font-size: 16px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.48px;
+        text-align: left;
+        color: $black;
+        flex: 0 0 auto;
+        width: 130px;
+      }
+    }
+  }
 }
