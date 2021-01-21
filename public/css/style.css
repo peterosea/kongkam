@@ -3252,3 +3252,64 @@ main.customer_care .accommodationList .accommodation .room {
 main.customer_care .accommodationList .accommodation.add {
   border-color: #222222;
 }
+
+main.customer_care .roomTypeLease .body {
+  padding: 70px 59px;
+}
+
+main.customer_care .roomTypeLease .table .col {
+  width: 100%;
+  font-size: 18px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 3.33;
+  letter-spacing: -0.54px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.customer_care .roomTypeLease .table .col .wrap div:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+main.customer_care .roomTypeLease .table .label {
+  width: auto;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.48px;
+  color: #ffffff;
+  padding: 8px 27px 8px;
+}
+
+main.customer_care .roomTypeLease .table .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #dddddd;
+  padding: 38px 0;
+}
+
+main.customer_care .roomTypeLease .table .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #aaaaaa;
+}
+
+main.customer_care .roomTypeLease .table .header .col {
+  color: #ffffff;
+  font-weight: 500;
+}

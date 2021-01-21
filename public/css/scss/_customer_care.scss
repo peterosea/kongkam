@@ -333,4 +333,50 @@ main.customer_care {
       }
     }
   }
+  .roomTypeLease {
+    .body {
+      padding: 70px 59px;
+    }
+    .table {
+      .col {
+        width: 100%;
+        font-size: 18px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 3.33;
+        letter-spacing: -0.54px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .wrap div:not(:last-child) {
+          margin-bottom: 24px;
+        }
+      }
+      .label {
+        width: auto;
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.48px;
+        color: $white;
+        padding: 8px 27px 8px;
+      }
+      .row {
+        display: flex;
+        border-bottom: 1px solid $very-light-pink;
+        padding: 38px 0;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        background-color: $brown-grey;
+        .col {
+          color: $white;
+          font-weight: 500;
+        }
+      }
+    }
+  }
 }
