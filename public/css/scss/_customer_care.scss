@@ -1,3 +1,54 @@
+@mixin paging {
+  .paging {
+    display: flex;
+    align-items: center;
+    button {
+      all: unset;
+      background-color: $white;
+      border-radius: 999px;
+      width: 31px;
+      height: 31px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $very-light-pink-three;
+      color: #656666;
+      &.right {
+        margin-left: 31px;
+        i {
+          transform: translateX(2px);
+        }
+      }
+      &.left {
+        margin-right: 31px;
+        i {
+          transform: translateX(-1px);
+        }
+      }
+    }
+    .paging-number {
+      display: flex;
+      align-items: center;
+      color: $brown-grey-two;
+      li {
+        font-family: $NotoSansKR;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        text-align: center;
+        line-height: 1;
+        padding-bottom: 1px;
+      }
+      li:not(:last-child) {
+        margin-right: 8px;
+      }
+      .current {
+        color: $black;
+      }
+    }
+  }
+}
 main.customer_care {
   padding: 70px 20px;
 
@@ -66,55 +117,7 @@ main.customer_care {
       justify-content: center;
       padding: 36px 31px;
       position: relative;
-      .paging {
-        display: flex;
-        align-items: center;
-        button {
-          all: unset;
-          background-color: $white;
-          border-radius: 999px;
-          width: 31px;
-          height: 31px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border: 2px solid $very-light-pink-three;
-          color: #656666;
-          &.right {
-            margin-left: 31px;
-            i {
-              transform: translateX(2px);
-            }
-          }
-          &.left {
-            margin-right: 31px;
-            i {
-              transform: translateX(-1px);
-            }
-          }
-        }
-        .paging-number {
-          display: flex;
-          align-items: center;
-          color: $brown-grey-two;
-          li {
-            font-family: $NotoSansKR;
-            font-size: 16px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
-            text-align: center;
-            line-height: 1;
-            padding-bottom: 1px;
-          }
-          li:not(:last-child) {
-            margin-right: 8px;
-          }
-          .current {
-            color: $black;
-          }
-        }
-      }
+      @include paging();
       button.customer-registration-btn {
         all: unset;
         padding: 4px 16px 8px;
@@ -254,6 +257,13 @@ main.customer_care {
         textarea {
           width: 100%;
           max-width: none;
+        }
+        .select {
+          display: flex;
+          input,
+          select {
+            margin-left: 10px;
+          }
         }
       }
       li.btnListItem {
@@ -496,6 +506,68 @@ main.customer_care {
         letter-spacing: -0.48px;
         text-align: center;
         color: $white;
+      }
+    }
+  }
+  .chargingDetails {
+    .body {
+      padding: 60px 50px;
+    }
+    .type-default {
+      display: flex;
+      margin-bottom: 50px;
+      ul {
+        margin-bottom: 0;
+      }
+      li:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .btnListItem {
+      padding: 0 40px 0 76px;
+      display: flex;
+      align-items: center;
+      button {
+        font-size: 16px;
+      }
+    }
+    .resultTable {
+      .content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $very-light-pink;
+        margin-bottom: 40px;
+      }
+      .row {
+        display: flex;
+      }
+      .col {
+        width: 100%;
+        padding: 17px;
+
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.54px;
+        text-align: center;
+        color: $black;
+      }
+      .header {
+        background-color: $brown-grey;
+        .col {
+          color: $white;
+          font-size: 18px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: -0.54px;
+          color: $white;
+        }
+      }
+      @include paging();
+      .paging {
+        justify-content: center;
       }
     }
   }

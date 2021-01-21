@@ -3155,6 +3155,17 @@ main.customer_care form.type-default ul label textarea {
   max-width: none;
 }
 
+main.customer_care form.type-default ul label .select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.customer_care form.type-default ul label .select input,
+main.customer_care form.type-default ul label .select select {
+  margin-left: 10px;
+}
+
 main.customer_care form.type-default ul li.btnListItem {
   margin-top: 32px;
   text-align: center;
@@ -3479,4 +3490,157 @@ main.customer_care .roomTypeDetail .btnListItem .label {
   letter-spacing: -0.48px;
   text-align: center;
   color: #ffffff;
+}
+
+main.customer_care .chargingDetails .body {
+  padding: 60px 50px;
+}
+
+main.customer_care .chargingDetails .type-default {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+main.customer_care .chargingDetails .type-default ul {
+  margin-bottom: 0;
+}
+
+main.customer_care .chargingDetails .type-default li:last-child {
+  margin-bottom: 0;
+}
+
+main.customer_care .chargingDetails .btnListItem {
+  padding: 0 40px 0 76px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.customer_care .chargingDetails .btnListItem button {
+  font-size: 16px;
+}
+
+main.customer_care .chargingDetails .resultTable .content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 40px;
+}
+
+main.customer_care .chargingDetails .resultTable .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.customer_care .chargingDetails .resultTable .col {
+  width: 100%;
+  padding: 17px;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.54px;
+  text-align: center;
+  color: #222222;
+}
+
+main.customer_care .chargingDetails .resultTable .header {
+  background-color: #aaaaaa;
+}
+
+main.customer_care .chargingDetails .resultTable .header .col {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.54px;
+  color: #ffffff;
+}
+
+main.customer_care .chargingDetails .resultTable .paging {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.customer_care .chargingDetails .resultTable .paging button {
+  all: unset;
+  background-color: #ffffff;
+  border-radius: 999px;
+  width: 31px;
+  height: 31px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #bfbfbf;
+  color: #656666;
+}
+
+main.customer_care .chargingDetails .resultTable .paging button.right {
+  margin-left: 31px;
+}
+
+main.customer_care .chargingDetails .resultTable .paging button.right i {
+  -webkit-transform: translateX(2px);
+          transform: translateX(2px);
+}
+
+main.customer_care .chargingDetails .resultTable .paging button.left {
+  margin-right: 31px;
+}
+
+main.customer_care .chargingDetails .resultTable .paging button.left i {
+  -webkit-transform: translateX(-1px);
+          transform: translateX(-1px);
+}
+
+main.customer_care .chargingDetails .resultTable .paging .paging-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #999999;
+}
+
+main.customer_care .chargingDetails .resultTable .paging .paging-number li {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  line-height: 1;
+  padding-bottom: 1px;
+}
+
+main.customer_care .chargingDetails .resultTable .paging .paging-number li:not(:last-child) {
+  margin-right: 8px;
+}
+
+main.customer_care .chargingDetails .resultTable .paging .paging-number .current {
+  color: #222222;
+}
+
+main.customer_care .chargingDetails .resultTable .paging {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
