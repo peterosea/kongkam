@@ -716,6 +716,153 @@ label.iosCheckbox:hover {
   cursor: pointer;
 }
 
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type="checkbox"],
+  input[type="radio"] {
+    --active: #47c17a;
+    --active-inner: #fff;
+    --focus: 2px rgba(#47c17a, 0.3);
+    --border: #bbc1e1;
+    --border-hover: #319352;
+    --background: #fff;
+    --disabled: #f6f8ff;
+    --disabled-inner: #e1e6f9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    -webkit-transition: background 0.3s, border-color 0.3s, -webkit-box-shadow 0.2s;
+    transition: background 0.3s, border-color 0.3s, -webkit-box-shadow 0.2s;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  }
+  input[type="checkbox"]:after,
+  input[type="radio"]:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    -webkit-transition: opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
+    transition: opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
+  }
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    --b: var(--active);
+    --bc: var(--active);
+    --d-o: 0.3s;
+    --d-t: 0.6s;
+    --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+  }
+  input[type="checkbox"]:disabled,
+  input[type="radio"]:disabled {
+    --b: var(--disabled);
+    cursor: not-allowed;
+    opacity: 0.9;
+  }
+  input[type="checkbox"]:disabled:checked,
+  input[type="radio"]:disabled:checked {
+    --b: var(--disabled-inner);
+    --bc: var(--border);
+  }
+  input[type="checkbox"]:disabled + label,
+  input[type="radio"]:disabled + label {
+    cursor: not-allowed;
+  }
+  input[type="checkbox"]:hover:not(:checked):not(:disabled),
+  input[type="radio"]:hover:not(:checked):not(:disabled) {
+    --bc: var(--border-hover);
+  }
+  input[type="checkbox"]:focus,
+  input[type="radio"]:focus {
+    -webkit-box-shadow: 0 0 0 var(--focus);
+            box-shadow: 0 0 0 var(--focus);
+  }
+  input[type="checkbox"]:not(.switch),
+  input[type="radio"]:not(.switch) {
+    width: 21px;
+  }
+  input[type="checkbox"]:not(.switch):after,
+  input[type="radio"]:not(.switch):after {
+    opacity: var(--o, 0);
+  }
+  input[type="checkbox"]:not(.switch):checked,
+  input[type="radio"]:not(.switch):checked {
+    --o: 1;
+  }
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    font-size: 14px;
+    line-height: 21px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+  input[type="checkbox"]:not(.switch) {
+    border-radius: 7px;
+  }
+  input[type="checkbox"]:not(.switch):after {
+    width: 5px;
+    height: 9px;
+    border: 2px solid var(--active-inner);
+    border-top: 0;
+    border-left: 0;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, calc(-50% - 1px)) rotate(var(--r, 20deg));
+            transform: translate(-50%, calc(-50% - 1px)) rotate(var(--r, 20deg));
+  }
+  input[type="checkbox"]:not(.switch):checked {
+    --r: 43deg;
+  }
+  input[type="checkbox"].switch {
+    width: 38px;
+    border-radius: 11px;
+  }
+  input[type="checkbox"].switch:after {
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--ab, var(--border));
+    -webkit-transform: translateX(var(--x, 0));
+            transform: translateX(var(--x, 0));
+  }
+  input[type="checkbox"].switch:checked {
+    --ab: var(--active-inner);
+    --x: 17px;
+  }
+  input[type="checkbox"].switch:disabled:not(:checked):after {
+    opacity: 0.6;
+  }
+  input[type="radio"] {
+    border-radius: 50%;
+  }
+  input[type="radio"]:after {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: var(--active-inner);
+    opacity: 0;
+    -webkit-transform: scale(var(--s, 0.7));
+            transform: scale(var(--s, 0.7));
+  }
+  input[type="radio"]:checked {
+    --s: 0.5;
+  }
+}
+
 button._crement {
   position: relative;
   border: none;
@@ -2794,16 +2941,16 @@ header.find .menu-list li {
   }
 }
 
-main.customer_care {
+.customer_care {
   padding: 70px 20px;
 }
 
-main.customer_care .container {
+.customer_care .container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-main.customer_care .registrationStyle {
+.customer_care .registrationStyle {
   border-radius: 6px;
   overflow: hidden;
   background-color: #ffffff;
@@ -2811,30 +2958,30 @@ main.customer_care .registrationStyle {
   margin-bottom: 40px;
 }
 
-main.customer_care .registrationStyle > .header {
+.customer_care .registrationStyle > .header {
   border-bottom: 1px solid #bfbfbf;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main.customer_care .registrationStyle > .header.modify {
+.customer_care .registrationStyle > .header.modify {
   font-size: 18px;
   font-weight: bold;
   padding: 24px 61px;
 }
 
 @media (max-width: 576px) {
-  main.customer_care .registrationStyle > .header.modify {
+  .customer_care .registrationStyle > .header.modify {
     padding: 24px 30px;
   }
 }
 
-main.customer_care .registrationStyle .body {
+.customer_care .registrationStyle .body {
   padding: 28px 31px 4px 31px;
 }
 
-main.customer_care .registration .header .col {
+.customer_care .registration .header .col {
   width: 100%;
   padding: 23px 0;
   text-align: center;
@@ -2843,27 +2990,27 @@ main.customer_care .registration .header .col {
   letter-spacing: -0.48px;
 }
 
-main.customer_care .registration .body .row {
+.customer_care .registration .body .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main.customer_care .registration .body .row:not(:last-child) {
+.customer_care .registration .body .row:not(:last-child) {
   border-bottom: 1px solid #bfbfbf;
   padding-bottom: 13px;
   margin-bottom: 13px;
 }
 
-main.customer_care .registration .body .row .col {
+.customer_care .registration .body .row .col {
   width: 100%;
 }
 
-main.customer_care .registration .body .row .col:not(:last-child) {
+.customer_care .registration .body .row .col:not(:last-child) {
   margin-right: 10px;
 }
 
-main.customer_care .registration .body .row input {
+.customer_care .registration .body .row input {
   border-radius: 6px;
   border: 1px solid #bfbfbf;
   -webkit-box-shadow: none;
@@ -2875,7 +3022,7 @@ main.customer_care .registration .body .row input {
           box-sizing: border-box;
 }
 
-main.customer_care .registration .footer {
+.customer_care .registration .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2886,7 +3033,7 @@ main.customer_care .registration .footer {
   position: relative;
 }
 
-main.customer_care .registration .footer .paging {
+.customer_care .registration .footer .paging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2895,7 +3042,7 @@ main.customer_care .registration .footer .paging {
           align-items: center;
 }
 
-main.customer_care .registration .footer .paging button {
+.customer_care .registration .footer .paging button {
   all: unset;
   background-color: #ffffff;
   border-radius: 999px;
@@ -2914,25 +3061,25 @@ main.customer_care .registration .footer .paging button {
   color: #656666;
 }
 
-main.customer_care .registration .footer .paging button.right {
+.customer_care .registration .footer .paging button.right {
   margin-left: 31px;
 }
 
-main.customer_care .registration .footer .paging button.right i {
+.customer_care .registration .footer .paging button.right i {
   -webkit-transform: translateX(2px);
           transform: translateX(2px);
 }
 
-main.customer_care .registration .footer .paging button.left {
+.customer_care .registration .footer .paging button.left {
   margin-right: 31px;
 }
 
-main.customer_care .registration .footer .paging button.left i {
+.customer_care .registration .footer .paging button.left i {
   -webkit-transform: translateX(-1px);
           transform: translateX(-1px);
 }
 
-main.customer_care .registration .footer .paging .paging-number {
+.customer_care .registration .footer .paging .paging-number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2942,7 +3089,7 @@ main.customer_care .registration .footer .paging .paging-number {
   color: #999999;
 }
 
-main.customer_care .registration .footer .paging .paging-number li {
+.customer_care .registration .footer .paging .paging-number li {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -2953,15 +3100,15 @@ main.customer_care .registration .footer .paging .paging-number li {
   padding-bottom: 1px;
 }
 
-main.customer_care .registration .footer .paging .paging-number li:not(:last-child) {
+.customer_care .registration .footer .paging .paging-number li:not(:last-child) {
   margin-right: 8px;
 }
 
-main.customer_care .registration .footer .paging .paging-number .current {
+.customer_care .registration .footer .paging .paging-number .current {
   color: #222222;
 }
 
-main.customer_care .registration .footer button.customer-registration-btn {
+.customer_care .registration .footer button.customer-registration-btn {
   all: unset;
   padding: 4px 16px 8px;
   border-radius: 6px;
@@ -2982,7 +3129,7 @@ main.customer_care .registration .footer button.customer-registration-btn {
   color: #ffffff;
 }
 
-main.customer_care .customerCareMenu {
+.customer_care .customerCareMenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2992,7 +3139,7 @@ main.customer_care .customerCareMenu {
   margin-bottom: 40px;
 }
 
-main.customer_care .customerCareMenu ul {
+.customer_care .customerCareMenu ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -3001,11 +3148,11 @@ main.customer_care .customerCareMenu ul {
   display: flex;
 }
 
-main.customer_care .customerCareMenu ul li {
+.customer_care .customerCareMenu ul li {
   padding: 0 25px;
 }
 
-main.customer_care .customerCareMenu ul li a {
+.customer_care .customerCareMenu ul li a {
   color: #222222;
   text-decoration: none;
   font-size: 18px;
@@ -3013,48 +3160,48 @@ main.customer_care .customerCareMenu ul li a {
   letter-spacing: -0.54px;
 }
 
-main.customer_care .customerCareMenu ul li a:hover {
+.customer_care .customerCareMenu ul li a:hover {
   color: #e50019;
 }
 
-main.customer_care .customerCareMenu ul li.current a {
+.customer_care .customerCareMenu ul li.current a {
   color: #e50019;
 }
 
-main.customer_care .customerCareMenu ul li:not(:last-child) {
+.customer_care .customerCareMenu ul li:not(:last-child) {
   border-right: 2px solid #cccccc;
 }
 
-main.customer_care .customerModifyRegistration .body {
+.customer_care .customerModifyRegistration .body {
   padding-bottom: 40px;
 }
 
-main.customer_care .lodgingModifyRegistration .body {
+.customer_care .lodgingModifyRegistration .body {
   padding: 42px 60px 40px;
 }
 
 @media (max-width: 576px) {
-  main.customer_care .lodgingModifyRegistration .body {
+  .customer_care .lodgingModifyRegistration .body {
     padding: 22px 30px 20px;
   }
 }
 
-main.customer_care .lodgingModifyRegistration form.type-default {
+.customer_care .lodgingModifyRegistration form.type-default {
   padding: 0;
 }
 
-main.customer_care form.type-default {
+.customer_care form.type-default {
   position: relative;
   padding: 0 41px;
 }
 
 @media (max-width: 780px) {
-  main.customer_care form.type-default {
+  .customer_care form.type-default {
     padding: 0;
   }
 }
 
-main.customer_care form.type-default ul {
+.customer_care form.type-default ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3067,47 +3214,47 @@ main.customer_care form.type-default ul {
   margin-bottom: 10px;
 }
 
-main.customer_care form.type-default ul li {
+.customer_care form.type-default ul li {
   width: calc(50% - 5px);
   margin-bottom: 10px;
 }
 
 @media (max-width: 992px) {
-  main.customer_care form.type-default ul li {
+  .customer_care form.type-default ul li {
     width: 100%;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
 }
 
-main.customer_care form.type-default ul li:nth-child(2n-1) {
+.customer_care form.type-default ul li:nth-child(2n-1) {
   padding-right: 40px;
   margin-right: 10px;
 }
 
 @media (max-width: 992px) {
-  main.customer_care form.type-default ul li:nth-child(2n-1) {
+  .customer_care form.type-default ul li:nth-child(2n-1) {
     margin-right: 0;
   }
 }
 
-main.customer_care form.type-default ul li:nth-child(2n) {
+.customer_care form.type-default ul li:nth-child(2n) {
   padding-left: 40px;
 }
 
-main.customer_care form.type-default ul li.fullWidth {
+.customer_care form.type-default ul li.fullWidth {
   width: 100%;
   padding: 0;
   margin-right: 0;
 }
 
-main.customer_care form.type-default ul label {
+.customer_care form.type-default ul label {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
 
 @media (max-width: 576px) {
-  main.customer_care form.type-default ul label {
+  .customer_care form.type-default ul label {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -3118,20 +3265,20 @@ main.customer_care form.type-default ul label {
   }
 }
 
-main.customer_care form.type-default ul label input:not(:first-child) {
+.customer_care form.type-default ul label input:not(:first-child) {
   margin-left: 10px;
 }
 
 @media (max-width: 576px) {
-  main.customer_care form.type-default ul label input:not(:first-child) {
+  .customer_care form.type-default ul label input:not(:first-child) {
     margin-left: 0px;
     margin-top: 10px;
   }
 }
 
-main.customer_care form.type-default ul label input,
-main.customer_care form.type-default ul label select,
-main.customer_care form.type-default ul label textarea {
+.customer_care form.type-default ul label input,
+.customer_care form.type-default ul label select,
+.customer_care form.type-default ul label textarea {
   max-width: none;
   width: 100%;
   font-family: "Noto Sans KR", sans-serif;
@@ -3144,39 +3291,39 @@ main.customer_care form.type-default ul label textarea {
   color: #222222;
 }
 
-main.customer_care form.type-default ul label.align-flex-start {
+.customer_care form.type-default ul label.align-flex-start {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 
-main.customer_care form.type-default ul label textarea {
+.customer_care form.type-default ul label textarea {
   width: 100%;
   max-width: none;
 }
 
-main.customer_care form.type-default ul label .select {
+.customer_care form.type-default ul label .select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main.customer_care form.type-default ul label .select input,
-main.customer_care form.type-default ul label .select select {
+.customer_care form.type-default ul label .select input,
+.customer_care form.type-default ul label .select select {
   margin-left: 10px;
 }
 
-main.customer_care form.type-default ul li.btnListItem {
+.customer_care form.type-default ul li.btnListItem {
   margin-top: 32px;
   text-align: center;
   padding-top: 41px;
 }
 
-main.customer_care form.type-default ul li.btnListItem button {
+.customer_care form.type-default ul li.btnListItem button {
   font-size: 16px;
 }
 
-main.customer_care form.type-default ul li.btnListItem::before {
+.customer_care form.type-default ul li.btnListItem::before {
   content: "";
   display: block;
   width: 100%;
@@ -3188,7 +3335,7 @@ main.customer_care form.type-default ul li.btnListItem::before {
           transform: translateY(-41px);
 }
 
-main.customer_care form.type-default ul .name {
+.customer_care form.type-default ul .name {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -3203,11 +3350,11 @@ main.customer_care form.type-default ul .name {
   width: 120px;
 }
 
-main.customer_care .accommodationList .body {
+.customer_care .accommodationList .body {
   padding: 98px 62px;
 }
 
-main.customer_care .accommodationList ul {
+.customer_care .accommodationList ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -3218,11 +3365,11 @@ main.customer_care .accommodationList ul {
       flex-wrap: wrap;
 }
 
-main.customer_care .accommodationList ul li {
+.customer_care .accommodationList ul li {
   margin: 10px;
 }
 
-main.customer_care .accommodationList .accommodation {
+.customer_care .accommodationList .accommodation {
   width: 245px;
   height: 300px;
   border-radius: 4px;
@@ -3242,7 +3389,7 @@ main.customer_care .accommodationList .accommodation {
           justify-content: center;
 }
 
-main.customer_care .accommodationList .accommodation .name {
+.customer_care .accommodationList .accommodation .name {
   font-size: 34px;
   font-weight: 300;
   font-stretch: normal;
@@ -3252,7 +3399,7 @@ main.customer_care .accommodationList .accommodation .name {
   margin-bottom: 13px;
 }
 
-main.customer_care .accommodationList .accommodation .room {
+.customer_care .accommodationList .accommodation .room {
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
@@ -3261,19 +3408,19 @@ main.customer_care .accommodationList .accommodation .room {
   color: #222222;
 }
 
-main.customer_care .accommodationList .accommodation.add {
+.customer_care .accommodationList .accommodation.add {
   border-color: #222222;
 }
 
-main.customer_care .roomTypeLease .body {
+.customer_care .roomTypeLease .body {
   padding: 70px 59px;
 }
 
-main.customer_care .roomTypeLease .table:hover .header {
+.customer_care .roomTypeLease .table:hover .header {
   border-radius: 6px;
 }
 
-main.customer_care .roomTypeLease .table .col {
+.customer_care .roomTypeLease .table .col {
   width: 100%;
   font-size: 18px;
   font-stretch: normal;
@@ -3292,11 +3439,11 @@ main.customer_care .roomTypeLease .table .col {
           justify-content: center;
 }
 
-main.customer_care .roomTypeLease .table .col .wrap div:not(:last-child) {
+.customer_care .roomTypeLease .table .col .wrap div:not(:last-child) {
   margin-bottom: 24px;
 }
 
-main.customer_care .roomTypeLease .table .label {
+.customer_care .roomTypeLease .table .label {
   width: auto;
   font-size: 16px;
   font-weight: bold;
@@ -3308,7 +3455,7 @@ main.customer_care .roomTypeLease .table .label {
   cursor: pointer;
 }
 
-main.customer_care .roomTypeLease .table .row {
+.customer_care .roomTypeLease .table .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3320,12 +3467,12 @@ main.customer_care .roomTypeLease .table .row {
   transition: background-color 0.3s, border-radius 0.3s;
 }
 
-main.customer_care .roomTypeLease .table .row:hover {
+.customer_care .roomTypeLease .table .row:hover {
   background-color: rgba(0, 133, 203, 0.07);
   border-radius: 6px;
 }
 
-main.customer_care .roomTypeLease .table .row::after {
+.customer_care .roomTypeLease .table .row::after {
   content: "";
   display: block;
   position: absolute;
@@ -3335,7 +3482,7 @@ main.customer_care .roomTypeLease .table .row::after {
   background-color: #dddddd;
 }
 
-main.customer_care .roomTypeLease .table .header {
+.customer_care .roomTypeLease .table .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3347,26 +3494,26 @@ main.customer_care .roomTypeLease .table .header {
   transition: border-radius 0.3s;
 }
 
-main.customer_care .roomTypeLease .table .header .col {
+.customer_care .roomTypeLease .table .header .col {
   color: #ffffff;
   font-weight: 500;
 }
 
-main.customer_care .roomTypeDetail.registrationStyle {
+.customer_care .roomTypeDetail.registrationStyle {
   border: 2px solid #0085cb;
 }
 
-main.customer_care .roomTypeDetail .body {
+.customer_care .roomTypeDetail .body {
   padding: 60px;
 }
 
 @media (max-width: 992px) {
-  main.customer_care .roomTypeDetail .body {
+  .customer_care .roomTypeDetail .body {
     padding: 0px;
   }
 }
 
-main.customer_care .roomTypeDetail .row {
+.customer_care .roomTypeDetail .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3374,7 +3521,7 @@ main.customer_care .roomTypeDetail .row {
 }
 
 @media (max-width: 992px) {
-  main.customer_care .roomTypeDetail .row {
+  .customer_care .roomTypeDetail .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -3382,30 +3529,30 @@ main.customer_care .roomTypeDetail .row {
   }
 }
 
-main.customer_care .roomTypeDetail .row .col {
+.customer_care .roomTypeDetail .row .col {
   width: 100%;
 }
 
-main.customer_care .roomTypeDetail form ul label input:not(:first-child) {
+.customer_care .roomTypeDetail form ul label input:not(:first-child) {
   margin-left: 0;
 }
 
-main.customer_care .roomTypeDetail .roomLabel {
+.customer_care .roomTypeDetail .roomLabel {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 
-main.customer_care .roomTypeDetail .roomLabel span {
+.customer_care .roomTypeDetail .roomLabel span {
   margin-top: 0;
   padding-top: 19px;
 }
 
-main.customer_care .roomTypeDetail .roomInput input:not(:last-child) {
+.customer_care .roomTypeDetail .roomInput input:not(:last-child) {
   margin-bottom: 10px;
 }
 
-main.customer_care .roomTypeDetail .roomInput button {
+.customer_care .roomTypeDetail .roomInput button {
   all: unset;
   padding: 16px 20px;
   border: 1px solid #222222;
@@ -3424,26 +3571,26 @@ main.customer_care .roomTypeDetail .roomInput button {
           box-sizing: border-box;
 }
 
-main.customer_care .roomTypeDetail .roomInput button img {
+.customer_care .roomTypeDetail .roomInput button img {
   width: 21px;
   height: 21px;
 }
 
-main.customer_care .roomTypeDetail .two-label label:not(:last-child) {
+.customer_care .roomTypeDetail .two-label label:not(:last-child) {
   margin-bottom: 10px;
 }
 
-main.customer_care .roomTypeDetail .col.content {
+.customer_care .roomTypeDetail .col.content {
   padding: 50px 41px;
 }
 
 @media (max-width: 780px) {
-  main.customer_care .roomTypeDetail .col.content {
+  .customer_care .roomTypeDetail .col.content {
     padding: 25px 21px;
   }
 }
 
-main.customer_care .roomTypeDetail .col.header {
+.customer_care .roomTypeDetail .col.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3464,24 +3611,24 @@ main.customer_care .roomTypeDetail .col.header {
 }
 
 @media (max-width: 992px) {
-  main.customer_care .roomTypeDetail .col.header {
+  .customer_care .roomTypeDetail .col.header {
     max-width: none;
     padding: 20px;
   }
 }
 
-main.customer_care .roomTypeDetail .btnListItem {
+.customer_care .roomTypeDetail .btnListItem {
   text-align: center;
   margin-top: 40px;
 }
 
 @media (max-width: 992px) {
-  main.customer_care .roomTypeDetail .btnListItem {
+  .customer_care .roomTypeDetail .btnListItem {
     margin-bottom: 40px;
   }
 }
 
-main.customer_care .roomTypeDetail .btnListItem .label {
+.customer_care .roomTypeDetail .btnListItem .label {
   font-size: 16px;
   font-weight: bold;
   font-stretch: normal;
@@ -3492,26 +3639,26 @@ main.customer_care .roomTypeDetail .btnListItem .label {
   color: #ffffff;
 }
 
-main.customer_care .chargingDetails .body {
+.customer_care .chargingDetails .body {
   padding: 60px 50px;
 }
 
-main.customer_care .chargingDetails .type-default {
+.customer_care .chargingDetails .type-default {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 50px;
 }
 
-main.customer_care .chargingDetails .type-default ul {
+.customer_care .chargingDetails .type-default ul {
   margin-bottom: 0;
 }
 
-main.customer_care .chargingDetails .type-default li:last-child {
+.customer_care .chargingDetails .type-default li:last-child {
   margin-bottom: 0;
 }
 
-main.customer_care .chargingDetails .btnListItem {
+.customer_care .chargingDetails .btnListItem {
   padding: 0 40px 0 76px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3521,24 +3668,24 @@ main.customer_care .chargingDetails .btnListItem {
           align-items: center;
 }
 
-main.customer_care .chargingDetails .btnListItem button {
+.customer_care .chargingDetails .btnListItem button {
   font-size: 16px;
 }
 
-main.customer_care .chargingDetails .resultTable .content {
+.customer_care .chargingDetails .resultTable .content {
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid #dddddd;
   margin-bottom: 40px;
 }
 
-main.customer_care .chargingDetails .resultTable .row {
+.customer_care .chargingDetails .resultTable .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main.customer_care .chargingDetails .resultTable .col {
+.customer_care .chargingDetails .resultTable .col {
   width: 100%;
   padding: 17px;
   font-size: 18px;
@@ -3550,11 +3697,11 @@ main.customer_care .chargingDetails .resultTable .col {
   color: #222222;
 }
 
-main.customer_care .chargingDetails .resultTable .header {
+.customer_care .chargingDetails .resultTable .header {
   background-color: #aaaaaa;
 }
 
-main.customer_care .chargingDetails .resultTable .header .col {
+.customer_care .chargingDetails .resultTable .header .col {
   color: #ffffff;
   font-size: 18px;
   font-weight: 500;
@@ -3564,7 +3711,7 @@ main.customer_care .chargingDetails .resultTable .header .col {
   color: #ffffff;
 }
 
-main.customer_care .chargingDetails .resultTable .paging {
+.customer_care .chargingDetails .resultTable .paging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3573,7 +3720,7 @@ main.customer_care .chargingDetails .resultTable .paging {
           align-items: center;
 }
 
-main.customer_care .chargingDetails .resultTable .paging button {
+.customer_care .chargingDetails .resultTable .paging button {
   all: unset;
   background-color: #ffffff;
   border-radius: 999px;
@@ -3592,25 +3739,25 @@ main.customer_care .chargingDetails .resultTable .paging button {
   color: #656666;
 }
 
-main.customer_care .chargingDetails .resultTable .paging button.right {
+.customer_care .chargingDetails .resultTable .paging button.right {
   margin-left: 31px;
 }
 
-main.customer_care .chargingDetails .resultTable .paging button.right i {
+.customer_care .chargingDetails .resultTable .paging button.right i {
   -webkit-transform: translateX(2px);
           transform: translateX(2px);
 }
 
-main.customer_care .chargingDetails .resultTable .paging button.left {
+.customer_care .chargingDetails .resultTable .paging button.left {
   margin-right: 31px;
 }
 
-main.customer_care .chargingDetails .resultTable .paging button.left i {
+.customer_care .chargingDetails .resultTable .paging button.left i {
   -webkit-transform: translateX(-1px);
           transform: translateX(-1px);
 }
 
-main.customer_care .chargingDetails .resultTable .paging .paging-number {
+.customer_care .chargingDetails .resultTable .paging .paging-number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3620,7 +3767,7 @@ main.customer_care .chargingDetails .resultTable .paging .paging-number {
   color: #999999;
 }
 
-main.customer_care .chargingDetails .resultTable .paging .paging-number li {
+.customer_care .chargingDetails .resultTable .paging .paging-number li {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -3631,16 +3778,242 @@ main.customer_care .chargingDetails .resultTable .paging .paging-number li {
   padding-bottom: 1px;
 }
 
-main.customer_care .chargingDetails .resultTable .paging .paging-number li:not(:last-child) {
+.customer_care .chargingDetails .resultTable .paging .paging-number li:not(:last-child) {
   margin-right: 8px;
 }
 
-main.customer_care .chargingDetails .resultTable .paging .paging-number .current {
+.customer_care .chargingDetails .resultTable .paging .paging-number .current {
   color: #222222;
 }
 
-main.customer_care .chargingDetails .resultTable .paging {
+.customer_care .chargingDetails .resultTable .paging {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.customer_care.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.customer_care.popup .container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.customer_care.popup .inner {
+  border-radius: 6px;
+  border: solid 1px #cccccc;
+  background-color: #ffffff;
+  padding: 59px;
+}
+
+@media (max-width: 992px) {
+  .customer_care.popup .inner {
+    padding: 25px;
+  }
+}
+
+.customer_care.popup .inner .search {
+  padding: 25px 45px;
+  border-radius: 6px;
+  background-color: #f4f4f4;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 992px) {
+  .customer_care.popup .inner .search {
+    padding: 25px 20px;
+  }
+}
+
+.customer_care.popup .inner .search .type-default {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+@media (max-width: 780px) {
+  .customer_care.popup .inner .search .type-default {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.customer_care.popup .inner .search .type-default .name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.customer_care.popup .inner .search .type-default ul {
+  margin-bottom: 0;
+  margin-right: 40px;
+}
+
+@media (max-width: 780px) {
+  .customer_care.popup .inner .search .type-default ul {
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .customer_care.popup .inner .search .type-default ul {
+    margin-bottom: 20px;
+  }
+}
+
+.customer_care.popup .inner .search .type-default li {
+  margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+  .customer_care.popup .inner .search .type-default li {
+    margin-bottom: 10px;
+  }
+}
+
+.customer_care.popup .inner .search .btnListItem {
+  padding-left: 40px;
+  border-left: 1px solid #dddddd;
+}
+
+@media (max-width: 780px) {
+  .customer_care.popup .inner .search .btnListItem {
+    padding-left: 138px;
+    border: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .customer_care.popup .inner .search .btnListItem {
+    padding-left: 0;
+  }
+}
+
+.customer_care.popup .inner .search .btnListItem button {
+  border: solid 1px #222222;
+  background-color: #ffffff;
+  height: 100%;
+  width: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.48px;
+  color: #222222;
+}
+
+@media (max-width: 992px) {
+  .customer_care.popup .inner .search .btnListItem button {
+    width: 150px;
+  }
+}
+
+@media (max-width: 780px) {
+  .customer_care.popup .inner .search .btnListItem button {
+    width: 100%;
+    margin: 0;
+    height: 58px;
+  }
+}
+
+.customer_care.popup .table {
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 30px;
+}
+
+.customer_care.popup .table .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.customer_care.popup .table .row:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.customer_care.popup .table .row .col {
+  width: 100%;
+  text-align: center;
+}
+
+.customer_care.popup .table .row .col.checkbox {
+  max-width: 150px;
+}
+
+.customer_care.popup .table .row .col.number {
+  max-width: 150px;
+}
+
+.customer_care.popup .table .row .col.managerId {
+  max-width: 200px;
+}
+
+.customer_care.popup .table .row .col.managerName {
+  max-width: 200px;
+}
+
+.customer_care.popup .table .row.header {
+  background-color: #aaaaaa;
+  margin-bottom: 0;
+}
+
+.customer_care.popup .table .row.header .col {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.54px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.customer_care.popup .table .row input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+}
+
+.customer_care.popup .table .row input[type="checkbox"]:not(.switch):after {
+  width: 7px;
+  height: 11px;
+  -webkit-transform: translate(-50%, calc(-50% - 2px)) rotate(var(--r, 20deg));
+          transform: translate(-50%, calc(-50% - 2px)) rotate(var(--r, 20deg));
+}
+
+.customer_care.popup .table .content {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.customer_care.popup .btnListItem {
+  text-align: center;
+}
+
+.customer_care.popup .btnListItem button {
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+.customer_care.popup .btnListItem .cancel {
+  background-color: #414141;
 }
