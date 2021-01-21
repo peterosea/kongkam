@@ -1,5 +1,6 @@
 <?php include_once '../includes/head.php' ?>
 
+<?php include_once '../includes/body-open.php' ?>
 <main>
   <div class="section page-login">
     <div class="container">
@@ -49,4 +50,5 @@
   </div>
 </main>
 
-<?php include_once '../includes/foot.php' ?>
+<?php include_once '../includes/body-close.php' ?>
+<?php include_once '../includes/footer.php' ?>
