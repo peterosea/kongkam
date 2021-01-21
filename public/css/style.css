@@ -3190,3 +3190,65 @@ main.customer_care form.type-default ul .name {
           flex: 0 0 auto;
   width: 120px;
 }
+
+main.customer_care .accommodationList .body {
+  padding: 98px 62px;
+}
+
+main.customer_care .accommodationList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main.customer_care .accommodationList ul li {
+  margin: 10px;
+}
+
+main.customer_care .accommodationList .accommodation {
+  width: 245px;
+  height: 300px;
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.customer_care .accommodationList .accommodation .name {
+  font-size: 34px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -1.02px;
+  color: #222222;
+  margin-bottom: 13px;
+}
+
+main.customer_care .accommodationList .accommodation .room {
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.54px;
+  color: #222222;
+}
+
+main.customer_care .accommodationList .accommodation.add {
+  border-color: #222222;
+}
