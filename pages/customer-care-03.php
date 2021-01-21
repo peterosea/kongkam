@@ -39,7 +39,6 @@
                 <input type="text" value="15:00">
               </label>
             </li>
-            </li>
             <li class="fullWidth btnListItem">
               <button type="submit" class="label _deposit">저장</button>
             </li>

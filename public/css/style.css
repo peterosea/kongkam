@@ -2808,23 +2808,24 @@ main.customer_care .registrationStyle {
   overflow: hidden;
   background-color: #ffffff;
   border: 1px solid #bfbfbf;
+  margin-bottom: 40px;
 }
 
-main.customer_care .registrationStyle .header {
+main.customer_care .registrationStyle > .header {
   border-bottom: 1px solid #bfbfbf;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main.customer_care .registrationStyle .header.modify {
+main.customer_care .registrationStyle > .header.modify {
   font-size: 18px;
   font-weight: bold;
   padding: 24px 61px;
 }
 
 @media (max-width: 576px) {
-  main.customer_care .registrationStyle .header.modify {
+  main.customer_care .registrationStyle > .header.modify {
     padding: 24px 30px;
   }
 }
@@ -3257,6 +3258,10 @@ main.customer_care .roomTypeLease .body {
   padding: 70px 59px;
 }
 
+main.customer_care .roomTypeLease .table:hover .header {
+  border-radius: 6px;
+}
+
 main.customer_care .roomTypeLease .table .col {
   width: 100%;
   font-size: 18px;
@@ -3289,14 +3294,34 @@ main.customer_care .roomTypeLease .table .label {
   letter-spacing: -0.48px;
   color: #ffffff;
   padding: 8px 27px 8px;
+  cursor: pointer;
 }
 
 main.customer_care .roomTypeLease .table .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 1px solid #dddddd;
   padding: 38px 0;
+  margin: 20px 0;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s, border-radius 0.3s;
+  transition: background-color 0.3s, border-radius 0.3s;
+}
+
+main.customer_care .roomTypeLease .table .row:hover {
+  background-color: rgba(0, 133, 203, 0.07);
+  border-radius: 6px;
+}
+
+main.customer_care .roomTypeLease .table .row::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: -10px;
+  background-color: #dddddd;
 }
 
 main.customer_care .roomTypeLease .table .header {
@@ -3307,9 +3332,151 @@ main.customer_care .roomTypeLease .table .header {
       -ms-flex-align: center;
           align-items: center;
   background-color: #aaaaaa;
+  -webkit-transition: border-radius 0.3s;
+  transition: border-radius 0.3s;
 }
 
 main.customer_care .roomTypeLease .table .header .col {
   color: #ffffff;
   font-weight: 500;
+}
+
+main.customer_care .roomTypeDetail.registrationStyle {
+  border: 2px solid #0085cb;
+}
+
+main.customer_care .roomTypeDetail .body {
+  padding: 60px;
+}
+
+@media (max-width: 992px) {
+  main.customer_care .roomTypeDetail .body {
+    padding: 0px;
+  }
+}
+
+main.customer_care .roomTypeDetail .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #dddddd;
+}
+
+@media (max-width: 992px) {
+  main.customer_care .roomTypeDetail .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main.customer_care .roomTypeDetail .row .col {
+  width: 100%;
+}
+
+main.customer_care .roomTypeDetail form ul label input:not(:first-child) {
+  margin-left: 0;
+}
+
+main.customer_care .roomTypeDetail .roomLabel {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main.customer_care .roomTypeDetail .roomLabel span {
+  margin-top: 0;
+  padding-top: 19px;
+}
+
+main.customer_care .roomTypeDetail .roomInput input:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+main.customer_care .roomTypeDetail .roomInput button {
+  all: unset;
+  padding: 16px 20px;
+  border: 1px solid #222222;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main.customer_care .roomTypeDetail .roomInput button img {
+  width: 21px;
+  height: 21px;
+}
+
+main.customer_care .roomTypeDetail .two-label label:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+main.customer_care .roomTypeDetail .col.content {
+  padding: 50px 41px;
+}
+
+@media (max-width: 780px) {
+  main.customer_care .roomTypeDetail .col.content {
+    padding: 25px 21px;
+  }
+}
+
+main.customer_care .roomTypeDetail .col.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f4f4f4;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.54px;
+  color: #222222;
+  max-width: 200px;
+}
+
+@media (max-width: 992px) {
+  main.customer_care .roomTypeDetail .col.header {
+    max-width: none;
+    padding: 20px;
+  }
+}
+
+main.customer_care .roomTypeDetail .btnListItem {
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 992px) {
+  main.customer_care .roomTypeDetail .btnListItem {
+    margin-bottom: 40px;
+  }
+}
+
+main.customer_care .roomTypeDetail .btnListItem .label {
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -0.48px;
+  text-align: center;
+  color: #ffffff;
 }
