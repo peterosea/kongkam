@@ -5,6 +5,9 @@
   background-color: #414141;
   padding: 10px 30px;
   align-items: center;
+  @include respond-to("sm") {
+    padding: 10px 18px;
+  }
   &.superadmin {
     background-color: $dark-red;
   }
@@ -17,9 +20,20 @@
       img {
         height: auto;
       }
+      .mobile {
+        display: none;
+      }
       @include respond-to("md") {
-        width: 120px;
-        height: 34px;
+        width: auto;
+        max-width: 120px;
+        .desktop {
+          display: none;
+        }
+        .mobile {
+          display: block;
+          height: 100%;
+          max-height: 36px;
+        }
       }
     }
   }
@@ -44,6 +58,10 @@
     li {
       padding: 0 18px;
       border-right: 1px solid rgba(255, 255, 255, 0.5);
+
+      @include respond-to("sm") {
+        padding: 0 9px;
+      }
       &:first-child {
         padding-left: 0;
       }
