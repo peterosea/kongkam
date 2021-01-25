@@ -936,10 +936,21 @@ button._crement::after {
   height: auto;
 }
 
+.top_nav_wrap .logo a .mobile {
+  display: none;
+}
+
 @media (max-width: 780px) {
   .top_nav_wrap .logo a {
     width: 120px;
     height: 34px;
+  }
+  .top_nav_wrap .logo a .desktop {
+    display: none;
+  }
+  .top_nav_wrap .logo a .mobile {
+    display: block;
+    height: 36px;
   }
 }
 
