@@ -1,0 +1,74 @@
+.top_nav_wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #414141;
+  padding: 10px 30px;
+  align-items: center;
+  @include respond-to("sm") {
+    padding: 10px 18px;
+  }
+  &.superadmin {
+    background-color: $dark-red;
+  }
+  .logo {
+    a {
+      display: flex;
+      align-items: center;
+      width: 251px;
+      height: 30px;
+      img {
+        height: auto;
+      }
+      .mobile {
+        display: none;
+      }
+      @include respond-to("md") {
+        width: auto;
+        max-width: 120px;
+        .desktop {
+          display: none;
+        }
+        .mobile {
+          display: block;
+          height: 100%;
+          max-height: 36px;
+        }
+      }
+    }
+  }
+  .top_menu {
+    display: flex;
+    ._name {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 9px;
+      }
+    }
+    a,
+    li {
+      color: #fff;
+      font-size: 16px;
+      line-height: 1.2em;
+      @include respond-to("md") {
+        font-size: 16px;
+      }
+    }
+    li {
+      padding: 0 18px;
+      border-right: 1px solid rgba(255, 255, 255, 0.5);
+
+      @include respond-to("sm") {
+        padding: 0 9px;
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+        border-right: none;
+      }
+    }
+  }
+}

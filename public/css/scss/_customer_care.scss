@@ -1,0 +1,965 @@
+@mixin paging {
+  .paging {
+    display: flex;
+    align-items: center;
+    button {
+      all: unset;
+      background-color: $white;
+      border-radius: 999px;
+      width: 31px;
+      height: 31px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $very-light-pink-three;
+      color: #656666;
+
+      @include respond-to("md") {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+      }
+      &.right {
+        margin-left: 31px;
+        i {
+          transform: translateX(2px);
+        }
+      }
+      &.left {
+        margin-right: 31px;
+        i {
+          transform: translateX(-1px);
+        }
+      }
+    }
+    .paging-number {
+      display: flex;
+      align-items: center;
+      color: $brown-grey-two;
+      li {
+        font-family: $NotoSansKR;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        text-align: center;
+        line-height: 1;
+        padding-bottom: 1px;
+        @include respond-to("md") {
+          font-size: 18px;
+        }
+      }
+      li:not(:last-child) {
+        margin-right: 8px;
+        @include respond-to("md") {
+          margin-right: 16px;
+        }
+      }
+      .current {
+        color: $black;
+      }
+    }
+  }
+}
+.customer_care {
+  padding: 70px 20px;
+  @include respond-to("sm") {
+    padding: 40px 20px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .registrationStyle {
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: $white;
+    border: 1px solid $very-light-pink-three;
+    margin-bottom: 40px;
+    > .header {
+      border-bottom: 1px solid $very-light-pink-three;
+      display: flex;
+      &.modify {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 24px 61px;
+        @include respond-to("md") {
+          padding: 24px 30px;
+        }
+        @include respond-to("sm") {
+          padding: 15px 20px;
+        }
+      }
+    }
+    .body {
+      padding: 28px 31px 4px 31px;
+
+      @include respond-to("md") {
+        padding: 14px 16px 2px 16px;
+      }
+    }
+  }
+  .registration {
+    .header {
+      @include respond-to("md") {
+        display: none;
+      }
+    }
+    hr {
+      display: none;
+
+      @include respond-to("md") {
+        display: block;
+        height: 1px;
+        border: none;
+        border-bottom: 1px solid $very-light-pink;
+        margin-top: 100px;
+        margin-bottom: 60px;
+        width: 100%;
+      }
+    }
+    .header .col {
+      width: 100%;
+      padding: 23px 0;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: -0.48px;
+    }
+    .col:last-child label {
+      @include respond-to("md") {
+        align-items: flex-start;
+        span {
+          margin-top: 20px;
+        }
+      }
+    }
+    label {
+      flex-wrap: nowrap;
+      span {
+        display: none;
+        @include respond-to("md") {
+          display: inline-block;
+          width: 170px;
+          word-break: keep-all;
+        }
+
+        @include respond-to("sm") {
+          width: 110px;
+        }
+      }
+
+      input,
+      textarea {
+        @include respond-to("md") {
+          max-width: none;
+        }
+      }
+    }
+    .body {
+      .row {
+        display: flex;
+        @include respond-to("md") {
+          flex-direction: column;
+        }
+        &:not(:first-child) {
+          @include respond-to("md") {
+            display: none;
+          }
+        }
+        &:not(:last-child) {
+          border-bottom: 1px solid $very-light-pink;
+          padding-bottom: 13px;
+          margin-bottom: 13px;
+          @include respond-to("md") {
+            border-bottom: none;
+          }
+        }
+        .col {
+          width: 100%;
+        }
+        .col:not(:last-child) {
+          margin-right: 10px;
+          @include respond-to("md") {
+            margin-right: 0;
+            margin-bottom: 10px;
+          }
+        }
+        input,
+        textarea {
+          border-radius: 6px;
+          border: 1px solid $very-light-pink-three;
+          box-shadow: none;
+          font-size: 16px;
+          padding: 17px;
+          width: 100%;
+          box-sizing: border-box;
+          @include respond-to("md") {
+            border: 1px solid $very-light-pink;
+          }
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      justify-content: center;
+      padding: 36px 31px;
+      position: relative;
+      @include paging();
+      @include respond-to("md") {
+        flex-direction: column;
+        align-items: center;
+      }
+      button.customer-registration-btn {
+        all: unset;
+        padding: 4px 16px 8px;
+        border-radius: 6px;
+        background-color: $cerulean;
+
+        position: absolute;
+        right: 31px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        font-family: $NotoSansKR;
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: -0.48px;
+        text-align: center;
+        color: $white;
+
+        @include respond-to("md") {
+          font-size: 18px;
+          padding: 16px 24px 20px;
+          position: relative;
+          transform: none;
+          top: auto;
+          left: auto;
+          right: auto;
+        }
+      }
+    }
+  }
+  // 고객 관리 메뉴
+  .customerCareMenu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      li {
+        padding: 0 25px;
+        a {
+          color: $black;
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: 500;
+          letter-spacing: -0.54px;
+          &:hover {
+            color: $cherry-red;
+          }
+        }
+        &.current a {
+          color: $cherry-red;
+        }
+      }
+      li:not(:last-child) {
+        border-right: 2px solid $very-light-pink-two;
+      }
+    }
+  }
+  // 고객 등록 수정
+  .customerModifyRegistration {
+    .body {
+      padding-bottom: 40px;
+    }
+  }
+  .lodgingModifyRegistration {
+    .body {
+      padding: 42px 60px 40px;
+      @include respond-to("sm") {
+        padding: 22px 30px 20px;
+      }
+    }
+    form.type-default {
+      padding: 0;
+    }
+  }
+  form.type-default {
+    position: relative;
+    padding: 0 41px;
+    @include respond-to("md") {
+      padding: 0;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin-bottom: 10px;
+      li {
+        width: calc(50% - 5px);
+        margin-bottom: 10px;
+        @include respond-to("lg") {
+          width: 100%;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+        &:nth-child(2n-1) {
+          padding-right: 40px;
+          margin-right: 10px;
+          @include respond-to("lg") {
+            margin-right: 0;
+          }
+        }
+        &:nth-child(2n) {
+          padding-left: 40px;
+        }
+      }
+      li.fullWidth {
+        width: 100%;
+        padding: 0;
+        margin-right: 0;
+      }
+      label {
+        flex-wrap: nowrap;
+        @include respond-to("sm") {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        input:not(:first-child) {
+          margin-left: 10px;
+          @include respond-to("sm") {
+            margin-left: 0px;
+            margin-top: 10px;
+          }
+        }
+        input,
+        select,
+        textarea {
+          max-width: none;
+          width: 100%;
+          font-family: $NotoSansKR;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: -0.48px;
+          text-align: left;
+          color: $black;
+        }
+        &.align-flex-start {
+          align-items: flex-start;
+        }
+        textarea {
+          width: 100%;
+          max-width: none;
+        }
+        .select {
+          display: flex;
+          input,
+          select {
+            margin-left: 10px;
+          }
+        }
+      }
+      li.btnListItem {
+        margin-top: 32px;
+        text-align: center;
+        padding-top: 41px;
+
+        button {
+          font-size: 16px;
+        }
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: $very-light-pink;
+          position: absolute;
+          left: 0;
+          transform: translateY(-41px);
+        }
+      }
+      .name {
+        font-family: $NotoSansKR;
+        font-size: 16px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.48px;
+        text-align: left;
+        color: $black;
+        flex: 0 0 auto;
+        width: 120px;
+      }
+    }
+  }
+  .accommodationList {
+    .body {
+      padding: 98px 62px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        margin: 10px;
+      }
+    }
+    .accommodation {
+      width: 245px;
+      height: 300px;
+      border-radius: 4px;
+      border: 1px solid $very-light-pink;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .name {
+        font-size: 34px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -1.02px;
+        color: $black;
+        margin-bottom: 13px;
+      }
+      .room {
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.54px;
+        color: $black;
+      }
+      &.add {
+        border-color: $black;
+      }
+    }
+  }
+  .roomTypeLease {
+    .body {
+      padding: 70px 59px;
+      @include respond-to("md") {
+        padding: 24px 30px;
+      }
+      @include respond-to("sm") {
+        padding: 15px 20px;
+      }
+    }
+    .table {
+      &:hover {
+        .header {
+          border-radius: 6px;
+        }
+      }
+      .col {
+        width: 100%;
+        font-size: 18px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 3.33;
+        letter-spacing: -0.54px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .wrap div:not(:last-child) {
+          margin-bottom: 24px;
+
+          @include respond-to("md") {
+            margin-bottom: 12px;
+          }
+        }
+
+        @include respond-to("md") {
+          font-weight: 300;
+          padding-left: 8px;
+          padding-right: 8px;
+          line-height: 1;
+          word-break: keep-all;
+          &.name {
+            width: 25%;
+          }
+          &.room-type {
+            width: 50%;
+          }
+          &.room {
+            width: 25%;
+          }
+        }
+        &.add {
+          @include respond-to("md") {
+            margin-top: 35px;
+            width: 100%;
+          }
+        }
+      }
+      .label {
+        width: auto;
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.48px;
+        color: $white;
+        padding: 8px 27px 8px;
+        cursor: pointer;
+
+        @include respond-to("md") {
+          padding: 12px 30px 12px;
+        }
+      }
+      .row {
+        display: flex;
+        padding: 38px 0;
+        margin: 20px 0;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s, border-radius 0.3s;
+        &:hover {
+          background-color: rgba($cerulean, 0.07);
+          border-radius: 6px;
+        }
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          height: 1px;
+          width: 100%;
+          bottom: -10px;
+          background-color: $very-light-pink;
+        }
+        @include respond-to("md") {
+          flex-wrap: wrap;
+        }
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        background-color: $brown-grey;
+        transition: border-radius 0.3s;
+        .col {
+          color: $white;
+          font-weight: 500;
+          line-height: 3.33;
+        }
+        .col.add {
+          @include respond-to("md") {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .roomTypeDetail {
+    &.registrationStyle {
+      border: 2px solid $cerulean;
+    }
+    .body {
+      padding: 60px;
+
+      @include respond-to("lg") {
+        padding: 0px;
+      }
+    }
+    .row {
+      display: flex;
+      border-bottom: 1px solid $very-light-pink;
+      @include respond-to("lg") {
+        flex-direction: column;
+      }
+      .col {
+        width: 100%;
+      }
+    }
+    form ul label input:not(:first-child) {
+      margin-left: 0;
+    }
+    .roomLabel {
+      align-items: flex-start;
+      span {
+        margin-top: 0;
+        padding-top: 19px;
+      }
+    }
+    .roomInput {
+      input:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      button {
+        all: unset;
+        padding: 16px 20px;
+        border: 1px solid $black;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+        img {
+          width: 21px;
+          height: 21px;
+        }
+      }
+    }
+    .two-label label:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    .col.content {
+      padding: 50px 41px;
+
+      @include respond-to("md") {
+        padding: 25px 21px;
+      }
+    }
+    .col.header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $white-two;
+      font-size: 18px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: -0.54px;
+      color: $black;
+      max-width: 200px;
+      @include respond-to("lg") {
+        max-width: none;
+        padding: 20px;
+      }
+    }
+    .btnListItem {
+      text-align: center;
+      margin-top: 40px;
+      @include respond-to("lg") {
+        margin-bottom: 40px;
+      }
+      .label {
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: -0.48px;
+        text-align: center;
+        color: $white;
+      }
+    }
+  }
+  .chargingDetails {
+    .body {
+      padding: 60px 50px;
+      @include respond-to("md") {
+        padding: 24px 30px;
+      }
+      @include respond-to("sm") {
+        padding: 15px 20px;
+      }
+    }
+    .type-default {
+      display: flex;
+      margin-bottom: 50px;
+
+      @include respond-to("md") {
+        flex-direction: column;
+      }
+      ul {
+        margin-bottom: 0;
+      }
+      li:last-child {
+        margin-bottom: 0;
+      }
+      .amountUsed {
+        > div {
+          margin-left: 10px;
+          width: 100%;
+          @include respond-to("sm") {
+            margin-left: 0;
+            margin-bottom: 10px;
+            justify-content: center;
+          }
+        }
+        input {
+          width: 100%;
+        }
+      }
+      .select {
+        select {
+          margin-left: 0;
+        }
+        @include respond-to("md") {
+          flex-direction: column;
+        }
+      }
+    }
+
+    hr {
+      display: none;
+
+      @include respond-to("md") {
+        display: block;
+        height: 1px;
+        border: none;
+        border-bottom: 1px solid $very-light-pink;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        width: 100%;
+      }
+    }
+    .btnListItem {
+      padding: 0 40px 0 76px;
+      display: flex;
+      align-items: center;
+
+      @include respond-to("md") {
+        justify-content: center;
+        padding: 0 40px;
+      }
+      button {
+        font-size: 16px;
+        @include respond-to("md") {
+          font-size: 18px;
+          padding: 18px 30px;
+          width: auto;
+        }
+      }
+    }
+    .resultTableWrap {
+      overflow-x: scroll;
+      margin-bottom: 20px;
+    }
+    .resultTable {
+      border: none;
+      width: 100%;
+      td {
+        border: none;
+      }
+      .content {
+        margin-bottom: 40px;
+      }
+      .col {
+        padding: 17px;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.54px;
+        text-align: center;
+        color: $black;
+        &:nth-child(1) {
+          min-width: 200px;
+        }
+        &:nth-child(2) {
+          min-width: 100px;
+        }
+        &:nth-child(3) {
+          min-width: 100px;
+        }
+      }
+      .header {
+        background-color: $brown-grey;
+        .col {
+          color: $white;
+          font-size: 18px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: -0.54px;
+          color: $white;
+        }
+      }
+    }
+
+    @include paging();
+    .paging {
+      justify-content: center;
+    }
+  }
+  &.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($black-two, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      max-height: 100%;
+      overflow-y: scroll;
+    }
+    .inner {
+      border-radius: 6px;
+      border: solid 1px $very-light-pink-two;
+      background-color: $white;
+      padding: 59px;
+      @include respond-to("lg") {
+        padding: 25px;
+      }
+
+      .search {
+        padding: 25px 45px;
+        border-radius: 6px;
+        background-color: $white-two;
+        margin-bottom: 14px;
+        @include respond-to("lg") {
+          padding: 25px 20px;
+        }
+        .type-default {
+          display: flex;
+          margin-bottom: 0;
+          padding: 0;
+          @include respond-to("md") {
+            flex-direction: column;
+          }
+          .name {
+            font-size: 16px;
+            font-weight: 500;
+          }
+          ul {
+            margin-bottom: 0;
+            margin-right: 40px;
+            @include respond-to("md") {
+              margin: 0;
+            }
+            @include respond-to("sm") {
+              margin-bottom: 20px;
+            }
+          }
+          li {
+            margin-bottom: 0;
+            @include respond-to("lg") {
+              margin-bottom: 10px;
+            }
+          }
+        }
+        .btnListItem {
+          padding-left: 40px;
+          border-left: 1px solid $very-light-pink;
+          @include respond-to("md") {
+            padding-left: 138px;
+            border: none;
+          }
+          @include respond-to("sm") {
+            padding-left: 0;
+          }
+          button {
+            border: solid 1px $black;
+            background-color: $white;
+            height: 100%;
+            width: 100px;
+            font-size: 16px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: -0.48px;
+            color: $black;
+            @include respond-to("lg") {
+              width: 150px;
+            }
+            @include respond-to("md") {
+              width: 100%;
+              margin: 0;
+              height: 58px;
+            }
+          }
+        }
+      }
+    }
+    .tableWrap {
+      overflow-x: scroll;
+      margin-bottom: 30px;
+      border-bottom: 1px solid $very-light-pink;
+    }
+    .table {
+      width: 100%;
+      .row {
+        display: flex;
+        .col {
+          width: 100%;
+          text-align: center;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          &.checkbox {
+            min-width: 80px;
+          }
+          &.number {
+            min-width: 50px;
+          }
+          &.managerId {
+            min-width: 130px;
+          }
+          &.managerName {
+            min-width: 160px;
+          }
+          &.buildingName {
+            min-width: 160px;
+          }
+        }
+        &.header {
+          background-color: $brown-grey;
+          margin-bottom: 0;
+          .col {
+            padding-top: 17px;
+            padding-bottom: 17px;
+            font-size: 18px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: -0.54px;
+            text-align: center;
+            color: $white;
+          }
+        }
+        input[type="checkbox"] {
+          width: 30px;
+          height: 30px;
+          &:not(.switch):after {
+            width: 7px;
+            height: 11px;
+            transform: translate(-50%, calc(-50% - 2px)) rotate(var(--r, 20deg));
+          }
+        }
+      }
+      .content {
+        .row:first-child .col {
+          padding-top: 45px;
+          @include respond-to("sm") {
+            padding-top: 25px;
+          }
+        }
+        .row:last-child .col {
+          padding-bottom: 45px;
+          @include respond-to("sm") {
+            padding-bottom: 25px;
+          }
+        }
+      }
+    }
+    .btnListItem {
+      text-align: center;
+      button {
+        margin: 0 5px;
+        font-size: 16px;
+      }
+      .cancel {
+        background-color: $greyish-brown;
+      }
+    }
+  }
+}

@@ -1,116 +1,51 @@
-header.main_header {
-    ///// TopMenu
-    .top_nav_wrap {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: #414141;
-        padding:10px 30px;
-        align-items: center;
-    }
-    .logo {
-        a {
-            display:flex;
-            width:251px;
-            height: 30px;
-            background-position: left center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-image:url('#{$urlImg}/logo.png');
-            @include respond-to('md'){
-                width: 120px;
-                height: 34px;
-                background-image:url('#{$urlImg}/logo-m.png');
-            }
+header.pageHeader {
+  border-bottom: 1px solid $very-light-pink;
+  background-color: $white;
+  .container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  .menu-list {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-sizing: border-box;
+    li {
+      width: 100%;
+      img {
+        margin-right: 11px;
+        @include respond-to("md") {
+          display: none;
         }
+      }
     }
-    .top_menu {
-        display: flex;
-        a, li {
-            color:#fff;
-            font-size: 16px;
-            line-height: 1.2em;
-            @include respond-to('md'){
-                font-size: 16px;
-            }
-        }
-        li {
-            padding: 0 18px;
-            border-right: 1px solid rgba(255,255,255,0.5);
-            &:first-child {
-                padding-left: 0;
-            }
-            &:last-child {
-                padding-right: 0;
-                border-right: none;
-            }
-        }
+    a {
+      padding: 40px;
+      padding-bottom: 36px;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      border-bottom: 4px solid transparent;
+      &:hover {
+        border-color: $cherry-red;
+      }
+      @include respond-to("md") {
+        padding: 30px;
+        padding-bottom: 26px;
+      }
+      @include respond-to("sm") {
+        padding: 20px 10px;
+        padding-bottom: 16px;
+        font-size: 18px;
+      }
     }
-    ///// Navigation
-    .gnb {
-        background-color: #fff;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        ._nav {
-            display:flex;
-            flex-direction: row;
-            width: 100%;
-            li {
-                display:flex;
-                align-items: center;
-                justify-content:center;
-                width:33.33%;
-                &:hover {
-                    border-bottom:4px solid $DarkGrey;
-                }
-            }
-            li._active {
-                border-bottom:4px solid $Red;
-                > a {
-                    font-weight: bold;
-                }
-            }
-            .has_icon ._icon {
-                background-position: center center;
-                background-size: auto;
-                background-repeat: no-repeat;
-                display:flex;
-                margin-right: 18px;
-                &.room_list {
-                    width:35px;
-                    height:35px;
-                    background-image: url('#{$urlImg}/menuicon_01.svg');
-                }
-                &.reservation_list {
-                    width:32px;
-                    height:32px;
-                    background-image: url('#{$urlImg}/menuicon_02.svg');
-                }
-                &.settle_list {
-                    width:28px;
-                    height:32px;
-                    background-image: url('#{$urlImg}/menuicon_03.svg');
-                }
-                @include respond-to('md') {
-                    display: none;
-                }
-            }
-            a {
-                padding:40px;
-                font-size: 20px;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                @include respond-to('md') {
-                    padding:30px;
-                }
-                @include respond-to('sm') {
-                    padding:20px 10px;
-                    font-size: 18px;
-                }
-            }
-        }
+    li.active > a {
+      font-weight: bold;
+      border-color: $cherry-red;
     }
+  }
 }
+@import "header-management";
+@import "header-find";

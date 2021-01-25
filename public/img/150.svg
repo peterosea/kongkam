@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="그룹_150" transform="translate(-625 -5285)">
+        <g id="그룹_141" transform="translate(636.5 5286)">
+            <g id="그룹_140">
+                <g id="그룹_139">
+                    <g id="그룹_138">
+                        <circle id="타원_24" cx="3.5" cy="3.5" r="3.5" class="cls-1" transform="translate(3.5)"/>
+                        <path id="패스_100" d="M645 5306l-1.167 11.667h-4.667L638 5306" class="cls-1" transform="translate(-634.5 -5282.666)"/>
+                        <path id="패스_101" d="M635 5300.063v6.927h3.5" class="cls-1" transform="translate(-635 -5283.656)"/>
+                        <path id="패스_102" d="M647.5 5300.063v6.927H644" class="cls-1" transform="translate(-633.5 -5283.656)"/>
+                    </g>
+                </g>
+            </g>
+            <path id="패스_103" d="M649 5301a7 7 0 0 0-14 0" class="cls-1" transform="translate(-635 -5284.666)"/>
+        </g>
+        <g id="그룹_145" transform="translate(651.667 5288.333)">
+            <g id="그룹_144">
+                <g id="그룹_143">
+                    <g id="그룹_142">
+                        <circle id="타원_25" cx="3.5" cy="3.5" r="3.5" class="cls-1" transform="translate(.333 -.333)"/>
+                        <path id="패스_104" d="M648 5310.667l1.167 4.667h4.667L655 5306" class="cls-1" transform="translate(-648 -5285)"/>
+                        <path id="패스_105" d="M656.333 5302.062v4.594H654" class="cls-1" transform="translate(-647 -5285.656)"/>
+                    </g>
+                </g>
+            </g>
+            <path id="패스_106" d="M656.833 5303c0-3.864-1.969-7-5.833-7" class="cls-1" transform="translate(-647.5 -5286.667)"/>
+        </g>
+        <g id="그룹_149" transform="translate(626 5288.333)">
+            <g id="그룹_148">
+                <g id="그룹_147">
+                    <g id="그룹_146">
+                        <circle id="타원_26" cx="3.5" cy="3.5" r="3.5" class="cls-1" transform="translate(2 -.333)"/>
+                        <path id="패스_107" d="M628 5306l1.167 9.333h4.667l1.167-4.667" class="cls-1" transform="translate(-625.667 -5285)"/>
+                        <path id="패스_108" d="M626 5302.062v4.594h2.333" class="cls-1" transform="translate(-626 -5285.656)"/>
+                    </g>
+                </g>
+            </g>
+            <path id="패스_109" d="M626 5303c0-3.864 1.966-7 5.833-7" class="cls-1" transform="translate(-626 -5286.667)"/>
+        </g>
+    </g>
+</svg>

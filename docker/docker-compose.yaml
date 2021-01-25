@@ -3,6 +3,7 @@ version: "3.7"
 services:
   was:
     image: php:8.0.0-apache
+    container_name: WS__kongkam
     restart: always
     ports:
       - 80

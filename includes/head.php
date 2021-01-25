@@ -16,7 +16,3 @@
   <link type="text/css" rel="stylesheet" href="../public/css/style.css">
   <!-- /.peterosea custom code -->
 </head>
-
-<body class="<?php if (!empty($matches)) echo $matches[1]; ?>">
-  <!-- Body Container -->
-  <div class="body_container">
