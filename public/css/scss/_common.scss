@@ -331,3 +331,18 @@ g {
     top: 35px;
   }
 }
+
+* {
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 4px;
+    height: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $brown-grey;
+    border-radius: 999px;
+  }
+}

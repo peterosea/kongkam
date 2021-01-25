@@ -22,10 +22,12 @@
               </label>
             </li>
             <li class="fullWidth">
-              <label>
+              <label class="amountUsed">
                 <span class="name">이용금액</span>
-                <div class="select">
+                <div>
                   <input type="text">
+                </div>
+                <div class="select">
                   <select name="" id="">
                     <option value="결제완료">결제완료</option>
                     <option value="결제완료">결제완료</option>
@@ -38,48 +40,53 @@
               </label>
             </li>
           </ul>
+          <hr />
           <div class="btnListItem">
             <button type="submit" class="label _deposit">저장</button>
           </div>
         </form>
-        <div class="resultTable">
-          <div class="row header">
-            <div class="col">이용기간</div>
-            <div class="col">이용금액</div>
-            <div class="col">결제여부</div>
-          </div>
-          <div class="content">
-            <div class="row">
-              <div class="col">2020-06-01 ~ 2020-12-31</div>
-              <div class="col">300,000</div>
-              <div class="col">결제대기</div>
-            </div>
-            <div class="row">
-              <div class="col">2020-06-01 ~ 2020-12-31</div>
-              <div class="col">300,000</div>
-              <div class="col">결제대기</div>
-            </div>
-            <div class="row">
-              <div class="col">2020-06-01 ~ 2020-12-31</div>
-              <div class="col">300,000</div>
-              <div class="col">결제대기</div>
-            </div>
-          </div>
-          <div class="paging">
-            <button type="button" class="left">
-              <i class="fas fa-chevron-left" aria-hidden="true"></i>
-            </button>
-            <ul class="paging-number">
-              <li class="current">1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-            </ul>
-            <button type="button" class="right">
-              <i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </button>
-          </div>
+        <div class="resultTableWrap">
+          <table class="resultTable" border="0" cellspacing="0" cellpadding="0">
+            <thead class="row header">
+              <tr>
+                <td class="col">이용기간</td>
+                <td class="col">이용금액</td>
+                <td class="col">결제여부</td>
+              </tr>
+            </thead>
+            <tbody class="content">
+              <tr class="row">
+                <td class="col">2020-06-01 ~ 2020-12-31</td>
+                <td class="col">300,000</td>
+                <td class="col">결제대기</td>
+              </tr>
+              <tr class="row">
+                <td class="col">2020-06-01 ~ 2020-12-31</td>
+                <td class="col">300,000</td>
+                <td class="col">결제대기</td>
+              </tr>
+              <tr class="row">
+                <td class="col">2020-06-01 ~ 2020-12-31</td>
+                <td class="col">300,000</td>
+                <td class="col">결제대기</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="paging">
+          <button type="button" class="left">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <ul class="paging-number">
+            <li class="current">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+          </ul>
+          <button type="button" class="right">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
     </div>

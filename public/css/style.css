@@ -370,6 +370,21 @@ g {
   top: 35px;
 }
 
+*::-webkit-scrollbar {
+  background-color: transparent;
+  width: 4px;
+  height: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #f4f4f4;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #aaaaaa;
+  border-radius: 999px;
+}
+
 form.type-default ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3893,11 +3908,32 @@ header.find .menu-list li {
   padding: 60px 50px;
 }
 
+@media (max-width: 780px) {
+  .customer_care .chargingDetails .body {
+    padding: 24px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .customer_care .chargingDetails .body {
+    padding: 15px 20px;
+  }
+}
+
 .customer_care .chargingDetails .type-default {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 50px;
+}
+
+@media (max-width: 780px) {
+  .customer_care .chargingDetails .type-default {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .customer_care .chargingDetails .type-default ul {
@@ -3906,6 +3942,54 @@ header.find .menu-list li {
 
 .customer_care .chargingDetails .type-default li:last-child {
   margin-bottom: 0;
+}
+
+.customer_care .chargingDetails .type-default .amountUsed > div {
+  margin-left: 10px;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .customer_care .chargingDetails .type-default .amountUsed > div {
+    margin-left: 0;
+    margin-bottom: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.customer_care .chargingDetails .type-default .amountUsed input {
+  width: 100%;
+}
+
+.customer_care .chargingDetails .type-default .select select {
+  margin-left: 0;
+}
+
+@media (max-width: 780px) {
+  .customer_care .chargingDetails .type-default .select {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.customer_care .chargingDetails hr {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .customer_care .chargingDetails hr {
+    display: block;
+    height: 1px;
+    border: none;
+    border-bottom: 1px solid #dddddd;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 100%;
+  }
 }
 
 .customer_care .chargingDetails .btnListItem {
@@ -3918,25 +4002,46 @@ header.find .menu-list li {
           align-items: center;
 }
 
+@media (max-width: 780px) {
+  .customer_care .chargingDetails .btnListItem {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 40px;
+  }
+}
+
 .customer_care .chargingDetails .btnListItem button {
   font-size: 16px;
 }
 
+@media (max-width: 780px) {
+  .customer_care .chargingDetails .btnListItem button {
+    font-size: 18px;
+    padding: 18px 30px;
+    width: auto;
+  }
+}
+
+.customer_care .chargingDetails .resultTableWrap {
+  overflow-x: scroll;
+  margin-bottom: 20px;
+}
+
+.customer_care .chargingDetails .resultTable {
+  border: none;
+  width: 100%;
+}
+
+.customer_care .chargingDetails .resultTable td {
+  border: none;
+}
+
 .customer_care .chargingDetails .resultTable .content {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #dddddd;
   margin-bottom: 40px;
 }
 
-.customer_care .chargingDetails .resultTable .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .customer_care .chargingDetails .resultTable .col {
-  width: 100%;
   padding: 17px;
   font-size: 18px;
   font-weight: normal;
@@ -3945,6 +4050,18 @@ header.find .menu-list li {
   letter-spacing: -0.54px;
   text-align: center;
   color: #222222;
+}
+
+.customer_care .chargingDetails .resultTable .col:nth-child(1) {
+  min-width: 200px;
+}
+
+.customer_care .chargingDetails .resultTable .col:nth-child(2) {
+  min-width: 100px;
+}
+
+.customer_care .chargingDetails .resultTable .col:nth-child(3) {
+  min-width: 100px;
 }
 
 .customer_care .chargingDetails .resultTable .header {
@@ -3961,7 +4078,7 @@ header.find .menu-list li {
   color: #ffffff;
 }
 
-.customer_care .chargingDetails .resultTable .paging {
+.customer_care .chargingDetails .paging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3970,7 +4087,7 @@ header.find .menu-list li {
           align-items: center;
 }
 
-.customer_care .chargingDetails .resultTable .paging button {
+.customer_care .chargingDetails .paging button {
   all: unset;
   background-color: #ffffff;
   border-radius: 999px;
@@ -3990,32 +4107,32 @@ header.find .menu-list li {
 }
 
 @media (max-width: 780px) {
-  .customer_care .chargingDetails .resultTable .paging button {
+  .customer_care .chargingDetails .paging button {
     width: 40px;
     height: 40px;
     font-size: 18px;
   }
 }
 
-.customer_care .chargingDetails .resultTable .paging button.right {
+.customer_care .chargingDetails .paging button.right {
   margin-left: 31px;
 }
 
-.customer_care .chargingDetails .resultTable .paging button.right i {
+.customer_care .chargingDetails .paging button.right i {
   -webkit-transform: translateX(2px);
           transform: translateX(2px);
 }
 
-.customer_care .chargingDetails .resultTable .paging button.left {
+.customer_care .chargingDetails .paging button.left {
   margin-right: 31px;
 }
 
-.customer_care .chargingDetails .resultTable .paging button.left i {
+.customer_care .chargingDetails .paging button.left i {
   -webkit-transform: translateX(-1px);
           transform: translateX(-1px);
 }
 
-.customer_care .chargingDetails .resultTable .paging .paging-number {
+.customer_care .chargingDetails .paging .paging-number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4025,7 +4142,7 @@ header.find .menu-list li {
   color: #999999;
 }
 
-.customer_care .chargingDetails .resultTable .paging .paging-number li {
+.customer_care .chargingDetails .paging .paging-number li {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -4037,26 +4154,26 @@ header.find .menu-list li {
 }
 
 @media (max-width: 780px) {
-  .customer_care .chargingDetails .resultTable .paging .paging-number li {
+  .customer_care .chargingDetails .paging .paging-number li {
     font-size: 18px;
   }
 }
 
-.customer_care .chargingDetails .resultTable .paging .paging-number li:not(:last-child) {
+.customer_care .chargingDetails .paging .paging-number li:not(:last-child) {
   margin-right: 8px;
 }
 
 @media (max-width: 780px) {
-  .customer_care .chargingDetails .resultTable .paging .paging-number li:not(:last-child) {
+  .customer_care .chargingDetails .paging .paging-number li:not(:last-child) {
     margin-right: 16px;
   }
 }
 
-.customer_care .chargingDetails .resultTable .paging .paging-number .current {
+.customer_care .chargingDetails .paging .paging-number .current {
   color: #222222;
 }
 
-.customer_care .chargingDetails .resultTable .paging {
+.customer_care .chargingDetails .paging {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

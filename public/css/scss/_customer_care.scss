@@ -660,39 +660,96 @@
   .chargingDetails {
     .body {
       padding: 60px 50px;
+      @include respond-to("md") {
+        padding: 24px 30px;
+      }
+      @include respond-to("sm") {
+        padding: 15px 20px;
+      }
     }
     .type-default {
       display: flex;
       margin-bottom: 50px;
+
+      @include respond-to("md") {
+        flex-direction: column;
+      }
       ul {
         margin-bottom: 0;
       }
       li:last-child {
         margin-bottom: 0;
       }
+      .amountUsed {
+        > div {
+          margin-left: 10px;
+          width: 100%;
+          @include respond-to("sm") {
+            margin-left: 0;
+            margin-bottom: 10px;
+            justify-content: center;
+          }
+        }
+        input {
+          width: 100%;
+        }
+      }
+      .select {
+        select {
+          margin-left: 0;
+        }
+        @include respond-to("md") {
+          flex-direction: column;
+        }
+      }
+    }
+
+    hr {
+      display: none;
+
+      @include respond-to("md") {
+        display: block;
+        height: 1px;
+        border: none;
+        border-bottom: 1px solid $very-light-pink;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        width: 100%;
+      }
     }
     .btnListItem {
       padding: 0 40px 0 76px;
       display: flex;
       align-items: center;
+
+      @include respond-to("md") {
+        justify-content: center;
+        padding: 0 40px;
+      }
       button {
         font-size: 16px;
+        @include respond-to("md") {
+          font-size: 18px;
+          padding: 18px 30px;
+          width: auto;
+        }
       }
     }
+    .resultTableWrap {
+      overflow-x: scroll;
+      margin-bottom: 20px;
+    }
     .resultTable {
+      border: none;
+      width: 100%;
+      td {
+        border: none;
+      }
       .content {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        border-bottom: 1px solid $very-light-pink;
         margin-bottom: 40px;
       }
-      .row {
-        display: flex;
-      }
       .col {
-        width: 100%;
         padding: 17px;
-
         font-size: 18px;
         font-weight: normal;
         font-stretch: normal;
@@ -700,6 +757,15 @@
         letter-spacing: -0.54px;
         text-align: center;
         color: $black;
+        &:nth-child(1) {
+          min-width: 200px;
+        }
+        &:nth-child(2) {
+          min-width: 100px;
+        }
+        &:nth-child(3) {
+          min-width: 100px;
+        }
       }
       .header {
         background-color: $brown-grey;
@@ -713,10 +779,11 @@
           color: $white;
         }
       }
-      @include paging();
-      .paging {
-        justify-content: center;
-      }
+    }
+
+    @include paging();
+    .paging {
+      justify-content: center;
     }
   }
   &.popup {
