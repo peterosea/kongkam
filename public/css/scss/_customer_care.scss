@@ -63,7 +63,9 @@
 }
 .customer_care {
   padding: 70px 20px;
-
+  @include respond-to("sm") {
+    padding: 40px 20px;
+  }
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -77,15 +79,15 @@
     > .header {
       border-bottom: 1px solid $very-light-pink-three;
       display: flex;
-      @include respond-to("md") {
-        display: none;
-      }
       &.modify {
         font-size: 18px;
         font-weight: bold;
         padding: 24px 61px;
-        @include respond-to("sm") {
+        @include respond-to("md") {
           padding: 24px 30px;
+        }
+        @include respond-to("sm") {
+          padding: 15px 20px;
         }
       }
     }
@@ -98,6 +100,11 @@
     }
   }
   .registration {
+    .header {
+      @include respond-to("md") {
+        display: none;
+      }
+    }
     hr {
       display: none;
 
@@ -442,6 +449,12 @@
   .roomTypeLease {
     .body {
       padding: 70px 59px;
+      @include respond-to("md") {
+        padding: 24px 30px;
+      }
+      @include respond-to("sm") {
+        padding: 15px 20px;
+      }
     }
     .table {
       &:hover {
@@ -462,6 +475,33 @@
         justify-content: center;
         .wrap div:not(:last-child) {
           margin-bottom: 24px;
+
+          @include respond-to("md") {
+            margin-bottom: 12px;
+          }
+        }
+
+        @include respond-to("md") {
+          font-weight: 300;
+          padding-left: 8px;
+          padding-right: 8px;
+          line-height: 1;
+          word-break: keep-all;
+          &.name {
+            width: 25%;
+          }
+          &.room-type {
+            width: 50%;
+          }
+          &.room {
+            width: 25%;
+          }
+        }
+        &.add {
+          @include respond-to("md") {
+            margin-top: 35px;
+            width: 100%;
+          }
         }
       }
       .label {
@@ -474,6 +514,10 @@
         color: $white;
         padding: 8px 27px 8px;
         cursor: pointer;
+
+        @include respond-to("md") {
+          padding: 12px 30px 12px;
+        }
       }
       .row {
         display: flex;
@@ -495,6 +539,9 @@
           bottom: -10px;
           background-color: $very-light-pink;
         }
+        @include respond-to("md") {
+          flex-wrap: wrap;
+        }
       }
       .header {
         display: flex;
@@ -504,6 +551,12 @@
         .col {
           color: $white;
           font-weight: 500;
+          line-height: 3.33;
+        }
+        .col.add {
+          @include respond-to("md") {
+            display: none;
+          }
         }
       }
     }

@@ -14,10 +14,10 @@
       <div class="body">
         <div class="table">
           <div class="header">
-            <div class="col">숙소</div>
-            <div class="col">룸 타입</div>
-            <div class="col">객실 수</div>
-            <div class="col">추가</div>
+            <div class="col name">숙소</div>
+            <div class="col room-type">룸 타입</div>
+            <div class="col room">객실 수</div>
+            <div class="col add">추가</div>
           </div>
           <div class="row">
             <div class="col name">

@@ -2969,6 +2969,12 @@ header.find .menu-list li {
   padding: 70px 20px;
 }
 
+@media (max-width: 576px) {
+  .customer_care {
+    padding: 40px 20px;
+  }
+}
+
 .customer_care .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -2989,21 +2995,21 @@ header.find .menu-list li {
   display: flex;
 }
 
-@media (max-width: 780px) {
-  .customer_care .registrationStyle > .header {
-    display: none;
-  }
-}
-
 .customer_care .registrationStyle > .header.modify {
   font-size: 18px;
   font-weight: bold;
   padding: 24px 61px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 780px) {
   .customer_care .registrationStyle > .header.modify {
     padding: 24px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .customer_care .registrationStyle > .header.modify {
+    padding: 15px 20px;
   }
 }
 
@@ -3014,6 +3020,12 @@ header.find .menu-list li {
 @media (max-width: 780px) {
   .customer_care .registrationStyle .body {
     padding: 14px 16px 2px 16px;
+  }
+}
+
+@media (max-width: 780px) {
+  .customer_care .registration .header {
+    display: none;
   }
 }
 
@@ -3590,6 +3602,18 @@ header.find .menu-list li {
   padding: 70px 59px;
 }
 
+@media (max-width: 780px) {
+  .customer_care .roomTypeLease .body {
+    padding: 24px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .customer_care .roomTypeLease .body {
+    padding: 15px 20px;
+  }
+}
+
 .customer_care .roomTypeLease .table:hover .header {
   border-radius: 6px;
 }
@@ -3617,6 +3641,38 @@ header.find .menu-list li {
   margin-bottom: 24px;
 }
 
+@media (max-width: 780px) {
+  .customer_care .roomTypeLease .table .col .wrap div:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 780px) {
+  .customer_care .roomTypeLease .table .col {
+    font-weight: 300;
+    padding-left: 8px;
+    padding-right: 8px;
+    line-height: 1;
+    word-break: keep-all;
+  }
+  .customer_care .roomTypeLease .table .col.name {
+    width: 25%;
+  }
+  .customer_care .roomTypeLease .table .col.room-type {
+    width: 50%;
+  }
+  .customer_care .roomTypeLease .table .col.room {
+    width: 25%;
+  }
+}
+
+@media (max-width: 780px) {
+  .customer_care .roomTypeLease .table .col.add {
+    margin-top: 35px;
+    width: 100%;
+  }
+}
+
 .customer_care .roomTypeLease .table .label {
   width: auto;
   font-size: 16px;
@@ -3627,6 +3683,12 @@ header.find .menu-list li {
   color: #ffffff;
   padding: 8px 27px 8px;
   cursor: pointer;
+}
+
+@media (max-width: 780px) {
+  .customer_care .roomTypeLease .table .label {
+    padding: 12px 30px 12px;
+  }
 }
 
 .customer_care .roomTypeLease .table .row {
@@ -3656,6 +3718,13 @@ header.find .menu-list li {
   background-color: #dddddd;
 }
 
+@media (max-width: 780px) {
+  .customer_care .roomTypeLease .table .row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .customer_care .roomTypeLease .table .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3671,6 +3740,13 @@ header.find .menu-list li {
 .customer_care .roomTypeLease .table .header .col {
   color: #ffffff;
   font-weight: 500;
+  line-height: 3.33;
+}
+
+@media (max-width: 780px) {
+  .customer_care .roomTypeLease .table .header .col.add {
+    display: none;
+  }
 }
 
 .customer_care .roomTypeDetail.registrationStyle {
