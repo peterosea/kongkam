@@ -4200,6 +4200,8 @@ header.find .menu-list li {
 .customer_care.popup .container {
   width: 100%;
   max-width: 1200px;
+  max-height: 100%;
+  overflow-y: scroll;
 }
 
 .customer_care.popup .inner {
@@ -4322,9 +4324,14 @@ header.find .menu-list li {
   }
 }
 
-.customer_care.popup .table {
-  border-bottom: 1px solid #dddddd;
+.customer_care.popup .tableWrap {
+  overflow-x: scroll;
   margin-bottom: 30px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.customer_care.popup .table {
+  width: 100%;
 }
 
 .customer_care.popup .table .row {
@@ -4333,29 +4340,31 @@ header.find .menu-list li {
   display: flex;
 }
 
-.customer_care.popup .table .row:not(:last-child) {
-  margin-bottom: 20px;
-}
-
 .customer_care.popup .table .row .col {
   width: 100%;
   text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .customer_care.popup .table .row .col.checkbox {
-  max-width: 150px;
+  min-width: 80px;
 }
 
 .customer_care.popup .table .row .col.number {
-  max-width: 150px;
+  min-width: 50px;
 }
 
 .customer_care.popup .table .row .col.managerId {
-  max-width: 200px;
+  min-width: 130px;
 }
 
 .customer_care.popup .table .row .col.managerName {
-  max-width: 200px;
+  min-width: 160px;
+}
+
+.customer_care.popup .table .row .col.buildingName {
+  min-width: 160px;
 }
 
 .customer_care.popup .table .row.header {
@@ -4387,9 +4396,24 @@ header.find .menu-list li {
           transform: translate(-50%, calc(-50% - 2px)) rotate(var(--r, 20deg));
 }
 
-.customer_care.popup .table .content {
+.customer_care.popup .table .content .row:first-child .col {
   padding-top: 45px;
+}
+
+@media (max-width: 576px) {
+  .customer_care.popup .table .content .row:first-child .col {
+    padding-top: 25px;
+  }
+}
+
+.customer_care.popup .table .content .row:last-child .col {
   padding-bottom: 45px;
+}
+
+@media (max-width: 576px) {
+  .customer_care.popup .table .content .row:last-child .col {
+    padding-bottom: 25px;
+  }
 }
 
 .customer_care.popup .btnListItem {

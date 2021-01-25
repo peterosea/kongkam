@@ -800,6 +800,8 @@
     .container {
       width: 100%;
       max-width: 1200px;
+      max-height: 100%;
+      overflow-y: scroll;
     }
     .inner {
       border-radius: 6px;
@@ -879,30 +881,34 @@
         }
       }
     }
-    .table {
-      border-bottom: 1px solid $very-light-pink;
+    .tableWrap {
+      overflow-x: scroll;
       margin-bottom: 30px;
+      border-bottom: 1px solid $very-light-pink;
+    }
+    .table {
+      width: 100%;
       .row {
         display: flex;
-        &:not(:last-child) {
-          margin-bottom: 20px;
-        }
         .col {
           width: 100%;
           text-align: center;
+          padding-top: 10px;
+          padding-bottom: 10px;
           &.checkbox {
-            max-width: 150px;
+            min-width: 80px;
           }
           &.number {
-            max-width: 150px;
+            min-width: 50px;
           }
           &.managerId {
-            max-width: 200px;
+            min-width: 130px;
           }
           &.managerName {
-            max-width: 200px;
+            min-width: 160px;
           }
           &.buildingName {
+            min-width: 160px;
           }
         }
         &.header {
@@ -931,8 +937,18 @@
         }
       }
       .content {
-        padding-top: 45px;
-        padding-bottom: 45px;
+        .row:first-child .col {
+          padding-top: 45px;
+          @include respond-to("sm") {
+            padding-top: 25px;
+          }
+        }
+        .row:last-child .col {
+          padding-bottom: 45px;
+          @include respond-to("sm") {
+            padding-bottom: 25px;
+          }
+        }
       }
     }
     .btnListItem {
