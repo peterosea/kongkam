@@ -16,21 +16,53 @@
         <div class="col">비고</div>
       </div>
       <div class="body">
-        <?php
-        $row = <<<HTML
+        <form class="type-default">
+          <?php
+          $row = <<<HTML
             <div class="row">
-              <div class="col"><input type="text"></div>
-              <div class="col"><input type="text"></div>
-              <div class="col"><input type="text"></div>
-              <div class="col"><input type="text"></div>
-              <div class="col"><input type="text"></div>
-              <div class="col"><input type="text"></div>
+              <div class="col">
+                <label>
+                  <span>고객명</span>
+                  <input type="text">
+                </label>
+              </div>
+              <div class="col">
+                <label>
+                  <span>아이디</span>
+                  <input type="text">
+                </label>
+              </div>
+              <div class="col">
+                <label>
+                  <span>연락처</span>
+                  <input type="text">
+                </label>
+              </div>
+              <div class="col">
+                <label>
+                  <span>가입일</span>
+                  <input type="text">
+                </label>
+              </div>
+              <div class="col">
+                <label>
+                  <span>서비스 이용중</span>
+                  <input type="text">
+                </label>
+              </div>
+              <div class="col">
+                <label>
+                  <span>비고</span>
+                  <textarea cols="30" rows="4"></textarea>
+                </label>
+              </div>
             </div>
 HTML;
-        for ($i = 0; $i < 5; $i++) {
-          echo $row;
-        }
-        ?>
+          for ($i = 0; $i < 5; $i++) {
+            echo $row;
+          }
+          ?>
+        </form>
       </div>
       <div class="footer">
         <div class="paging">
@@ -48,6 +80,7 @@ HTML;
             <i class="fas fa-chevron-right" aria-hidden="true"></i>
           </button>
         </div>
+        <hr />
         <button type="button" class="customer-registration-btn">
           고객 등록
         </button>
