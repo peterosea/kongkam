@@ -3005,9 +3005,6 @@ header.find .menu-list li {
 
 .customer_care .registrationStyle > .header {
   border-bottom: 1px solid #bfbfbf;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .customer_care .registrationStyle > .header.modify {
@@ -3029,7 +3026,7 @@ header.find .menu-list li {
 }
 
 .customer_care .registrationStyle .body {
-  padding: 28px 31px 4px 31px;
+  padding: 70px 59px;
 }
 
 @media (max-width: 780px) {
@@ -3038,147 +3035,46 @@ header.find .menu-list li {
   }
 }
 
-@media (max-width: 780px) {
-  .customer_care .registration .header {
-    display: none;
-  }
+.customer_care .tableWrap {
+  overflow-x: scroll;
 }
 
-.customer_care .registration hr {
-  display: none;
+.customer_care .registration {
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
 }
 
-@media (max-width: 780px) {
-  .customer_care .registration hr {
-    display: block;
-    height: 1px;
-    border: none;
-    border-bottom: 1px solid #dddddd;
-    margin-top: 100px;
-    margin-bottom: 60px;
-    width: 100%;
-  }
+.customer_care .registration td {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.customer_care .registration .header {
+  background-color: #aaaaaa;
 }
 
 .customer_care .registration .header .col {
-  width: 100%;
   padding: 23px 0;
   text-align: center;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: -0.48px;
+  color: #ffffff;
 }
 
-@media (max-width: 780px) {
-  .customer_care .registration .col:last-child label {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .customer_care .registration .col:last-child label span {
-    margin-top: 20px;
-  }
+.customer_care .registration .body .col {
+  padding: 23px;
 }
 
-.customer_care .registration label {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+.customer_care .registration .body .row:first-child .col {
+  padding-top: 45px;
 }
 
-.customer_care .registration label span {
-  display: none;
+.customer_care .registration .body .row:last-child .col {
+  padding-bottom: 45px;
 }
 
-@media (max-width: 780px) {
-  .customer_care .registration label span {
-    display: inline-block;
-    width: 170px;
-    word-break: keep-all;
-  }
-}
-
-@media (max-width: 576px) {
-  .customer_care .registration label span {
-    width: 110px;
-  }
-}
-
-@media (max-width: 780px) {
-  .customer_care .registration label input,
-  .customer_care .registration label textarea {
-    max-width: none;
-  }
-}
-
-.customer_care .registration .body .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media (max-width: 780px) {
-  .customer_care .registration .body .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media (max-width: 780px) {
-  .customer_care .registration .body .row:not(:first-child) {
-    display: none;
-  }
-}
-
-.customer_care .registration .body .row:not(:last-child) {
-  border-bottom: 1px solid #dddddd;
-  padding-bottom: 13px;
-  margin-bottom: 13px;
-}
-
-@media (max-width: 780px) {
-  .customer_care .registration .body .row:not(:last-child) {
-    border-bottom: none;
-  }
-}
-
-.customer_care .registration .body .row .col {
-  width: 100%;
-}
-
-.customer_care .registration .body .row .col:not(:last-child) {
-  margin-right: 10px;
-}
-
-@media (max-width: 780px) {
-  .customer_care .registration .body .row .col:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-}
-
-.customer_care .registration .body .row input,
-.customer_care .registration .body .row textarea {
-  border-radius: 6px;
-  border: 1px solid #bfbfbf;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  font-size: 16px;
-  padding: 17px;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-@media (max-width: 780px) {
-  .customer_care .registration .body .row input,
-  .customer_care .registration .body .row textarea {
-    border: 1px solid #dddddd;
-  }
-}
-
-.customer_care .registration .footer {
+.customer_care .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3189,7 +3085,7 @@ header.find .menu-list li {
   position: relative;
 }
 
-.customer_care .registration .footer .paging {
+.customer_care .footer .paging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3198,7 +3094,7 @@ header.find .menu-list li {
           align-items: center;
 }
 
-.customer_care .registration .footer .paging button {
+.customer_care .footer .paging button {
   all: unset;
   background-color: #ffffff;
   border-radius: 999px;
@@ -3218,32 +3114,32 @@ header.find .menu-list li {
 }
 
 @media (max-width: 780px) {
-  .customer_care .registration .footer .paging button {
+  .customer_care .footer .paging button {
     width: 40px;
     height: 40px;
     font-size: 18px;
   }
 }
 
-.customer_care .registration .footer .paging button.right {
+.customer_care .footer .paging button.right {
   margin-left: 31px;
 }
 
-.customer_care .registration .footer .paging button.right i {
+.customer_care .footer .paging button.right i {
   -webkit-transform: translateX(2px);
           transform: translateX(2px);
 }
 
-.customer_care .registration .footer .paging button.left {
+.customer_care .footer .paging button.left {
   margin-right: 31px;
 }
 
-.customer_care .registration .footer .paging button.left i {
+.customer_care .footer .paging button.left i {
   -webkit-transform: translateX(-1px);
           transform: translateX(-1px);
 }
 
-.customer_care .registration .footer .paging .paging-number {
+.customer_care .footer .paging .paging-number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3253,7 +3149,7 @@ header.find .menu-list li {
   color: #999999;
 }
 
-.customer_care .registration .footer .paging .paging-number li {
+.customer_care .footer .paging .paging-number li {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -3265,27 +3161,27 @@ header.find .menu-list li {
 }
 
 @media (max-width: 780px) {
-  .customer_care .registration .footer .paging .paging-number li {
+  .customer_care .footer .paging .paging-number li {
     font-size: 18px;
   }
 }
 
-.customer_care .registration .footer .paging .paging-number li:not(:last-child) {
+.customer_care .footer .paging .paging-number li:not(:last-child) {
   margin-right: 8px;
 }
 
 @media (max-width: 780px) {
-  .customer_care .registration .footer .paging .paging-number li:not(:last-child) {
+  .customer_care .footer .paging .paging-number li:not(:last-child) {
     margin-right: 16px;
   }
 }
 
-.customer_care .registration .footer .paging .paging-number .current {
+.customer_care .footer .paging .paging-number .current {
   color: #222222;
 }
 
 @media (max-width: 780px) {
-  .customer_care .registration .footer {
+  .customer_care .footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -3294,9 +3190,12 @@ header.find .menu-list li {
         -ms-flex-align: center;
             align-items: center;
   }
+  .customer_care .footer .paging {
+    margin-bottom: 58px;
+  }
 }
 
-.customer_care .registration .footer button.customer-registration-btn {
+.customer_care .footer button.customer-registration-btn {
   all: unset;
   padding: 4px 16px 8px;
   border-radius: 6px;
@@ -3318,7 +3217,7 @@ header.find .menu-list li {
 }
 
 @media (max-width: 780px) {
-  .customer_care .registration .footer button.customer-registration-btn {
+  .customer_care .footer button.customer-registration-btn {
     font-size: 18px;
     padding: 16px 24px 20px;
     position: relative;
